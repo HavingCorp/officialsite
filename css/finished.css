@@ -1305,11 +1305,12 @@ body{
 }
 
 .fp-card{
-  min-height:300px !important;
+  min-height:210px !important;
   display:flex !important;
   flex-direction:column !important;
-  justify-content:space-between !important;
-  padding:24px !important;
+  justify-content:flex-start !important;
+  gap:20px !important;
+  padding:28px !important;
   border:1px solid rgba(17,17,17,.10) !important;
   border-radius:24px !important;
   background:#fff !important;
@@ -1364,6 +1365,43 @@ body{
   border-top:1px solid rgba(17,17,17,.09) !important;
   color:#777 !important;
   font-size:12px !important;
+}
+
+/* --- redesigned card: logo + description only --- */
+.fp-card-logo{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  height:56px !important;
+}
+.fp-card-logo img{
+  max-height:56px !important;
+  max-width:80% !important;
+  width:auto !important;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  display:block !important;
+}
+/* fallback when a logo image is missing: colored monogram badge */
+.fp-card-logo.is-fallback{
+  width:56px !important;
+  height:56px !important;
+  flex:0 0 auto !important;
+  border-radius:14px !important;
+  background:var(--acc,#C8602A) !important;
+  color:#fff !important;
+  font-weight:800 !important;
+  font-size:20px !important;
+  letter-spacing:.02em !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.fp-card-desc{
+  margin:0 !important;
+  font-size:14px !important;
+  line-height:1.7 !important;
+  color:#555 !important;
 }
 
 .fp-detail{
