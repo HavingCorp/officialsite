@@ -1443,6 +1443,53 @@ body{
   color:#666 !important;
 }
 
+.fp-item-tabs{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:8px !important;
+  margin-bottom:22px !important;
+}
+.fp-tab{
+  border:1px solid rgba(17,17,17,.14) !important;
+  background:#fff !important;
+  color:#555 !important;
+  font-size:11px !important;
+  font-weight:600 !important;
+  letter-spacing:.06em !important;
+  text-transform:uppercase !important;
+  padding:8px 14px !important;
+  border-radius:999px !important;
+  cursor:pointer !important;
+  transition:background .15s ease, color .15s ease, border-color .15s ease !important;
+}
+.fp-tab:hover{ border-color:rgba(17,17,17,.32) !important; color:#222 !important; }
+.fp-tab.is-active{ background:#181410 !important; border-color:#181410 !important; color:#fff !important; }
+
+.fp-item-pager{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  gap:6px !important;
+  margin-top:32px !important;
+}
+.fp-page-btn{
+  min-width:38px !important;
+  height:38px !important;
+  padding:0 10px !important;
+  border:1px solid rgba(17,17,17,.14) !important;
+  background:#fff !important;
+  color:#555 !important;
+  font-size:13px !important;
+  border-radius:10px !important;
+  cursor:pointer !important;
+  transition:background .15s ease, color .15s ease, border-color .15s ease !important;
+}
+.fp-page-btn:hover:not(:disabled){ border-color:rgba(17,17,17,.32) !important; color:#222 !important; }
+.fp-page-btn.is-active{ background:#181410 !important; border-color:#181410 !important; color:#fff !important; }
+.fp-page-btn:disabled{ opacity:.35 !important; cursor:default !important; }
+.fp-page-nav{ font-size:16px !important; line-height:1 !important; }
+
 .fp-item-grid{
   display:grid !important;
   grid-template-columns:repeat(4,minmax(0,1fr)) !important;
