@@ -5,7 +5,7 @@
     var page = location.pathname.split('/').pop() || 'finished.html';
     if(page !== 'finished.html') return;
 
-    var brands=[], formats=[], state={view:'list', brand:null, modal:null};
+    var brands=[], formats=[], state={view:'list', brand:null, modal:null, dType:'ALL', dPage:1};
 
     var UI={
       en:{ listTitle:'Finished Products',
@@ -33,8 +33,8 @@
         notePrep:'\uC774 \uBE0C\uB79C\uB4DC\uC758 \uC81C\uD488 \uC0C1\uC138 \uC815\uBCF4\uB294 \uC900\uBE44 \uC911\uC785\uB2C8\uB2E4.', noteContact:'\uBB38\uC758\uD558\uAE30', noteTail:'\uD604\uC7AC \uB77C\uC778\uC5C5\uACFC \uC0AC\uC591\uC744 \uC548\uB0B4\uD574 \uB4DC\uB9BD\uB2C8\uB2E4.',
         loading:'\uBE0C\uB79C\uB4DC \uBD88\uB7EC\uC624\uB294 \uC911\u2026' }
     };
-    Object.assign(UI.en,{spec:'Specifications',volume:'Volume',shelfLife:'Shelf life',functional:'Functional type',origin:'Country of origin',certs:'Certifications & test reports',inci:'Full ingredients (INCI)',pb:'Private label (PB / OEM)',pbYes:'Available',pbNo:'On request',markets:'Currently sold in',concept:'Concept'});
-    Object.assign(UI.ko,{spec:'사양',volume:'용량',shelfLife:'유통기한',functional:'기능성',origin:'원산지',certs:'인증 · 시험성적서',inci:'전성분 (INCI)',pb:'PB · 자체 브랜드',pbYes:'가능',pbNo:'문의',markets:'현재 판매 지역',concept:'컨셉'});
+    Object.assign(UI.en,{spec:'Specifications',volume:'Volume',shelfLife:'Shelf life',functional:'Functional type',origin:'Country of origin',certs:'Certifications & test reports',inci:'Full ingredients (INCI)',pb:'Private label (PB / OEM)',pbYes:'Available',pbNo:'On request',markets:'Currently sold in',concept:'Concept',all:'All'});
+    Object.assign(UI.ko,{spec:'사양',volume:'용량',shelfLife:'유통기한',functional:'기능성',origin:'원산지',certs:'인증 · 시험성적서',inci:'전성분 (INCI)',pb:'PB · 자체 브랜드',pbYes:'가능',pbNo:'문의',markets:'현재 판매 지역',concept:'컨셉',all:'전체'});
     function lang(){ var l=(document.documentElement.getAttribute('data-lang')||document.documentElement.lang||'en'); return l.slice(0,2)==='ko'?'ko':'en'; }
     function t(k){ return (UI[lang()]||UI.en)[k] || UI.en[k] || ''; }
     function L(v){ if(v==null) return ''; if(typeof v==='string') return v; return v[lang()]||v.en||v.ko||''; }
@@ -74,7 +74,7 @@
         '<button type="button" id="fp-back" class="fp-back"></button>',
         '<div class="fp-detail-intro"><div class="fp-detail-brand"><div id="fp-detail-logo" class="fp-logo fp-logo--lg"></div><div id="fp-detail-meta" class="fp-detail-metalist"></div></div>',
         '<div><h2 id="fp-detail-title"></h2><p id="fp-detail-desc"></p><div id="fp-detail-sig" class="fp-sig"></div></div></div>',
-        '<div id="fp-item-note" class="fp-item-note" hidden></div><div id="fp-item-grid" class="fp-item-grid"></div>',
+        '<div id="fp-item-note" class="fp-item-note" hidden></div><div id="fp-item-tabs" class="fp-item-tabs"></div><div id="fp-item-grid" class="fp-item-grid"></div><div id="fp-item-pager" class="fp-item-pager"></div>',
       '</section>',
       '<div id="fp-modal" class="fp-modal" aria-hidden="true"><div class="fp-modal-backdrop" data-close="1"></div>',
         '<div class="fp-modal-panel" role="dialog" aria-modal="true"><button type="button" class="fp-modal-close" data-close="1" aria-label="Close">\u00d7</button>',
@@ -84,7 +84,8 @@
 
     var listEl=document.getElementById('fp-list'), detail=document.getElementById('fp-detail'),
         cardGrid=document.getElementById('fp-card-grid'), itemGrid=document.getElementById('fp-item-grid'),
-        itemNote=document.getElementById('fp-item-note'), modal=document.getElementById('fp-modal');
+        itemNote=document.getElementById('fp-item-note'), modal=document.getElementById('fp-modal'),
+        itemTabs=document.getElementById('fp-item-tabs'), itemPager=document.getElementById('fp-item-pager');
 
     function galleryHTML(accent,imgs,mono,typeLabel){
       imgs=(imgs||[]).filter(Boolean);
@@ -120,18 +121,35 @@
       document.getElementById('fp-detail-meta').innerHTML='';
       var sig=(b.signature_ingredients||[]).slice(0,8);
       document.getElementById('fp-detail-sig').innerHTML= sig.length? ('<div class="fp-sig-label">'+esc(t('signature'))+'</div>'+sig.map(function(s){return '<span class="fp-chip">'+esc(L(s))+'</span>';}).join('')):'';
-      if(!ps.length){ itemGrid.innerHTML=''; itemNote.hidden=false;
+      if(!ps.length){ itemTabs.innerHTML=''; itemPager.innerHTML=''; itemGrid.innerHTML=''; itemNote.hidden=false;
         itemNote.innerHTML=esc(t('notePrep'))+' <a href="inquiry.html">'+esc(t('noteContact'))+'</a> '+esc(t('noteTail'));
-      }else{ itemNote.hidden=true;
-        itemGrid.innerHTML=ps.map(function(p,i){
-          var d=L(p.description), img=(p.images&&p.images.length?p.images[0]:(p.image||''));
-          return '<article class="fp-item" tabindex="0" data-kind="sku" data-index="'+i+'">'+
-            '<div class="fp-item-img'+(img?'':' is-empty')+'">'+(img?'<img src="'+esc(img)+'" alt="'+esc(pName(p))+'" onerror="this.parentNode.classList.add(\'is-empty\');this.remove();">':'')+'</div>'+
-            '<div class="fp-item-body"><div class="fp-item-type">'+esc(pType(p))+'</div><h3>'+esc(pName(p))+'</h3>'+
-            (d?'<p>'+esc(d.split('\n')[0].slice(0,90))+'</p>':'')+'</div>'+
-            '<div class="fp-item-meta">'+esc(p.volume||'')+'</div></article>';
-        }).join('');
-      }
+      }else{ itemNote.hidden=true; renderItems(); }
+    }
+    function renderItems(){
+      var b=state.brand; if(!b) return;
+      var all=products(b).map(function(p,i){return {p:p,i:i};});
+      var types=[]; all.forEach(function(x){var ty=L(x.p&&x.p.type)||''; if(ty&&types.indexOf(ty)<0) types.push(ty);});
+      if(state.dType!=='ALL' && types.indexOf(state.dType)<0) state.dType='ALL';
+      itemTabs.innerHTML = types.length? ('<button class="fp-tab'+(state.dType==='ALL'?' is-active':'')+'" data-type="ALL">'+esc(t('all'))+'</button>'+
+        types.map(function(ty){return '<button class="fp-tab'+(state.dType===ty?' is-active':'')+'" data-type="'+esc(ty)+'">'+esc(ty)+'</button>';}).join('')) : '';
+      var filtered = state.dType==='ALL'? all : all.filter(function(x){return (L(x.p&&x.p.type)||'')===state.dType;});
+      var pageSize=12, pages=Math.max(1,Math.ceil(filtered.length/pageSize));
+      if(state.dPage>pages) state.dPage=pages; if(state.dPage<1) state.dPage=1;
+      var slice=filtered.slice((state.dPage-1)*pageSize, state.dPage*pageSize);
+      itemGrid.innerHTML=slice.map(function(x){
+        var p=x.p, d=L(p.description), img=(p.images&&p.images.length?p.images[0]:(p.image||''));
+        return '<article class="fp-item" tabindex="0" data-kind="sku" data-index="'+x.i+'">'+
+          '<div class="fp-item-img'+(img?'':' is-empty')+'">'+(img?'<img src="'+esc(img)+'" alt="'+esc(pName(p))+'" onerror="this.parentNode.classList.add(\'is-empty\');this.remove();">':'')+'</div>'+
+          '<div class="fp-item-body"><div class="fp-item-type">'+esc(pType(p))+'</div><h3>'+esc(pName(p))+'</h3>'+
+          (d?'<p>'+esc(d.split('\n')[0].slice(0,90))+'</p>':'')+'</div>'+
+          '<div class="fp-item-meta">'+esc(p.volume||'')+'</div></article>';
+      }).join('');
+      if(pages>1){
+        var pg='<button class="fp-page-btn fp-page-nav" data-page="'+(state.dPage-1)+'"'+(state.dPage===1?' disabled':'')+'>\u2039</button>';
+        for(var n=1;n<=pages;n++){ pg+='<button class="fp-page-btn'+(n===state.dPage?' is-active':'')+'" data-page="'+n+'">'+n+'</button>'; }
+        pg+='<button class="fp-page-btn fp-page-nav" data-page="'+(state.dPage+1)+'"'+(state.dPage===pages?' disabled':'')+'>\u203A</button>';
+        itemPager.innerHTML=pg;
+      } else itemPager.innerHTML='';
     }
     function renderOem(){
       setHero('OEM / ODM', t('oemDesc'), t('oemKicker'));
@@ -139,7 +157,7 @@
       document.getElementById('fp-detail-title').textContent='OEM / ODM';
       document.getElementById('fp-detail-desc').textContent=t('oemDesc');
       document.getElementById('fp-detail-meta').innerHTML='<div class="fp-meta-row"><span>'+esc(t('formatsLabel'))+'</span><b>'+formats.length+' '+t('types')+'</b></div>';
-      document.getElementById('fp-detail-sig').innerHTML=''; itemNote.hidden=true;
+      document.getElementById('fp-detail-sig').innerHTML=''; itemNote.hidden=true; itemTabs.innerHTML=''; itemPager.innerHTML='';
       itemGrid.innerHTML=formats.map(function(f,i){
         return '<article class="fp-item" tabindex="0" data-kind="format" data-index="'+i+'"><div><div class="fp-item-type">'+esc(L(f.spec&&f.spec.category)||'Formulation')+'</div><h3>'+esc(L(f.name))+'</h3>'+
           (f.tagline?'<p>'+esc(L(f.tagline).slice(0,110))+'</p>':'')+'</div><div class="fp-item-meta">'+esc(L(f.spec&&f.spec.type)||'')+'</div></article>';
@@ -197,7 +215,7 @@
 
     /* ---------- view transitions ---------- */
     function showList(){ state.view='list'; listEl.style.display='block'; detail.classList.remove('is-active'); render(); window.scrollTo({top:0,behavior:'smooth'}); }
-    function showBrand(b){ state.view='brand'; state.brand=b; listEl.style.display='none'; detail.classList.add('is-active');
+    function showBrand(b){ state.view='brand'; state.brand=b; state.dType='ALL'; state.dPage=1; listEl.style.display='none'; detail.classList.add('is-active');
       try{ if(!(history.state&&history.state.fpDetail)) history.pushState({fpDetail:1},''); }catch(e){} render(); window.scrollTo({top:0,behavior:'smooth'}); }
     function showOem(){ state.view='oem'; listEl.style.display='none'; detail.classList.add('is-active');
       try{ if(!(history.state&&history.state.fpDetail)) history.pushState({fpDetail:1},''); }catch(e){} render(); window.scrollTo({top:0,behavior:'smooth'}); }
@@ -212,6 +230,8 @@
       openModal();
     });
     itemGrid.addEventListener('keydown',function(e){ if(e.key==='Enter'){ var it=e.target.closest('.fp-item'); if(it) it.click(); } });
+    itemTabs.addEventListener('click',function(e){ var b=e.target.closest('.fp-tab'); if(!b) return; state.dType=b.dataset.type; state.dPage=1; renderItems(); });
+    itemPager.addEventListener('click',function(e){ var b=e.target.closest('.fp-page-btn'); if(!b||b.disabled) return; state.dPage=+b.dataset.page; renderItems(); try{ itemTabs.scrollIntoView({behavior:'smooth',block:'start'}); }catch(err){} });
     document.getElementById('fp-back').addEventListener('click',function(){ if(history.state&&history.state.fpDetail) history.back(); else showList(); });
     window.addEventListener('popstate',function(){ if(detail.classList.contains('is-active')) showList(); });
     modal.addEventListener('click',function(e){ if(e.target.dataset&&e.target.dataset.close) return closeModal();
