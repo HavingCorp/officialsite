@@ -1,0 +1,123 @@
+{
+ "note": "Formulation catalog for OEM / ODM development. Manufacturer not disclosed; formulations are selectable for private-label projects.",
+ "formats": [
+  {
+   "id": "mango-cleansing-balm",
+   "accent": "#C9962E",
+   "name": { "en": "Mango Cleansing Balm", "ko": "밤 망고 클렌징 밤" },
+   "tagline": {
+     "en": "A moisturizing mango balm that melts away makeup even on dry skin, leaving a smooth, comfortable finish.",
+     "ko": "건조주의보에도 촉촉하게 지우고 매끄럽게 끝내는 밤 망고 보습 클렌징 밤"
+   },
+   "spec": {
+     "category": { "en": "Cleansing Balm", "ko": "클렌징 밤" },
+     "type": { "en": "Wash-off", "ko": "워시오프" },
+     "container": { "en": "Tube", "ko": "튜브" }
+   },
+   "features": [
+    {
+     "title": { "en": "Juicy mango cleansing power", "ko": "과즙처럼 촉촉한 망고 클렌징 파워!" },
+     "desc": {
+       "en": "A blend of mango seed butter and ceramide protects the moisture barrier after cleansing, while a fresh mango scent makes the routine more enjoyable.",
+       "ko": "망고 씨 버터와 세라마이드 성분 조합으로 세안 후에도 보습 장벽을 지키고, 푸르티 망고향으로 세안하면서 기분까지 리프레시"
+     }
+    },
+    {
+     "title": { "en": "0% stickiness, pore-clearing oil balm", "ko": "끈적임 0% 오일 밤 제형으로 모공 고민 클리어" },
+     "desc": {
+       "en": "A rich yet soft oil balm melts onto skin, removing makeup, sebum and blackheads in one step for a clean, clear pore feeling.",
+       "ko": "도톰하면서 부드럽게 피부에 녹는 오일 밤 제형이 메이크업·피지·블랙헤드까지 한 번에 촉촉하게 지워내, 내 피부는 언제나 모공 맑음 모드"
+     }
+    },
+    {
+     "title": { "en": "Smooth, refined skin texture", "ko": "피부 결이 매끈매끈하다! 매끈매끈한~" },
+     "desc": {
+       "en": "Fine chestnut-shell scrub particles and a dual PHA exfoliating system gently refine the skin, completing a smooth texture even in dry winter conditions.",
+       "ko": "고운 입자의 밤 껍질 스크럽과 PHA의 2중 각질 케어 시스템으로 겨울철 들뜸, 각질을 부드럽게 정리해 매끈한 피부 결 완성"
+     }
+    }
+   ],
+   "mechanism": {
+     "en": "Oil-based ingredients adsorb and cleanse makeup and impurities inside pores, while a chestnut-shell scrub and PHA provide dual exfoliating care for a smooth skin texture.",
+     "ko": "오일 성분이 메이크업과 모공 속 불순물을 흡착 및 세정하고, 밤 껍질 스크럽과 PHA의 이중 각질 케어로 매끄러운 피부 결을 완성"
+   },
+   "key_ingredients": [
+    {
+     "name": { "en": "Chestnut Shell Extract", "ko": "밤껍질 추출물" },
+     "desc": { "en": "Helps tighten the look of pores and balance sebum for improved skin tone.", "ko": "모공 수렴과 피지 조절 도움 및 피부 톤 개선" },
+     "image": null
+    },
+    {
+     "name": { "en": "Mango Seed Butter", "ko": "망고씨 버터" },
+     "desc": { "en": "Forms a natural moisture film to prevent water loss and supply nourishment for active, supple skin.", "ko": "천연 보습막을 형성해 피부 속 수분 증발 차단, 영양공급으로 피부 활력" },
+     "image": null
+    },
+    {
+     "name": { "en": "PHA", "ko": "PHA" },
+     "desc": { "en": "Supports gentle exfoliation, antioxidant care and clearer-looking skin.", "ko": "각질제거, 항산화 및 피부청돈에 도움을 줌" },
+     "image": null
+    }
+   ],
+   "images": []
+  },
+  {
+   "id": "bubble-cleansing-foam",
+   "accent": "#3FA9C9",
+   "name": { "en": "Bubble Pop Cleansing Foam", "ko": "버블 톡톡 클렌징 폼" },
+   "tagline": {
+     "en": "A water gel that pops into bubbles on contact, a 1-minute pore-reset cleanser.",
+     "ko": "수분 젤이 피부에 닿으면 톡톡! 버블로 살아나는 1분 모공 리셋 클렌저"
+   },
+   "spec": {
+     "category": { "en": "Cleansing Foam", "ko": "클렌징 폼" },
+     "type": { "en": "Wash-off", "ko": "워시오프" },
+     "container": { "en": "Airless", "ko": "에어리스" }
+   },
+   "features": [
+    {
+     "title": { "en": "Gel-to-bubble cleanser", "ko": "피부에 닿는 순간 버블이 형성되는 젤 to 버블 클렌저" },
+     "desc": {
+       "en": "A moist gel texture transforms into popping bubbles on skin, a unique transforming foam cleanser that clears pores, impurities and sebum in one step.",
+       "ko": "촉촉한 젤 제형이 톡톡 터지는 버블로 변신! 모공, 노폐물, 피지 청소까지 한 번에 끝내는 유니크한 트랜스포밍 폼 클렌저"
+     }
+    },
+    {
+     "title": { "en": "High-moisture gel type for low-irritation cleansing", "ko": "고수분 촉촉젤 타입으로 저자극 세안" },
+     "desc": {
+       "en": "A high-density gel with 80% water content keeps skin hydrated after cleansing, while fine bubbles gently lift away impurities without irritation.",
+       "ko": "수분 80% 함유된 고밀도 수분 젤 타입이 세안 후에도 촉촉함을 유지하고, 미세 버블이 자극 없이 노폐물만 부드럽게 클렌징"
+     }
+    },
+    {
+     "title": { "en": "An easy 1-minute bubble pack routine", "ko": "간편하게 즐기는 1분 버블 팩 루틴" },
+     "desc": {
+       "en": "Abundant fine bubbles adhere to skin, allowing a 1-minute bubble pack while you cleanse, a multi-step routine in one.",
+       "ko": "풍성하게 올라오는 미세 버블이 피부에 밀착! 세안과 동시에 1분 버블 팩까지 가능한 멀티 루틴 케어"
+     }
+    }
+   ],
+   "mechanism": {
+     "en": "Ingredients that volatilize quickly at skin temperature meet surfactants to form fine bubbles, reaching deep into pores to clear away lodged impurities.",
+     "ko": "사람의 피부 온도에서도 빠르게 휘발되는 성분이 계면활성제와 만나 미세한 거품을 형성해, 모공 속 깊숙이 자리 잡은 노폐물까지 말끔하게 제거"
+   },
+   "key_ingredients": [
+    {
+     "name": { "en": "Iceland Glacial Water", "ko": "아이슬란드 빙하수" },
+     "desc": { "en": "Rich in trace minerals; supports hydration and skin water-absorption.", "ko": "풍부한 미네랄 함유, 수분 공급 및 피부 흡수력 증가" },
+     "image": null
+    },
+    {
+     "name": { "en": "Aloe / Polysaccharide Complex", "ko": "유푸드 리커버리" },
+     "desc": { "en": "Polysaccharides soothe stressed skin and support a refined pore appearance.", "ko": "유푸폴리사카라이드로 손상없이 담아내 피부 진정, 모공 축소 효과가 우수함" },
+     "image": null
+    },
+    {
+     "name": { "en": "AHA", "ko": "AHA" },
+     "desc": { "en": "A low-irritation exfoliating ingredient suited to dry skin.", "ko": "건성피부에 적합한 저자극 각질 케어 성분" },
+     "image": null
+    }
+   ],
+   "images": []
+  }
+ ]
+}

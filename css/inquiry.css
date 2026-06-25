@@ -1,0 +1,28 @@
+/* ===== rb-inquiry-align ===== */
+
+/* Align inquiry body to the same line/width as other pages (margin 20, content pad 56) */
+.thin-page-title + main > .inq-wrap{
+  max-width:none !important;
+  margin-left:20px !important;
+  margin-right:20px !important;
+  padding-left:56px !important;
+  padding-right:56px !important;
+}
+@media(max-width:760px){
+  .thin-page-title + main > .inq-wrap{
+    margin-left:16px !important;margin-right:16px !important;
+    padding-left:22px !important;padding-right:22px !important;
+  }
+}
+
+/* form submission states + consent */
+.fchk--consent{align-items:flex-start;gap:9px;line-height:1.55;font-size:13px;color:#666;margin:4px 0 8px;}
+.fchk--consent input{margin-top:3px;flex-shrink:0;}
+.fchk--consent a{color:#C8602A;text-decoration:underline;text-underline-offset:2px;}
+.fchk--consent .req{color:#C8602A;}
+.form-status{display:none;margin-top:14px;padding:13px 16px;border-radius:10px;font-size:14px;line-height:1.55;}
+.form-status.show{display:block;}
+.form-status--info{background:#f4f4f2;color:#555;}
+.form-status--success{background:rgba(46,160,90,.10);color:#1f7a45;}
+.form-status--error{background:rgba(200,96,42,.10);color:#a94d1f;}
+.fsub:disabled{opacity:.6;cursor:default;}

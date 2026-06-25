@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<script>(function(){try{var m=document.cookie.match(/(?:^|; )havingLang=([^;]+)/);var l=m?m[1]:'en';document.documentElement.setAttribute('lang',l);document.documentElement.setAttribute('data-lang',l);}catch(e){}document.documentElement.className+=(document.documentElement.className?' ':'')+'i18n-pending';setTimeout(function(){document.documentElement.classList.remove('i18n-pending');},1200);})();</script>
+<style>html.i18n-pending body{visibility:hidden}</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Send an Inquiry · Having Corp.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/inquiry.css">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+</head>
+<body class="">
+<nav id="nav" class="site-gnb" aria-label="Global navigation">
+  <div class="gnb-inner">
+    <a class="gnb-logo" href="index.html"><img src="assets/logo.svg" alt="Having" class="gnb-logo__img" onerror="this.outerHTML='Having<b>.</b>'"></a>
+    <ul class="gnb-links">
+      <li class="gnb-item" data-menu="business"><a class="gnb-link" href="finished.html" data-i18n="nav.business">Business</a></li>
+      <li class="gnb-item" data-menu="company"><a class="gnb-link" href="about.html" data-i18n="nav.company">Company</a></li>
+      <li class="gnb-item"><a class="gnb-link" href="inquiry.html" data-i18n="nav.contact">Contact</a></li><li class="gnb-item gnb-lang"><span class="lang-toggle" role="group" aria-label="Language"><button type="button" class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button><span class="lang-sep">/</span><button type="button" class="lang-btn" data-lang="ko" onclick="setLang('ko')">KO</button></span></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="mega-menu" id="menu-business" aria-hidden="true">
+  <div class="mega-inner">
+    <section class="mega-title-col">
+      <div class="mega-kicker" data-i18n="nav.business">Business</div>
+      <h2 data-i18n="nav.business">Business</h2>
+    </section>
+    <section class="mega-list-col">
+      <a class="mega-row" href="ingredients.html">
+        <span data-i18n="footer.ingredients">Ingredients</span>
+        <small data-i18n="mega.ingredients.desc">Cosmetic ingredients and functional actives</small>
+      </a>
+      <a class="mega-row" href="fragrance.html">
+        <span data-i18n="footer.fragrance">Fragrance</span>
+        <small data-i18n="mega.fragrance.desc">Fragrance solutions and scent development</small>
+      </a>
+      <a class="mega-row" href="finished.html">
+        <span data-i18n="footer.finished">Finished Products</span>
+        <small data-i18n="mega.finished.desc">Brand portfolio, SKU lineups, and OEM / ODM formats</small>
+      </a>
+    </section>
+  </div>
+</div>
+
+<div class="mega-menu" id="menu-company" aria-hidden="true">
+  <div class="mega-inner">
+    <section class="mega-title-col">
+      <div class="mega-kicker" data-i18n="nav.company">Company</div>
+      <h2 data-i18n="nav.company">Company</h2>
+    </section>
+    <section class="mega-list-col">
+      <a class="mega-row" href="about.html">
+        <span data-i18n="footer.about">About Us</span>
+        <small data-i18n="mega.about.desc">Company overview and global presence</small>
+      </a>
+      <a class="mega-row" href="team.html">
+        <span data-i18n="footer.leadership">Leadership</span>
+        <small data-i18n="mega.leadership.desc">A message from our founder</small>
+      </a>
+      <a class="mega-row" href="esg.html">
+        <span data-i18n="footer.sustainability">Sustainability</span>
+        <small data-i18n="mega.sustainability.desc">Responsible trade and documentation principles</small>
+      </a>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div aria-modal="true" class="mobile-drawer" id="mobileDrawer" role="dialog" style="display:none;opacity:0;pointer-events:none;">
+<button aria-label="Close menu" class="drawer-close" onclick="if(window.closeDrawer)closeDrawer()" type="button">×</button>
+<a href="#" data-i18n="nav.business">Business</a>
+<a class="drawer-sub" href="ingredients.html" data-i18n="drawer.ingredients">Cosmetic Ingredients</a>
+<a class="drawer-sub" href="fragrance.html" data-i18n="footer.fragrance">Fragrance</a>
+<a class="drawer-sub" href="finished.html" data-i18n="drawer.brands">Brands</a>
+<a class="drawer-sub" href="finished.html" data-i18n="drawer.oemodm">OEM / ODM</a>
+<a href="#" data-i18n="nav.company">Company</a>
+<a class="drawer-sub" href="about.html" data-i18n="footer.about">About Us</a>
+<a class="drawer-sub" href="team.html" data-i18n="footer.leadership">Leadership</a>
+<a class="drawer-sub" href="esg.html" data-i18n="footer.sustainability">Sustainability</a>
+<a class="drawer-sub" href="inquiry.html" data-i18n="nav.contact">Contact</a>
+<div class="drawer-lang"><button type="button" class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button><span class="lang-sep">/</span><button type="button" class="lang-btn" data-lang="ko" onclick="setLang('ko')">한국어</button></div>
+<div class="drawer-contact">
+    <span data-having="address">8F R829, City Plaza, 191 Dongbaekjungang-ro, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea</span>
+  </div>
+</div>
+<section class="thin-page-title" aria-label="Contact">
+<div class="thin-page-title__inner">
+    <div class="thin-page-title__kicker" data-i18n="lead.hero.kicker">COMPANY</div>
+    <h1 class="thin-page-title__title" data-i18n="nav.contact">Contact</h1>
+    <p class="thin-page-title__desc" data-i18n="inq.hero.desc">Send us your product, ingredient, OEM / ODM, or fragrance inquiry and we will review the right Korean partner.</p>
+  </div>
+</section>
+
+<main class="page-transition-content">
+<div class="inq-wrap">
+<div>
+<div class="sl" data-i18n="inq.sl">Get in Touch</div>
+<h2 class="inq-title" data-i18n-html="inq.title">We'll get back<br/>to you within<br/>1–2 business days.</h2>
+<div style="font-size:15px;font-weight:300;color:#666;line-height:1.7;margin-bottom:36px;" data-i18n="inq.lead">Tell us about your product, ingredient, OEM / ODM, or fragrance needs and we'll connect you with the right Korean partner.</div>
+<div class="cd-item"><div class="cd-label" data-i18n="inq.cd.phone">Phone</div><div class="cd-val" data-i18n="inq.cd.phoneVal">Available on request</div></div>
+<div class="cd-item"><div class="cd-label" data-i18n="inq.cd.email">Email</div><div class="cd-val"><a href="mailto:having@having.co.kr">having@having.co.kr</a></div></div>
+<div class="cd-item"><div class="cd-label" data-i18n="inq.cd.address">Address</div><div class="cd-val"><span data-having="address">8F R829, City Plaza, 191 Dongbaekjungang-ro, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea</span></div></div>
+<div class="inq-note" data-i18n="inq.note">Sample requests and product inquiries are welcome. We typically respond within 1–2 business days.</div>
+</div>
+<form class="form" id="inq-form" novalidate>
+<input type="hidden" name="access_key" id="inq-access-key" value=""/>
+<input type="hidden" name="subject" value="New website inquiry — Having Corp."/>
+<input type="hidden" name="from_name" value="Having Corp. Website"/>
+<input type="checkbox" name="botcheck" id="inq-botcheck" style="display:none;position:absolute;left:-9999px;" tabindex="-1" autocomplete="off"/>
+<div class="form-st" data-i18n="inq.st.info">Your Information</div>
+<div class="form-row">
+<div class="fg"><label class="flbl"><span data-i18n="inq.f.name">Name</span> <span>*</span></label><input class="fi" name="Name" placeholder="Full name" data-i18n-ph="inq.ph.name" required type="text"/></div>
+<div class="fg"><label class="flbl"><span data-i18n="inq.f.company">Company</span> <span>*</span></label><input class="fi" name="Company" placeholder="Company name" data-i18n-ph="inq.ph.company" required type="text"/></div>
+</div>
+<div class="form-row">
+<div class="fg"><label class="flbl"><span data-i18n="inq.f.email">Email</span> <span>*</span></label><input class="fi" name="Email" placeholder="your@email.com" required type="email"/></div>
+<div class="fg"><label class="flbl"><span data-i18n="inq.f.phone">Phone</span> <span>*</span></label><input class="fi" name="Phone" placeholder="+82 10 0000 0000" required type="tel"/></div>
+</div>
+<div class="form-row">
+<div class="fg"><label class="flbl"><span data-i18n="inq.f.country">Country</span></label><input class="fi" name="Country" placeholder="Country" data-i18n-ph="inq.ph.country" type="text"/></div>
+<div class="fg"><label class="flbl"><span data-i18n="inq.f.type">Inquiry Type</span></label>
+<select class="fsel" name="Inquiry Type">
+<option value="" data-i18n="inq.opt.select">Select type</option>
+<option value="Product Information" data-i18n="inq.opt.productInfo">Product Information</option>
+<option value="Sample Request" data-i18n="inq.opt.sample">Sample Request</option>
+<option value="Price & MOQ" data-i18n="inq.opt.price">Price &amp; MOQ</option>
+<option value="Partnership" data-i18n="inq.opt.partnership">Partnership</option>
+<option value="Other" data-i18n="inq.opt.other">Other</option>
+</select></div>
+</div>
+<div class="form-st" data-i18n="inq.st.details">Inquiry Details</div>
+<div class="fg">
+<label class="flbl"><span data-i18n="inq.f.area">Business Area</span> <span>*</span></label>
+<div class="fchk-group">
+<label class="fchk"><input type="checkbox" name="Business Area" value="Cosmetic Ingredients"/> <span data-i18n="inq.area.ingredients">Cosmetic Ingredients</span></label>
+<label class="fchk"><input type="checkbox" name="Business Area" value="Finished Products / Brand"/> <span data-i18n="inq.area.finished">Finished Products / Brand</span></label>
+<label class="fchk"><input type="checkbox" name="Business Area" value="OEM / ODM / Private Label"/> <span data-i18n="inq.area.oem">OEM / ODM / Private Label</span></label>
+<label class="fchk"><input type="checkbox" name="Business Area" value="Fragrances"/> <span data-i18n="inq.area.fragrance">Fragrances</span></label>
+<label class="fchk"><input type="checkbox" name="Business Area" value="Other"/> <span data-i18n="inq.area.other">Other</span></label>
+</div>
+</div>
+<div class="fg"><label class="flbl"><span data-i18n="inq.f.message">Message</span> <span>*</span></label><textarea class="ftxt" name="Message" placeholder="Please describe your needs..." data-i18n-ph="inq.ph.message" required></textarea></div>
+<label class="fchk fchk--consent"><input id="inq-consent" required type="checkbox"/> <span data-i18n-html="inq.consent">I have read and agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and consent to the collection and use of my personal information (name, email, phone, company, message) for the purpose of processing this inquiry. <span class="req">*</span></span></label>
+<button class="fsub" id="inq-submit" type="submit" data-i18n="inq.submit">Send Inquiry →</button>
+<p class="form-note" data-i18n="inq.formNote">* Required fields. Your information is used only to respond to your inquiry and is retained for one year after resolution.</p>
+<div class="form-status" id="inq-status" role="status" aria-live="polite"></div>
+</form>
+</div>
+<div aria-hidden="true" style="height:80px"></div></main>
+<footer class="site-footer having-footer">
+  <div class="having-footer__inner">
+    <div class="having-footer__top">
+      <div class="having-footer__brand">
+        <div class="having-footer__logo"><img src="assets/logo.svg" alt="Having" class="having-footer__logo-img" onerror="this.outerHTML='Having<b>.</b>'"></div>
+        <p data-i18n="footer.brandDesc">HAVING connects Korean beauty ingredients, fragrance, finished products, and OEM / ODM capabilities with global partners.</p>
+      </div>
+      <div class="having-footer__col">
+        <div class="having-footer__title" data-i18n="footer.col.business">Business</div>
+        <a href="ingredients.html" data-i18n="footer.ingredients">Ingredients</a>
+        <a href="fragrance.html" data-i18n="footer.fragrance">Fragrance</a>
+        <a href="finished.html" data-i18n="footer.finished">Finished Products</a>
+      </div>
+      <div class="having-footer__col">
+        <div class="having-footer__title" data-i18n="footer.col.company">Company</div>
+        <a href="about.html" data-i18n="footer.about">About Us</a>
+        <a href="team.html" data-i18n="footer.leadership">Leadership</a>
+        <a href="esg.html" data-i18n="footer.sustainability">Sustainability</a>
+        <a href="inquiry.html" data-i18n="footer.contact">Contact</a>
+      </div>
+      <div class="having-footer__col">
+        <div class="having-footer__title" data-i18n="footer.col.contact">Contact</div>
+        <a href="inquiry.html" data-i18n="footer.inquiryForm">Make an Inquiry</a>
+      </div>
+    </div>
+    <div class="having-footer__legal"><span data-having="company">Having Corp.</span>&nbsp;&nbsp;·&nbsp;&nbsp;<span data-i18n="footer.regLabel">Business Registration No.</span> <span data-having="regno">528-86-01549</span><br/><span data-having="address">8F R829, City Plaza, 191 Dongbaekjungang-ro, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea</span></div>
+    <div class="having-footer__bottom">
+      <span><span data-i18n="footer.rights">© HAVING Corp. All rights reserved.</span> &nbsp;·&nbsp; <a href="terms.html" data-i18n="footer.terms">Terms of Service</a> &nbsp;·&nbsp; <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></span>
+      <span data-i18n="footer.tagline">Korean beauty sourcing & export coordination</span>
+    </div>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/inquiry.js"></script>
+</body>
+</html>

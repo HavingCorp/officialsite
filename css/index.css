@@ -1,0 +1,460 @@
+/* having-type-transition-system-v10 */
+
+/* HAVING Type + Transition System v10
+   Intent:
+   1) Keep the premium fade direction, but remove the artificial gradient band.
+   2) Use a solid content sheet to bridge hero -> content, so content never dirty-overlaps hero text.
+   3) Define every text role by fixed desktop/tablet/mobile values. */
+:root{
+  --page-nav-h:72px;
+  --hero-step-p:0;
+  --hero-text-o:1;
+  --hero-bg-o:1;
+  --hero-dim-o:.18;
+  --fp-reveal:0;
+
+  --type-hero:88px;
+  --type-section:52px;
+  --type-card:26px;
+  --type-lead:22px;
+  --type-body:18px;
+  --type-meta:14px;
+  --type-chip:15px;
+  --type-data:17px;
+  --type-nav:16px;
+  --type-footer:13px;
+
+  --lh-hero:.95;
+  --lh-section:1.05;
+  --lh-card:1.15;
+  --lh-lead:1.60;
+  --lh-body:1.72;
+  --lh-meta:1.35;
+  --lh-chip:1.05;
+  --lh-data:1.35;
+}
+@media (max-width:1024px){
+  :root{
+    --type-hero:68px;
+    --type-section:42px;
+    --type-card:24px;
+    --type-lead:21px;
+    --type-body:17px;
+    --type-meta:14px;
+    --type-chip:14px;
+    --type-data:16px;
+    --type-nav:16px;
+    --type-footer:13px;
+  }
+}
+@media (max-width:720px){
+  :root{
+    --page-nav-h:64px;
+    --type-hero:46px;
+    --type-section:32px;
+    --type-card:22px;
+    --type-lead:19px;
+    --type-body:16px;
+    --type-meta:13px;
+    --type-chip:13px;
+    --type-data:15px;
+    --type-nav:16px;
+    --type-footer:12px;
+  }
+}
+
+/* NAV / FOOTER */
+#nav, #nav a, #nav button, .nav-link, .mega-menu, .mega-menu a, .mobile-drawer, .mobile-drawer a{
+  font-size:var(--type-nav) !important;
+  line-height:1.2 !important;
+}
+footer, footer *, .footer-top, .footer-bottom, .ft-tagline{
+  font-size:var(--type-footer) !important;
+  line-height:1.6 !important;
+}
+
+/* TYPE SCALE */
+.page-hero .page-title,
+.page-hero h1{
+  font-size:var(--type-hero) !important;
+  line-height:var(--lh-hero) !important;
+  font-weight:600 !important;
+  letter-spacing:-.055em !important;
+}
+.sh, .section-title, .sf h2, section h2:not(.fp-si-name), article h2{
+  font-size:var(--type-section) !important;
+  line-height:var(--lh-section) !important;
+  font-weight:560 !important;
+  letter-spacing:-.045em !important;
+}
+.card-title, .card h3, .team-name, .member-name, .value-title, .service-title, .solution-title,
+.app-title, .diff-label, .fp-ed-name, .fp-oem-name, .fp-si-name, .fp-mobile-card-name,
+.fp-bi-name, .fp-sidebar-title{
+  font-size:var(--type-card) !important;
+  line-height:var(--lh-card) !important;
+  font-weight:560 !important;
+  letter-spacing:-.025em !important;
+}
+.page-lead, .section-lead, .lead, .cta p, .cta-copy, .inq-lead,
+.page-hero .page-lead{
+  font-size:var(--type-lead) !important;
+  line-height:var(--lh-lead) !important;
+  font-weight:420 !important;
+  letter-spacing:-.01em !important;
+}
+main p, main li, main td, main label,
+.page-transition-content p, .page-transition-content li,
+.ph-text, .tl-tx, .award-item, .rr, .net-name, .net-countries, .app-ex,
+.card-desc, .card-copy, .card-text, .value-desc, .service-desc, .solution-desc, .product-desc,
+.brand-desc, .story-desc, .team-desc, .member-desc, .esg-desc, .inquiry-desc,
+.fp-ed-desc, .fp-ed-body, .fp-story-section-body, .fp-story-market, .fp-oem-desc,
+.fp-si-subtitle, .fp-si-feat, .fp-mobile-card-sub, .inq-note, .form-note, .form-st,
+input, textarea, select{
+  font-size:var(--type-body) !important;
+  line-height:var(--lh-body) !important;
+  font-weight:400 !important;
+}
+.page-eyebrow, .sl, .meta, .label, .tl-yr, .tl-badge, .award-yr, .team-dept, .team-exp,
+.step-num, .brand-cat, .brand-avail, .cd-label, .flbl, table th,
+.fp-bi-num, .fp-ed-idx, .fp-scroll-hint, .fp-sidebar-lbl, .fp-bi-cat, .fp-oem-type,
+.fp-toggle-label, .fp-si-volume, .fp-si-cell-label, .fp-oem-lab, .fp-si-photo-label{
+  font-size:var(--type-meta) !important;
+  line-height:var(--lh-meta) !important;
+  font-weight:500 !important;
+  letter-spacing:.07em !important;
+}
+.cd-val, .fp-bi-sku, .fp-ed-mv, .fp-ed-ml, .fp-si-cell-val, .stat-value, .data-text,
+#ing-count{
+  font-size:var(--type-data) !important;
+  line-height:var(--lh-data) !important;
+  font-weight:500 !important;
+}
+button, .btn, .fp-tab, .fp-toggle-arr{
+  font-size:var(--type-nav) !important;
+}
+
+/* CHIP / TAG / PILL SYSTEM */
+.card-tag, .pill, .chip, .tag, .ing-tag, .brand-tag, .fp-si-badge, .fp-tag, .app-ex span,
+.badge, .status, [class*="tag"], [class*="chip"], [class*="pill"]{
+  font-size:var(--type-chip) !important;
+  line-height:var(--lh-chip) !important;
+  font-weight:500 !important;
+  letter-spacing:-.005em !important;
+  white-space:nowrap !important;
+}
+.card-tag, .pill, .chip, .tag, .ing-tag, .brand-tag, .fp-si-badge, .fp-tag, .badge, .status{
+  display:inline-flex !important;
+  align-items:center !important;
+  min-height:32px !important;
+  padding:8px 14px !important;
+  border-radius:999px !important;
+}
+
+/* HERO -> CONTENT TRANSITION v10
+   No gradient bridge. Content becomes a solid white sheet that rises over the hero.
+   The hero fade can be longer because text/content are separated by the white sheet. */
+#nav{ z-index:1000 !important; }
+.hero-stage{
+  position:relative !important;
+  height:115svh !important;
+  min-height:115svh !important;
+  margin-top:var(--page-nav-h) !important;
+  background:#111 !important;
+  z-index:1 !important;
+  overflow:visible !important;
+}
+.hero-stage .page-hero:not(.fp-page-hero){
+  position:sticky !important;
+  top:var(--page-nav-h) !important;
+  height:calc(100svh - var(--page-nav-h)) !important;
+  min-height:calc(100svh - var(--page-nav-h)) !important;
+  margin-top:0 !important;
+  z-index:1 !important;
+  opacity:var(--hero-bg-o) !important;
+  transform:none !important;
+  overflow:hidden !important;
+  will-change:opacity;
+}
+.hero-stage .page-hero:not(.fp-page-hero)::after{
+  opacity:calc(.26 + (var(--hero-dim-o) * .54)) !important;
+  transition:none !important;
+}
+.hero-stage .page-hero:not(.fp-page-hero) .page-eyebrow,
+.hero-stage .page-hero:not(.fp-page-hero) .page-title,
+.hero-stage .page-hero:not(.fp-page-hero) .page-lead{
+  opacity:var(--hero-text-o) !important;
+  transform:none !important;
+  will-change:opacity;
+}
+.hero-stage::after{ display:none !important; content:none !important; }
+.page-transition-content{
+  position:relative !important;
+  z-index:5 !important;
+  margin-top:-18svh !important;
+  min-height:100vh !important;
+  background:#fff !important;
+  opacity:1 !important;
+  transform:none !important;
+  border-radius:36px 36px 0 0 !important;
+  box-shadow:0 -42px 90px rgba(0,0,0,.24) !important;
+  overflow:hidden !important;
+}
+.page-transition-content::before{
+  content:"" !important;
+  position:absolute !important;
+  left:0; right:0; top:0;
+  height:42px;
+  background:#fff;
+  display:block !important;
+  z-index:0;
+}
+.page-transition-content > *{ position:relative; z-index:1; }
+.page-transition-content > .s:first-child,
+.page-transition-content > .sf:first-child{
+  padding-top:56px !important;
+}
+.page-transition-content > div:first-child[style*="padding"]{
+  padding-top:56px !important;
+}
+
+/* Finished page keeps a showcase overlay, but uses the same longer phase without a fake gradient band. */
+#fp-reveal-stage{
+  position:relative !important;
+  height:115svh !important;
+  min-height:115svh !important;
+  margin-top:var(--page-nav-h) !important;
+  background:#111 !important;
+  overflow:visible !important;
+}
+.fp-page-hero{
+  position:sticky !important;
+  top:var(--page-nav-h) !important;
+  height:calc(100svh - var(--page-nav-h)) !important;
+  min-height:calc(100svh - var(--page-nav-h)) !important;
+  margin-top:0 !important;
+  z-index:1 !important;
+  opacity:var(--hero-bg-o) !important;
+  transform:none !important;
+}
+.fp-page-hero::after{ opacity:calc(.24 + (var(--hero-dim-o) * .54)) !important; }
+.fp-page-hero .page-eyebrow,
+.fp-page-hero .page-title,
+.fp-page-hero .page-lead,
+.fp-page-hero .fp-scroll-hint{
+  opacity:var(--hero-text-o) !important;
+  transform:none !important;
+}
+#fp-scroll-stage{
+  position:sticky !important;
+  top:var(--page-nav-h) !important;
+  z-index:8 !important;
+  height:calc(100svh - var(--page-nav-h)) !important;
+  min-height:calc(100svh - var(--page-nav-h)) !important;
+  margin-top:calc(-1 * (100svh - var(--page-nav-h))) !important;
+  pointer-events:none !important;
+}
+#fp-root{
+  height:calc(100svh - var(--page-nav-h)) !important;
+  opacity:var(--fp-reveal) !important;
+  transform:none !important;
+  transition:none !important;
+  pointer-events:none !important;
+  will-change:opacity;
+}
+#fp-root.fp-revealed{ pointer-events:auto !important; }
+
+/* Finished product cards */
+#fp-sku-inner{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fill,minmax(400px,1fr)) !important;
+  gap:32px !important;
+  padding:30px 0 60px !important;
+  overflow:visible !important;
+}
+.fp-si.fp-si-card{
+  min-height:500px !important;
+  border-radius:26px !important;
+  overflow:hidden !important;
+}
+.fp-si-photo{ height:305px !important; flex-basis:305px !important; min-height:305px !important; }
+.fp-si-body{ padding:28px 28px 32px !important; gap:15px !important; }
+.fp-si-card .fp-si-name{ font-size:var(--type-card) !important; line-height:1.18 !important; font-weight:650 !important; }
+
+@media (max-width:900px){
+  .hero-stage{ height:105svh !important; min-height:105svh !important; }
+  .page-transition-content{
+    margin-top:-12svh !important;
+    border-radius:28px 28px 0 0 !important;
+  }
+  .page-transition-content > .s:first-child,
+  .page-transition-content > .sf:first-child,
+  .page-transition-content > div:first-child[style*="padding"]{ padding-top:36px !important; }
+  #fp-reveal-stage{ height:105svh !important; min-height:105svh !important; }
+  #fp-sku-inner{ display:flex !important; overflow-x:auto !important; overflow-y:hidden !important; gap:20px !important; padding:20px 0 36px !important; -webkit-overflow-scrolling:touch; }
+  .fp-si.fp-si-card{ flex:0 0 88vw !important; max-width:460px !important; min-height:430px !important; }
+  .fp-si-photo{ height:245px !important; flex-basis:245px !important; min-height:245px !important; }
+}
+@media (prefers-reduced-motion: reduce){
+  :root{ --hero-text-o:1; --hero-bg-o:1; --hero-dim-o:1; --fp-reveal:1; }
+  .hero-stage{ height:auto !important; min-height:0 !important; overflow:visible !important; }
+  .hero-stage .page-hero:not(.fp-page-hero){ position:relative !important; top:auto !important; }
+  .page-transition-content{ margin-top:0 !important; opacity:1 !important; background:#fff !important; border-radius:0 !important; box-shadow:none !important; }
+  #fp-scroll-stage{ position:relative !important; margin-top:0 !important; pointer-events:auto !important; }
+  #fp-root{ opacity:1 !important; pointer-events:auto !important; }
+}
+
+/* having-a-reveal-system-v11 */
+
+/* A. Fade-up reveal system v11
+   Applies to all pages except Finished Products.
+   - Hero scrolls normally.
+   - No sticky hero, no white sheet overlap, no gradient bridge.
+   - Content sections reveal with a restrained fade-up.
+*/
+html{ scroll-behavior:smooth; }
+.hero-stage{
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+  position:relative !important;
+}
+.hero-stage::after,
+.hero-stage .page-hero:not(.fp-page-hero)::after{
+  display:none !important;
+  content:none !important;
+}
+.hero-stage .page-hero:not(.fp-page-hero){
+  position:relative !important;
+  top:auto !important;
+  height:auto !important;
+  min-height:calc(100svh - var(--page-nav-h, 72px)) !important;
+  opacity:1 !important;
+  transform:none !important;
+}
+.hero-stage .page-hero:not(.fp-page-hero) .page-eyebrow,
+.hero-stage .page-hero:not(.fp-page-hero) .page-title,
+.hero-stage .page-hero:not(.fp-page-hero) .page-lead{
+  opacity:1 !important;
+  transform:none !important;
+}
+.page-transition-content{
+  margin-top:0 !important;
+  opacity:1 !important;
+  transform:none !important;
+  background:#fff !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+.page-transition-content::before{
+  display:none !important;
+  content:none !important;
+}
+.page-transition-content > *{
+  position:relative;
+  z-index:1;
+}
+.page-transition-content > .s:first-child,
+.page-transition-content > .sf:first-child,
+.page-transition-content > section:first-child,
+.page-transition-content > div:first-child{
+  padding-top:72px !important;
+}
+.page-transition-content > .s,
+.page-transition-content > .sf,
+.page-transition-content > section,
+.page-transition-content > div,
+.a-reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .78s cubic-bezier(.22,.61,.36,1), transform .78s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.page-transition-content > .s.is-visible,
+.page-transition-content > .sf.is-visible,
+.page-transition-content > section.is-visible,
+.page-transition-content > div.is-visible,
+.a-reveal.is-visible{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+@media (max-width: 900px){
+  .page-transition-content > .s:first-child,
+  .page-transition-content > .sf:first-child,
+  .page-transition-content > section:first-child,
+  .page-transition-content > div:first-child{
+    padding-top:56px !important;
+  }
+  .page-transition-content > .s,
+  .page-transition-content > .sf,
+  .page-transition-content > section,
+  .page-transition-content > div,
+  .a-reveal{
+    transform:translateY(20px);
+    transition-duration:.62s;
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .page-transition-content > .s,
+  .page-transition-content > .sf,
+  .page-transition-content > section,
+  .page-transition-content > div,
+  .a-reveal{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+}
+
+/* rb-cta2 */
+
+.rb-cta2-band{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#f6f6f5 0%,#ececeb 100%) !important;
+  border:1px solid rgba(17,17,17,.05) !important;
+  border-radius:28px !important;
+  margin:10px 20px 88px !important;
+}
+.rb-cta2-band::before{
+  content:"";position:absolute;inset:-35%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(42% 42% at 28% 30%, rgba(200,96,42,.07), transparent 72%),
+    radial-gradient(46% 46% at 72% 66%, rgba(120,168,122,.07), transparent 72%),
+    radial-gradient(40% 40% at 58% 24%, rgba(150,150,150,.10), transparent 70%);
+  filter:blur(34px);
+  animation:rbGlow 20s ease-in-out infinite alternate;
+}
+@keyframes rbGlow{
+  0%{transform:translate(0,0) scale(1) rotate(0deg);}
+  50%{transform:translate(5%,3%) scale(1.12) rotate(5deg);}
+  100%{transform:translate(-3%,-2%) scale(1.06) rotate(-4deg);}
+}
+.rb-cta2{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:92px 40px 100px;text-align:center;}
+.rb-cta2__eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b5541f;margin:0 0 18px;}
+.rb-cta2__title{font-size:clamp(32px,4.4vw,56px);font-weight:700;letter-spacing:-.03em;line-height:1.04;color:#1a1a1a;margin:0 0 40px;}
+.rb-cta2__bar{
+  position:relative;display:flex;align-items:center;gap:14px;
+  width:100%;max-width:600px;margin:0 auto;
+  background:rgba(255,255,255,.45);
+  -webkit-backdrop-filter:blur(18px) saturate(1.5);
+  backdrop-filter:blur(18px) saturate(1.5);
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:999px;padding:9px 9px 9px 28px;
+  box-shadow:0 14px 44px rgba(17,17,17,.10),0 2px 8px rgba(17,17,17,.05);
+  text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease;
+}
+.rb-cta2__bar:hover{transform:translateY(-2px);background:rgba(255,255,255,.6);box-shadow:0 20px 56px rgba(17,17,17,.14),0 3px 12px rgba(17,17,17,.06);}
+.rb-cta2__ph{flex:1 1 auto;text-align:left;color:#5f5b56;font-size:16px;font-weight:500;}
+.rb-cta2__go{flex:0 0 auto;width:50px;height:50px;border-radius:50%;background:#1a1a1a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;transition:background-color .18s ease;}
+.rb-cta2__bar:hover .rb-cta2__go{background:#C8602A;}
+@media(max-width:760px){
+  .rb-cta2-band{margin:10px 16px 64px !important;}
+  .rb-cta2{padding:60px 20px 70px;}
+  .rb-cta2__bar{max-width:none;padding-left:22px;}
+  .rb-cta2__ph{font-size:15px;}
+  .rb-cta2__go{width:44px;height:44px;font-size:18px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .rb-cta2-band::before{animation:none;}
+  .rb-cta2__bar,.rb-cta2__go{transition:none;}
+}
