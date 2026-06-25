@@ -1383,19 +1383,12 @@ body{
   object-position:left center !important;
   display:block !important;
 }
-/* fallback when a logo image is missing: colored monogram badge */
-.fp-card-logo.is-fallback{
-  width:56px !important;
-  height:56px !important;
-  flex:0 0 auto !important;
-  border-radius:14px !important;
-  background:var(--acc,#C8602A) !important;
-  color:#fff !important;
+/* OEM / ODM card text label (no logo image) */
+.fp-card-oemlabel{
+  font-size:22px !important;
   font-weight:800 !important;
-  font-size:20px !important;
-  letter-spacing:.02em !important;
-  align-items:center !important;
-  justify-content:center !important;
+  letter-spacing:-.02em !important;
+  color:#C8602A !important;
 }
 .fp-card-desc{
   margin:0 !important;
@@ -1460,7 +1453,7 @@ body{
   min-height:260px !important;
   display:flex !important;
   flex-direction:column !important;
-  justify-content:space-between !important;
+  justify-content:flex-start !important;
   padding:18px !important;
   border:1px solid rgba(17,17,17,.10) !important;
   border-radius:20px !important;
@@ -1498,13 +1491,29 @@ body{
 }
 
 .fp-item-meta{
-  margin-top:20px !important;
+  margin-top:auto !important;
   padding-top:14px !important;
   border-top:1px solid rgba(17,17,17,.08) !important;
   font-size:11px !important;
   line-height:1.5 !important;
   color:#777 !important;
 }
+
+/* SKU card image slot */
+.fp-item-img{
+  width:100% !important;
+  aspect-ratio:1/1 !important;
+  border-radius:12px !important;
+  overflow:hidden !important;
+  background:#f4f2ef !important;
+  margin-bottom:14px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.fp-item-img img{width:100% !important;height:100% !important;object-fit:cover !important;display:block !important;}
+.fp-item-img.is-empty{background:linear-gradient(135deg,#f5f3f0,#eceae6) !important;}
+.fp-item-body{display:flex !important;flex-direction:column !important;}
 
 .fp-modal{
   position:fixed !important;
@@ -1779,6 +1788,19 @@ body.fp-detail-mode #fp-hero-back{display:inline-flex;}
 .fp-m-secp{margin:0;font-size:13px;line-height:1.7;color:#555}
 
 .fp-m-list li b{color:#222}
+
+.fp-m-spec{display:flex;flex-direction:column;gap:0}
+.fp-spec-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid rgba(17,17,17,.08);font-size:13px}
+.fp-spec-row span{color:#888}
+.fp-spec-row b{color:#222;font-weight:600;text-align:right}
+.fp-m-badge{display:inline-block;padding:6px 13px;border-radius:999px;font-size:12.5px;font-weight:600;background:#f4f2ef;color:#777;border:1px solid rgba(17,17,17,.08)}
+.fp-m-badge.is-yes{background:rgba(200,96,42,.10);color:#C8602A;border-color:rgba(200,96,42,.25)}
+.fp-m-inci{border:1px solid rgba(17,17,17,.10);border-radius:12px;padding:14px 16px;background:#faf9f7}
+.fp-m-inci summary{cursor:pointer;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#999;list-style:none}
+.fp-m-inci summary::-webkit-details-marker{display:none}
+.fp-m-inci summary::after{content:" +";color:#C8602A}
+.fp-m-inci[open] summary::after{content:" \2212";color:#C8602A}
+.fp-m-inci .fp-m-secp{margin-top:10px;font-size:12px;color:#666;word-break:break-word}
 
 .fp-m-ingcards{display:flex;flex-direction:column;gap:12px}
 
