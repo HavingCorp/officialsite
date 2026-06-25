@@ -140,7 +140,7 @@
 /* ===== Leadership editorial redesign (v4) ===== */
 /* CEO: body+signature left, large cut-out portrait right (flush bottom + baseline line) */
 .rb-band--white > .rb-wrap{padding-bottom:0 !important;}
-.rb-ceo{display:grid;grid-template-columns:1fr minmax(420px,540px);gap:48px;align-items:end;}
+.rb-ceo{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,540px);gap:clamp(32px,4vw,72px);align-items:end;max-width:1240px;margin-inline:auto;}
 .rb-ceo__body{align-self:start;display:flex;flex-direction:column;gap:20px;padding-bottom:84px;}
 .rb-ceo__body .rb-message{max-width:54ch;}
 .rb-ceo__body .rb-message--lead{position:relative;padding-left:22px;font-size:21px;line-height:1.6;color:#1d1d1b;font-weight:400;}
@@ -150,8 +150,8 @@
 .rb-ceo__role{font-size:12.5px;font-weight:500;letter-spacing:.04em;color:#9c968e;}
 /* portrait: bigger, nudged toward right edge, baseline line under, flush at section bottom */
 .rb-ceo__portrait{position:relative;margin:0 -16px 0 0;align-self:end;border-bottom:1px solid #e6e0d8;transform:translateX(-40px);}
-.rb-ceo__halo{position:absolute;top:0;left:50%;transform:translateX(-50%);width:118%;aspect-ratio:1;z-index:0;
-  background:radial-gradient(circle at 50% 40%, #F3E8DD 0%, #F6F1EB 42%, rgba(246,241,235,0) 68%);}
+.rb-ceo__halo{position:absolute;top:-12%;left:50%;transform:translateX(-50%);width:132%;aspect-ratio:1;z-index:0;
+  background:radial-gradient(circle at 50% 42%, #F3E8DD 0%, #F6F1EB 46%, rgba(246,241,235,0) 70%);}
 .rb-ceo__portrait img{position:relative;z-index:1;width:100%;max-width:540px;height:auto;display:block;margin:0 auto;}
 
 /* Philosophy: single vertical flow — quote (wrapped in marks) then description */
