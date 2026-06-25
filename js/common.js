@@ -332,3 +332,36 @@ window.addEventListener('DOMContentLoaded', function() {
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
+
+// noid
+/* Back-to-top button (global, all pages) */
+(function(){
+  function init(){
+    if(document.querySelector('.to-top')) return;
+    var btn=document.createElement('button');
+    btn.type='button';
+    btn.className='to-top';
+    btn.setAttribute('aria-label','Scroll to top');
+    btn.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5l-7 7m7-7l7 7m-7-7v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    document.body.appendChild(btn);
+    var shown=false, threshold=400;
+    function onScroll(){
+      var y=window.pageYOffset||document.documentElement.scrollTop||0;
+      var show=y>threshold;
+      if(show!==shown){ shown=show; btn.classList.toggle('is-visible',show); }
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',onScroll,{passive:true});
+    onScroll();
+    btn.addEventListener('click',function(){
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var start=window.pageYOffset||document.documentElement.scrollTop||0;
+      if(reduce||start<=0){ window.scrollTo(0,0); return; }
+      var dur=320, t0=null;
+      function ease(p){ return 1-Math.pow(1-p,3); }
+      function step(ts){ if(t0==null)t0=ts; var p=Math.min((ts-t0)/dur,1); window.scrollTo(0,Math.round(start*(1-ease(p)))); if(p<1) requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
