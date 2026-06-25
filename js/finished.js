@@ -113,8 +113,7 @@
     function renderBrand(b){
       setHero(b.name||'Brand', brandCat(b), t('brand'));
       var lg=document.getElementById('fp-detail-logo');
-      if(b.logo){ lg.className='fp-card-logo'; lg.style.display=''; lg.innerHTML='<img src="'+esc(b.logo)+'" alt="'+esc(b.name)+'" onerror="this.parentNode.style.display=\'none\';">'; }
-      else { lg.style.display='none'; lg.innerHTML=''; }
+      if(lg){ lg.style.display='none'; lg.innerHTML=''; }
       document.getElementById('fp-detail-title').textContent=b.name||'Brand';
       document.getElementById('fp-detail-desc').textContent=brandDesc(b);
       var ps=products(b);
