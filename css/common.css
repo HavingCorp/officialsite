@@ -3078,3 +3078,8 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
   #nav.site-gnb .gnb-links .gnb-item:not(.gnb-lang){ display:none !important; }
   #nav.site-gnb .hamburger{ display:flex !important; }
 }
+
+/* mobile drawer: hide redundant close button & language toggle
+   (top bar already provides the × close and the EN/KO toggle) */
+.mobile-drawer .drawer-close{ display:none !important; }
+.mobile-drawer .drawer-lang{ display:none !important; }
