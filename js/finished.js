@@ -155,6 +155,9 @@
         var d=L(p.description);
         var metaBits=[]; if(L(p.type)) metaBits.push(L(p.type)); if(p.volume) metaBits.push(p.volume);
         var concepts=(p.concepts||[]).filter(Boolean);
+        var feats=(p.features||[]);
+        var keyIngs=(p.key_ingredients||[]);
+        var mech=L(p.mechanism)||'';
         var certs=(p.certifications||[]).concat(p.test_reports||[]).filter(Boolean);
         var inci=L(p.inci)||'';
         var pb=(p.private_label!=null)?p.private_label:(b.private_label!=null?b.private_label:null);
@@ -163,6 +166,9 @@
           '<div class="fp-m-meta">'+metaBits.map(function(x){return '<span>'+esc(x)+'</span>';}).join('')+'</div>'+
           (d?'<p class="fp-m-desc">'+esc(d.replace(/\n+/g,' ').trim())+'</p>':'')+
           (concepts.length?'<div class="fp-m-chips">'+concepts.map(function(x){return '<span class="fp-chip">'+esc(L(x))+'</span>';}).join('')+'</div>':'')+
+          (feats.length?'<div class="fp-m-sec"><h4>'+esc(t('features'))+'</h4><ul class="fp-m-list">'+feats.map(function(ft){return '<li><b>'+esc(L(ft.title))+'</b><br>'+esc(L(ft.desc))+'</li>';}).join('')+'</ul></div>':'')+
+          (keyIngs.length?'<div class="fp-m-sec"><h4>'+esc(t('keyIng'))+'</h4><div class="fp-m-ingcards">'+keyIngs.map(function(ki){return '<div class="fp-m-ingcard"><div class="fp-m-ingdot" style="--acc:'+esc(b.accent||'#C8602A')+'">'+esc((L(ki.name)||'?').slice(0,2))+'</div><div><b>'+esc(L(ki.name))+'</b><span>'+esc(L(ki.desc))+'</span></div></div>';}).join('')+'</div></div>':'')+
+          (mech?'<div class="fp-m-sec"><h4>'+esc(t('mechanism'))+'</h4><p class="fp-m-secp">'+esc(mech)+'</p></div>':'')+
           (spec.length?'<div class="fp-m-sec"><h4>'+esc(t('spec'))+'</h4><div class="fp-m-spec">'+spec.map(function(s){return '<div class="fp-spec-row"><span>'+esc(s[0])+'</span><b>'+esc(s[1])+'</b></div>';}).join('')+'</div></div>':'')+
           (certs.length?'<div class="fp-m-sec"><h4>'+esc(t('certs'))+'</h4><ul class="fp-m-list">'+certs.map(function(x){return '<li>'+esc(L(x))+'</li>';}).join('')+'</ul></div>':'')+
           (inci?'<details class="fp-m-sec fp-m-inci"><summary>'+esc(t('inci'))+'</summary><p class="fp-m-secp">'+esc(inci)+'</p></details>':'')+
