@@ -44,8 +44,8 @@ nav {
   font-weight: 500; line-height: 1.4;
   letter-spacing: -0.025em; color: #fff;
   max-width: 900px; margin-bottom: 44px;
-  word-break: normal;
-  overflow-wrap: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   hyphens: none;
   opacity: 0;
   transform: translateY(12px);
@@ -347,8 +347,8 @@ nav.menu-open .nav-top {
   font-weight: 500; line-height: 1.4;
   letter-spacing: -0.025em; color: #fff;
   max-width: 760px; margin-bottom: 44px;
-  word-break: normal;
-  overflow-wrap: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   hyphens: none;
 }
 
@@ -582,7 +582,7 @@ nav.menu-open .nav-top {
 .ct-sub {
   font-size: 17px; font-weight: 300; line-height: 1.7;
   color: #888; max-width: 560px; margin-bottom: 48px;
-  word-break: normal; hyphens: none;
+  word-break: keep-all; hyphens: none;
 }
 
 .ct-actions { display: flex; gap: 12px; align-items: center; }
@@ -3091,4 +3091,16 @@ body:not(.home) .thin-page-title__inner > *{position:relative;z-index:2;}
 @media (prefers-reduced-motion: reduce){
   .to-top{ transition:opacity .2s ease, visibility .2s; transform:none; }
   .to-top.is-visible{ transform:none; }
+}
+
+/* === global Korean line-breaking: break at word boundaries, not mid-syllable === */
+body{ word-break:keep-all; overflow-wrap:break-word; }
+
+/* === mobile GNB: show hamburger, hide inline links (keep language toggle) === */
+.hamburger{ display:none; }
+@media (max-width:900px){
+  #nav.site-gnb .gnb-inner{ justify-content:flex-start !important; gap:12px !important; }
+  #nav.site-gnb .gnb-links{ margin-left:auto !important; gap:10px !important; }
+  #nav.site-gnb .gnb-links .gnb-item:not(.gnb-lang){ display:none !important; }
+  #nav.site-gnb .hamburger{ display:flex !important; }
 }
