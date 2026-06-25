@@ -33,6 +33,8 @@
         notePrep:'\uC774 \uBE0C\uB79C\uB4DC\uC758 \uC81C\uD488 \uC0C1\uC138 \uC815\uBCF4\uB294 \uC900\uBE44 \uC911\uC785\uB2C8\uB2E4.', noteContact:'\uBB38\uC758\uD558\uAE30', noteTail:'\uD604\uC7AC \uB77C\uC778\uC5C5\uACFC \uC0AC\uC591\uC744 \uC548\uB0B4\uD574 \uB4DC\uB9BD\uB2C8\uB2E4.',
         loading:'\uBE0C\uB79C\uB4DC \uBD88\uB7EC\uC624\uB294 \uC911\u2026' }
     };
+    Object.assign(UI.en,{spec:'Specifications',volume:'Volume',shelfLife:'Shelf life',functional:'Functional type',origin:'Country of origin',certs:'Certifications & test reports',inci:'Full ingredients (INCI)',pb:'Private label (PB / OEM)',pbYes:'Available',pbNo:'On request',markets:'Currently sold in',concept:'Concept'});
+    Object.assign(UI.ko,{spec:'사양',volume:'용량',shelfLife:'유통기한',functional:'기능성',origin:'원산지',certs:'인증 · 시험성적서',inci:'전성분 (INCI)',pb:'PB · 자체 브랜드',pbYes:'가능',pbNo:'문의',markets:'현재 판매 지역',concept:'컨셉'});
     function lang(){ var l=(document.documentElement.getAttribute('data-lang')||document.documentElement.lang||'en'); return l.slice(0,2)==='ko'?'ko':'en'; }
     function t(k){ return (UI[lang()]||UI.en)[k] || UI.en[k] || ''; }
     function L(v){ if(v==null) return ''; if(typeof v==='string') return v; return v[lang()]||v.en||v.ko||''; }
@@ -44,11 +46,11 @@
     function pType(p){ return L(p&&p.type)||'Product'; }
     function brandDesc(b){ return L(b&&b.description)||''; }
     function cardLogoHTML(b){
-      var acc=esc((b&&b.accent)||'#C8602A'), mono=esc(monogram(b&&b.name)), nm=esc(b&&b.name);
+      var nm=esc(b&&b.name);
       if(b&&b.logo){
-        return '<div class="fp-card-logo" style="--acc:'+acc+'"><img src="'+esc(b.logo)+'" alt="'+nm+'" onerror="var p=this.parentNode;p.classList.add(\'is-fallback\');p.textContent=\''+mono+'\';"></div>';
+        return '<div class="fp-card-logo"><img src="'+esc(b.logo)+'" alt="'+nm+'" onerror="this.parentNode.style.display=\'none\';"></div>';
       }
-      return '<div class="fp-card-logo is-fallback" style="--acc:'+acc+'">'+mono+'</div>';
+      return '';
     }
     function brandCat(b){ return L(b&&b.category)|| (lang()==='ko'?'\uD55C\uAD6D \uBDF0\uD2F0':'Korean Beauty'); }
 
@@ -104,28 +106,31 @@
           '<p class="fp-card-desc">'+esc(brandDesc(b).slice(0,170))+'</p></article>';
       }).join('');
       var oem='<article class="fp-card oem" tabindex="0" data-card="oem">'+
-        '<div class="fp-card-logo is-fallback" style="--acc:#C8602A">OE</div>'+
+        '<div class="fp-card-oemlabel">OEM / ODM</div>'+
         '<p class="fp-card-desc">'+esc(t('oemCardDesc'))+'</p></article>';
       cardGrid.innerHTML=cards+oem;
     }
     function renderBrand(b){
       setHero(b.name||'Brand', brandCat(b), t('brand'));
-      var lg=document.getElementById('fp-detail-logo'); lg.outerHTML=logoHTML(b,'fp-logo--lg').replace('<span class="fp-logo','<span id="fp-detail-logo" class="fp-logo');
+      var lg=document.getElementById('fp-detail-logo');
+      if(b.logo){ lg.className='fp-card-logo'; lg.style.display=''; lg.innerHTML='<img src="'+esc(b.logo)+'" alt="'+esc(b.name)+'" onerror="this.parentNode.style.display=\'none\';">'; }
+      else { lg.style.display='none'; lg.innerHTML=''; }
       document.getElementById('fp-detail-title').textContent=b.name||'Brand';
       document.getElementById('fp-detail-desc').textContent=brandDesc(b);
-      var meta=[]; if(b.manufacturer) meta.push([t('manufacturer'),b.manufacturer]); if(b.founded) meta.push([t('founded'),b.founded]);
-      if(b.category) meta.push([t('category'),L(b.category)]);
-      var ps=products(b); meta.push([t('products'), ps.length? ps.length+' '+t('skus'): t('onRequest')]);
-      document.getElementById('fp-detail-meta').innerHTML=meta.map(function(m){return '<div class="fp-meta-row"><span>'+esc(m[0])+'</span><b>'+esc(m[1])+'</b></div>';}).join('');
+      var ps=products(b);
+      document.getElementById('fp-detail-meta').innerHTML='';
       var sig=(b.signature_ingredients||[]).slice(0,8);
       document.getElementById('fp-detail-sig').innerHTML= sig.length? ('<div class="fp-sig-label">'+esc(t('signature'))+'</div>'+sig.map(function(s){return '<span class="fp-chip">'+esc(L(s))+'</span>';}).join('')):'';
       if(!ps.length){ itemGrid.innerHTML=''; itemNote.hidden=false;
         itemNote.innerHTML=esc(t('notePrep'))+' <a href="inquiry.html">'+esc(t('noteContact'))+'</a> '+esc(t('noteTail'));
       }else{ itemNote.hidden=true;
         itemGrid.innerHTML=ps.map(function(p,i){
-          var hi=p.key_ingredients&&p.key_ingredients.length, d=L(p.description);
-          return '<article class="fp-item" tabindex="0" data-kind="sku" data-index="'+i+'"><div><div class="fp-item-type">'+esc(pType(p))+'</div><h3>'+esc(pName(p))+'</h3>'+
-            (d?'<p>'+esc(d.split('\n')[0].slice(0,110))+'</p>':'')+'</div><div class="fp-item-meta">'+esc(p.volume||'')+(hi?'<span class="fp-item-flag">'+esc(t('keyIng'))+'</span>':'')+'</div></article>';
+          var d=L(p.description), img=(p.images&&p.images.length?p.images[0]:(p.image||''));
+          return '<article class="fp-item" tabindex="0" data-kind="sku" data-index="'+i+'">'+
+            '<div class="fp-item-img'+(img?'':' is-empty')+'">'+(img?'<img src="'+esc(img)+'" alt="'+esc(pName(p))+'" onerror="this.parentNode.classList.add(\'is-empty\');this.remove();">':'')+'</div>'+
+            '<div class="fp-item-body"><div class="fp-item-type">'+esc(pType(p))+'</div><h3>'+esc(pName(p))+'</h3>'+
+            (d?'<p>'+esc(d.split('\n')[0].slice(0,90))+'</p>':'')+'</div>'+
+            '<div class="fp-item-meta">'+esc(p.volume||'')+'</div></article>';
         }).join('');
       }
     }
@@ -147,13 +152,21 @@
       if(m.kind==='sku'){
         var b=m.brand, p=m.product;
         gal.innerHTML=galleryHTML(b.accent,p.images,monogram(b.name),pType(p));
-        var meta=[]; if(L(p.type)) meta.push(L(p.type)); if(p.volume) meta.push(p.volume); if(p.sku) meta.push(p.sku);
-        var ing=(p.key_ingredients||[]), ben=(p.benefits||[]), d=L(p.description);
+        var d=L(p.description);
+        var metaBits=[]; if(L(p.type)) metaBits.push(L(p.type)); if(p.volume) metaBits.push(p.volume);
+        var concepts=(p.concepts||[]).filter(Boolean);
+        var certs=(p.certifications||[]).concat(p.test_reports||[]).filter(Boolean);
+        var inci=L(p.inci)||'';
+        var pb=(p.private_label!=null)?p.private_label:(b.private_label!=null?b.private_label:null);
+        var spec=[]; if(p.volume) spec.push([t('volume'),p.volume]); if(p.shelf_life) spec.push([t('shelfLife'),p.shelf_life]); if(L(p.functional)) spec.push([t('functional'),L(p.functional)]); if(p.origin) spec.push([t('origin'),L(p.origin)]);
         main.innerHTML='<div class="fp-m-brand">'+esc(b.name||'')+'</div><h3>'+esc(pName(p))+'</h3>'+
-          '<div class="fp-m-meta">'+meta.map(function(x){return '<span>'+esc(x)+'</span>';}).join('')+'</div>'+
+          '<div class="fp-m-meta">'+metaBits.map(function(x){return '<span>'+esc(x)+'</span>';}).join('')+'</div>'+
           (d?'<p class="fp-m-desc">'+esc(d.replace(/\n+/g,' ').trim())+'</p>':'')+
-          (ing.length?'<div class="fp-m-sec"><h4>'+esc(t('keyIng'))+'</h4><div class="fp-m-chips">'+ing.map(function(x){return '<span class="fp-chip">'+esc(L(x))+'</span>';}).join('')+'</div></div>':'')+
-          (ben.length?'<div class="fp-m-sec"><h4>'+esc(t('benefits'))+'</h4><ul class="fp-m-list">'+ben.map(function(x){return '<li>'+esc(L(x))+'</li>';}).join('')+'</ul></div>':'')+
+          (concepts.length?'<div class="fp-m-chips">'+concepts.map(function(x){return '<span class="fp-chip">'+esc(L(x))+'</span>';}).join('')+'</div>':'')+
+          (spec.length?'<div class="fp-m-sec"><h4>'+esc(t('spec'))+'</h4><div class="fp-m-spec">'+spec.map(function(s){return '<div class="fp-spec-row"><span>'+esc(s[0])+'</span><b>'+esc(s[1])+'</b></div>';}).join('')+'</div></div>':'')+
+          (certs.length?'<div class="fp-m-sec"><h4>'+esc(t('certs'))+'</h4><ul class="fp-m-list">'+certs.map(function(x){return '<li>'+esc(L(x))+'</li>';}).join('')+'</ul></div>':'')+
+          (inci?'<details class="fp-m-sec fp-m-inci"><summary>'+esc(t('inci'))+'</summary><p class="fp-m-secp">'+esc(inci)+'</p></details>':'')+
+          (pb!=null?'<div class="fp-m-sec"><h4>'+esc(t('pb'))+'</h4><span class="fp-m-badge'+(pb?' is-yes':'')+'">'+esc(pb?t('pbYes'):t('pbNo'))+'</span></div>':'')+
           '<a class="fp-m-cta" href="inquiry.html?product='+encodeURIComponent((b.name||'')+' - '+pName(p))+'">'+esc(t('inquire'))+'</a>';
       }else{
         var f=m.format;
