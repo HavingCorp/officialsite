@@ -43,6 +43,13 @@
     function pName(p){ return L(p&&p.name)||(p&&p.sku)||'Product'; }
     function pType(p){ return L(p&&p.type)||'Product'; }
     function brandDesc(b){ return L(b&&b.description)||''; }
+    function cardLogoHTML(b){
+      var acc=esc((b&&b.accent)||'#C8602A'), mono=esc(monogram(b&&b.name)), nm=esc(b&&b.name);
+      if(b&&b.logo){
+        return '<div class="fp-card-logo" style="--acc:'+acc+'"><img src="'+esc(b.logo)+'" alt="'+nm+'" onerror="var p=this.parentNode;p.classList.add(\'is-fallback\');p.textContent=\''+mono+'\';"></div>';
+      }
+      return '<div class="fp-card-logo is-fallback" style="--acc:'+acc+'">'+mono+'</div>';
+    }
     function brandCat(b){ return L(b&&b.category)|| (lang()==='ko'?'\uD55C\uAD6D \uBDF0\uD2F0':'Korean Beauty'); }
 
     function setHero(title,desc,kicker){
@@ -92,13 +99,13 @@
       document.getElementById('fp-list-title').textContent=t('listTitle');
       document.getElementById('fp-list-desc').textContent=t('listDesc');
       var cards=brands.map(function(b,i){
-        var count=products(b).length;
-        return '<article class="fp-card" tabindex="0" data-card="brand" data-index="'+i+'"><div class="fp-card-top">'+logoHTML(b,'')+'<div class="fp-card-kicker">'+esc(brandCat(b))+'</div></div>'+
-          '<div><h3>'+esc(b.name||'Brand')+'</h3><p>'+esc(brandDesc(b).slice(0,140))+'</p></div>'+
-          '<div class="fp-card-meta"><span>'+esc(b.manufacturer?String(b.manufacturer).slice(0,22):t('koreanBrand'))+'</span><span>'+(count?count+' '+t('skus'):t('onRequest'))+'</span></div></article>';
+        return '<article class="fp-card" tabindex="0" data-card="brand" data-index="'+i+'">'+
+          cardLogoHTML(b)+
+          '<p class="fp-card-desc">'+esc(brandDesc(b).slice(0,170))+'</p></article>';
       }).join('');
-      var oem='<article class="fp-card oem" tabindex="0" data-card="oem"><div class="fp-card-top"><span class="fp-logo" style="--acc:#C8602A">OE</span><div class="fp-card-kicker">'+esc(t('oem'))+'</div></div>'+
-        '<div><h3>OEM / ODM</h3><p>'+esc(t('oemCardDesc'))+'</p></div><div class="fp-card-meta"><span>'+esc(t('formatsLabel'))+'</span><span>'+formats.length+' '+t('types')+'</span></div></article>';
+      var oem='<article class="fp-card oem" tabindex="0" data-card="oem">'+
+        '<div class="fp-card-logo is-fallback" style="--acc:#C8602A">OE</div>'+
+        '<p class="fp-card-desc">'+esc(t('oemCardDesc'))+'</p></article>';
       cardGrid.innerHTML=cards+oem;
     }
     function renderBrand(b){
