@@ -140,7 +140,7 @@
 /* ===== Leadership editorial redesign (v4) ===== */
 /* CEO: body+signature left, large cut-out portrait right (flush bottom + baseline line) */
 .rb-band--white > .rb-wrap{padding-bottom:0 !important;}
-.rb-ceo{display:grid;grid-template-columns:minmax(0,600px) minmax(420px,520px);gap:clamp(36px,4vw,72px);align-items:end;justify-content:start;}
+.rb-ceo{display:grid;grid-template-columns:minmax(0,1000px) minmax(420px,520px);gap:clamp(36px,4vw,72px);align-items:end;justify-content:start;}
 .rb-ceo__body{align-self:start;display:flex;flex-direction:column;gap:20px;padding-bottom:84px;}
 .rb-ceo__body .rb-message{max-width:54ch;}
 .rb-ceo__body .rb-message--lead{position:relative;padding-left:22px;font-size:21px;line-height:1.6;color:#1d1d1b;font-weight:400;}
