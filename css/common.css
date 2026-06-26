@@ -3083,3 +3083,26 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
    (top bar already provides the × close and the EN/KO toggle) */
 .mobile-drawer .drawer-close{ display:none !important; }
 .mobile-drawer .drawer-lang{ display:none !important; }
+
+/* ===== index pillar cards: photo backgrounds (cover = no stretch, reveals more on expand) ===== */
+#cards .bg1{ background:#e9e4dd url("../assets/pillar-ingredients.jpg") center/cover no-repeat !important; }
+#cards .bg2{ background:#e9e4dd url("../assets/pillar-fragrance.jpg") center/cover no-repeat !important; }
+#cards .bg3{ background:#e9e4dd url("../assets/pillar-finished.jpg") center/cover no-repeat !important; }
+/* darker overlay so white text stays readable over photos */
+#cards .card-overlay{ background:linear-gradient(to top, rgba(15,12,10,.72) 0%, rgba(15,12,10,.32) 46%, rgba(15,12,10,.12) 100%) !important; }
+/* text -> light */
+#cards .card{ color:#fff; }
+#cards .card-num{ color:rgba(255,255,255,.72); }
+#cards .card-name{ color:#fff; }
+#cards .card-ko{ color:rgba(255,255,255,.72); }
+#cards .card-desc{ color:rgba(255,255,255,.86); }
+#cards .card-tag{ color:#fff; border-color:rgba(255,255,255,.45); }
+#cards .card-arrow{ background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.42); color:#fff; }
+
+/* ===== index main hero: background image (text stays as-is) ===== */
+.hero::before{
+  content:''; position:absolute; inset:0; z-index:0;
+  background:#fff url("../assets/hero-home.jpg") center/cover no-repeat;
+  pointer-events:none;
+}
+.hero > *{ position:relative; z-index:1; }
