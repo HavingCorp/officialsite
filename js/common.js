@@ -323,10 +323,16 @@ window.addEventListener('DOMContentLoaded', function() {
     var page=location.pathname.split('/').pop()||'index.html';
     var src=MAP[page]; if(!src) return;
     var el=document.querySelector('.thin-page-title__inner'); if(!el) return;
+    var LIGHT={'fragrance.html':1}; /* keep dark text, no overlay */
+    var light=LIGHT[page];
     var img=new Image();
     img.onload=function(){
-      el.style.cssText+=';background-image:linear-gradient(135deg,rgba(22,16,13,.62),rgba(22,16,13,.40)),url("'+src+'") !important;background-size:cover !important;background-position:center !important;background-color:#1a1410 !important;';
-      document.body.classList.add('has-hero-img');
+      if(light){
+        el.style.cssText+=';background-image:url("'+src+'") !important;background-size:cover !important;background-position:center !important;';
+      } else {
+        el.style.cssText+=';background-image:linear-gradient(135deg,rgba(22,16,13,.62),rgba(22,16,13,.40)),url("'+src+'") !important;background-size:cover !important;background-position:center !important;background-color:#1a1410 !important;';
+        document.body.classList.add('has-hero-img');
+      }
     };
     img.src=src;
   }
