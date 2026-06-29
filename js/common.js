@@ -323,12 +323,12 @@ window.addEventListener('DOMContentLoaded', function() {
     var page=location.pathname.split('/').pop()||'index.html';
     var src=MAP[page]; if(!src) return;
     var el=document.querySelector('.thin-page-title__inner'); if(!el) return;
-    var LIGHT={'fragrance.html':1}; /* keep dark text, no overlay */
+    var LIGHT={'fragrance.html':1,'about.html':1,'team.html':1,'finished.html':1,'esg.html':1,'ingredients.html':1,'inquiry.html':1}; /* black text + white gradient */
     var light=LIGHT[page];
     var img=new Image();
     img.onload=function(){
       if(light){
-        el.style.cssText+=';background-image:url("'+src+'") !important;background-size:cover !important;background-position:center !important;';
+        el.style.cssText+=';background-image:linear-gradient(to bottom right, rgba(255,255,255,.95) 0%, rgba(255,255,255,.60) 100%), url("'+src+'") !important;background-size:cover !important;background-position:center !important;background-color:#f3ece4 !important;';
       } else {
         el.style.cssText+=';background-image:linear-gradient(135deg,rgba(22,16,13,.62),rgba(22,16,13,.40)),url("'+src+'") !important;background-size:cover !important;background-position:center !important;background-color:#1a1410 !important;';
         document.body.classList.add('has-hero-img');

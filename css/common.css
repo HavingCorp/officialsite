@@ -3084,20 +3084,20 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
 .mobile-drawer .drawer-close{ display:none !important; }
 .mobile-drawer .drawer-lang{ display:none !important; }
 
-/* ===== index pillar cards: photo backgrounds (cover = no stretch, reveals more on expand) ===== */
+/* ===== index pillar cards: photo backgrounds + white gradient + black text ===== */
 #cards .bg1{ background:#e9e4dd url("../assets/pillar-ingredients.jpg") center/cover no-repeat !important; }
 #cards .bg2{ background:#e9e4dd url("../assets/pillar-fragrance.jpg") center/cover no-repeat !important; }
 #cards .bg3{ background:#e9e4dd url("../assets/pillar-finished.jpg") center/cover no-repeat !important; }
-/* darker overlay so white text stays readable over photos */
-#cards .card-overlay{ background:linear-gradient(to top, rgba(15,12,10,.72) 0%, rgba(15,12,10,.32) 46%, rgba(15,12,10,.12) 100%) !important; }
-/* text -> light */
-#cards .card{ color:#fff; }
-#cards .card-num{ color:rgba(255,255,255,.72); }
-#cards .card-name{ color:#fff; }
-#cards .card-ko{ color:rgba(255,255,255,.72); }
-#cards .card-desc{ color:rgba(255,255,255,.86); }
-#cards .card-tag{ color:#fff; border-color:rgba(255,255,255,.45); }
-#cards .card-arrow{ background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.42); color:#fff; }
+/* white gradient (top-left 95% -> bottom-right 60%), same as fragrance hero */
+#cards .card-overlay{ background:linear-gradient(to bottom right, rgba(255,255,255,.95) 0%, rgba(255,255,255,.60) 100%) !important; }
+/* text -> dark */
+#cards .card{ color:#1a1410; }
+#cards .card-num{ color:rgba(26,20,16,.55); }
+#cards .card-name{ color:#1a1410; }
+#cards .card-ko{ color:rgba(26,20,16,.55); }
+#cards .card-desc{ color:#4a443f; }
+#cards .card-tag{ color:#1a1410; border-color:rgba(17,17,17,.30); }
+#cards .card-arrow{ background:rgba(17,17,17,.06); border-color:rgba(17,17,17,.25); color:#1a1410; }
 
 /* ===== index main hero: background image (text stays as-is) ===== */
 .hero::before{

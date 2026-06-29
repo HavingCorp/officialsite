@@ -197,3 +197,12 @@
 @media (prefers-reduced-motion: reduce){
   .reveal{opacity:1 !important;transform:none !important;filter:none !important;}
 }
+
+/* How we support: heading left + image right (2-col) */
+.rb-feature-row{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,60px);align-items:center;margin-bottom:48px;}
+.rb-feature-row .rb-head{margin:0;}
+.rb-feature-row .rb-band-visual{aspect-ratio:4/3;margin:0;}
+@media(max-width:760px){
+  .rb-feature-row{grid-template-columns:1fr;gap:24px;}
+  .rb-feature-row .rb-band-visual{aspect-ratio:16/10;}
+}
