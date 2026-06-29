@@ -328,7 +328,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var img=new Image();
     img.onload=function(){
       if(light){
-        el.style.cssText+=';background-image:linear-gradient(to bottom right, rgba(255,255,255,.95) 0%, rgba(255,255,255,.60) 100%), url("'+src+'") !important;background-size:cover !important;background-position:center !important;background-color:#f3ece4 !important;';
+        el.style.cssText+=';background-color:#f3ece4 !important;background-image:linear-gradient(to bottom right, rgba(255,255,255,.95) 0%, rgba(255,255,255,.60) 100%), url("'+src+'") !important;background-repeat:no-repeat, no-repeat !important;background-position:center, center !important;background-size:100% 100%, cover !important;background-origin:border-box, border-box !important;background-clip:border-box !important;';
       } else {
         el.style.cssText+=';background-image:linear-gradient(135deg,rgba(22,16,13,.62),rgba(22,16,13,.40)),url("'+src+'") !important;background-size:cover !important;background-position:center !important;background-color:#1a1410 !important;';
         document.body.classList.add('has-hero-img');
