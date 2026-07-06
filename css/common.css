@@ -426,11 +426,12 @@ nav.menu-open .nav-top {
 
 .card-bg {
   position: absolute; inset: 0;
+  transform: scale(1.12);
   transition: transform 1.8s cubic-bezier(0.16,1,0.3,1);
   will-change: transform;
 }
 
-.card.active .card-bg { transform: scale(1.05); }
+.card.active .card-bg { transform: scale(1); }
 
 .bg1 {
   
@@ -3102,7 +3103,7 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
 /* ===== index main hero: background image (text stays as-is) ===== */
 .hero::before{
   content:''; position:absolute; inset:0; z-index:0;
-  background:#fff url("../assets/hero-home.jpg") center/cover no-repeat;
+  background:linear-gradient(to right, rgba(255,255,255,.90) 0%, rgba(255,255,255,.55) 32%, rgba(255,255,255,0) 60%) no-repeat, url("../assets/hero-home.jpg") center/cover no-repeat #fff;
   pointer-events:none;
 }
 .hero > *{ position:relative; z-index:1; }
