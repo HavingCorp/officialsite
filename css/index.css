@@ -458,3 +458,7 @@ html{ scroll-behavior:smooth; }
   .rb-cta2-band::before{animation:none;}
   .rb-cta2__bar,.rb-cta2__go{transition:none;}
 }
+
+/* fix: index pillar card description was rendering on one line and clipping */
+#cards .card-body, #cards .card-more, #cards .card-desc{ white-space:normal !important; }
+#cards .card-desc{ overflow-wrap:break-word !important; word-break:keep-all; }
