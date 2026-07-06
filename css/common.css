@@ -3103,7 +3103,7 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
 /* ===== index main hero: background image (text stays as-is) ===== */
 .hero::before{
   content:''; position:absolute; inset:0; z-index:0;
-  background:linear-gradient(to right, rgba(255,255,255,.90) 0%, rgba(255,255,255,.55) 32%, rgba(255,255,255,0) 60%) no-repeat, url("../assets/hero-home.jpg") center/cover no-repeat #fff;
+  background:linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)) no-repeat, url("../assets/hero-home.jpg") center/cover no-repeat #fff;
   pointer-events:none;
 }
 .hero > *{ position:relative; z-index:1; }
