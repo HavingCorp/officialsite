@@ -3107,7 +3107,7 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
   background:linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)) no-repeat, url("../assets/hero-home.jpg") center/cover no-repeat #fff;
   pointer-events:none;
 }
-.hero > *{ position:relative; z-index:1; }
+.hero > *:not(.scroll-arrow){ position:relative; z-index:1; }
 
 /* ===== index hero: mouse parallax (background shifts opposite) + subtle tilt ===== */
 .hero{ perspective:1300px; }
@@ -3125,9 +3125,16 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
   .scroll-arrow.morph .arrow-circle{ width:40px; height:40px; }
 }
 
-/* scroll cue: pin to the bottom of the hero's first screen */
+/* scroll cue: absolutely pinned to the hero's bottom (hero == 100svh) */
 .hero{ padding-bottom: 28px; }
-.hero .scroll-arrow{ bottom: 20px !important; top: auto !important; }
+.hero .scroll-arrow{
+  position: absolute !important;
+  top: auto !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 2 !important;
+}
 @media (max-width:900px){
   .hero{ padding-bottom: 24px; }
   .hero .scroll-arrow{ bottom: 14px !important; }
