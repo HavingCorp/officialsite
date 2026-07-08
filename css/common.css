@@ -290,7 +290,8 @@ nav.menu-open .nav-top {
 .hero-desc.in { opacity: 1; transform: none; }
 
 .scroll-arrow {
-  position: absolute; bottom: 12px;
+  position: absolute; top: auto !important;
+  bottom: 20px !important;
   left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 10px;
   z-index: 2;
@@ -3122,4 +3123,12 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
 @media (prefers-reduced-motion: reduce){
   .hero::before{ transform:scale(1.02) !important; transition:none !important; }
   .scroll-arrow.morph .arrow-circle{ width:40px; height:40px; }
+}
+
+/* scroll cue: pin to the bottom of the hero's first screen */
+.hero{ padding-bottom: 28px; }
+.hero .scroll-arrow{ bottom: 20px !important; top: auto !important; }
+@media (max-width:900px){
+  .hero{ padding-bottom: 24px; }
+  .hero .scroll-arrow{ bottom: 14px !important; }
 }
