@@ -59,3 +59,48 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   });
 })();
+
+/* index hero: mouse parallax 3D tilt + scroll-cue ellipse morph */
+(function(){
+  function ready(fn){ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn); else fn(); }
+  ready(function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // 3D parallax tilt on the hero background
+    var hero=document.querySelector('.hero');
+    if(hero && !reduce){
+      var raf=null;
+      hero.addEventListener('mousemove',function(e){
+        if(window.innerWidth<=900) return;
+        var r=hero.getBoundingClientRect();
+        var px=(e.clientX-r.left)/r.width-0.5;   // -0.5 .. 0.5
+        var py=(e.clientY-r.top)/r.height-0.5;
+        var MV=24, TL=2;                          // move px, tilt deg (subtle)
+        var bx=(-px*MV).toFixed(1), by=(-py*MV).toFixed(1);   // bg shifts opposite (parallax)
+        var ry=(px*TL*2).toFixed(2), rx=(-py*TL*1.3).toFixed(2);
+        if(raf) cancelAnimationFrame(raf);
+        raf=requestAnimationFrame(function(){
+          hero.style.setProperty('--hero-bx',bx+'px');
+          hero.style.setProperty('--hero-by',by+'px');
+          hero.style.setProperty('--hero-ry',ry+'deg');
+          hero.style.setProperty('--hero-rx',rx+'deg');
+        });
+      });
+      hero.addEventListener('mouseleave',function(){
+        hero.style.setProperty('--hero-bx','0px');
+        hero.style.setProperty('--hero-by','0px');
+        hero.style.setProperty('--hero-ry','0deg');
+        hero.style.setProperty('--hero-rx','0deg');
+      });
+    }
+    // scroll cue: morph to ellipse when scrolled down, back to circle at top
+    var arw=document.getElementById('sarrow');
+    if(arw){
+      var onScroll=function(){
+        if(window.scrollY>4) arw.classList.add('morph');
+        else arw.classList.remove('morph');
+      };
+      window.addEventListener('scroll',onScroll,{passive:true});
+      onScroll();
+    }
+  });
+})();

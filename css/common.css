@@ -310,7 +310,7 @@ nav.menu-open .nav-top {
   border: 1px solid rgba(26,20,16,.35);
   display: flex; align-items: center; justify-content: center;
   animation: bounce 2.4s ease-in-out infinite;
-  background: #fff;
+  background: transparent;
 }
 
 .arrow-circle svg { color: #1a1410; }
@@ -3107,3 +3107,19 @@ body{ word-break:keep-all; overflow-wrap:break-word; }
   pointer-events:none;
 }
 .hero > *{ position:relative; z-index:1; }
+
+/* ===== index hero: mouse parallax (background shifts opposite) + subtle tilt ===== */
+.hero{ perspective:1300px; }
+.hero::before{
+  transform:translate(var(--hero-bx,0px),var(--hero-by,0px)) rotateX(var(--hero-rx,0deg)) rotateY(var(--hero-ry,0deg)) scale(1.12);
+  transform-origin:center center;
+  transition:transform .22s ease-out;
+  will-change:transform;
+}
+/* ===== scroll cue: circle morphs to ellipse while scrolling ===== */
+.arrow-circle{ transition:width .4s cubic-bezier(.16,1,.3,1), height .4s cubic-bezier(.16,1,.3,1), border-radius .4s cubic-bezier(.16,1,.3,1); }
+.scroll-arrow.morph .arrow-circle{ width:28px; height:56px; border-radius:40px; }
+@media (prefers-reduced-motion: reduce){
+  .hero::before{ transform:scale(1.02) !important; transition:none !important; }
+  .scroll-arrow.morph .arrow-circle{ width:40px; height:40px; }
+}
