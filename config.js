@@ -17,11 +17,11 @@ window.HAVING_CONFIG = {
   i18n: {
     en: {
       companyName:    "Having Corp.",
-      companyAddress: "8F R829, City Plaza, 191 Dongbaekjungang-ro, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea"
+      companyAddress: "B-519, 338, Gwanggyojungang-ro, Suji-gu, Yongin-si, Gyeonggi-do, 16942, Republic of Korea"
     },
     ko: {
       companyName:    "해빙 주식회사",
-      companyAddress: "경기도 용인시 기흥구 동백중앙로 191, 8층 R829호(중동)"
+      companyAddress: "경기도 용인시 수지구 광교중앙로 338, B동 519호 (광교우미뉴브) 16942"
     }
   }
 };
