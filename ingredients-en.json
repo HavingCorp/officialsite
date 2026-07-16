@@ -1,0 +1,528 @@
+{
+  "generated": "2026-07-14",
+  "schema": "having-ingredients-en-v1",
+  "note": "English (export) ingredient DB. Branded active ingredients.",
+  "filters": {
+    "family": [
+      "PDRN",
+      "Ceramide",
+      "Peptide",
+      "Exosome"
+    ],
+    "function": [
+      "Skin Barrier Repair",
+      "Skin Moisturizing",
+      "Skin Regeneration",
+      "Anti-aging",
+      "Brightening",
+      "Anti-Aging",
+      "Skin Soothing",
+      "Skin Elasticity",
+      "Pore Care",
+      "Anti-Hair Loss",
+      "Whitening",
+      "Transparent Formula",
+      "Skin Texture Improvement",
+      "Hair/Scalp Care",
+      "Desquamation"
+    ],
+    "certification": [
+      "HALAL",
+      "VEGAN"
+    ]
+  },
+  "ingredients": [
+    {
+      "id": "ing-001",
+      "name": "Ceracare MLS AC45",
+      "inci": "Ceramide Complex (EOP, NG, NP, AG, AP), Cholesterol,  Glyceryl Stearate",
+      "family": "Ceramide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Skin Moisturizing"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-002",
+      "name": "Cera Flex Green",
+      "inci": "Ceramide Complex (EOP, NP, AP), Cholesterol, Phytosphingosine",
+      "family": "Ceramide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Skin Moisturizing"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-003",
+      "name": "Lacto-PDRN 5000",
+      "inci": "Lactobacillus Ferment, Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Skin Regeneration",
+        "Skin Elasticity",
+        "Anti-Aging"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-004",
+      "name": "Lipidplex 45T8",
+      "inci": "Ceramide Complex (NP, AP, NG, AS, NS, EOP, EOS), Glycosphingolipids",
+      "family": "Ceramide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Skin Moisturizing"
+      ],
+      "clinical": true,
+      "certifications": [],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-005",
+      "name": "CERATECA 1005 (N)",
+      "inci": "Ceramide NP, Asiaticoside, Madecassic Acid, Asiatic Acid",
+      "family": "Ceramide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Skin Moisturizing",
+        "Skin Regeneration"
+      ],
+      "clinical": false,
+      "certifications": [],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-006",
+      "name": "Clear Ceramide 365",
+      "inci": "Ceramide Complex (NP, AP, NG, AS, NS, EOP, EOS), Glycosphingolipids",
+      "family": "Ceramide",
+      "functions": [
+        "Transparent Formula",
+        "Skin Barrier Repair",
+        "Skin Moisturizing",
+        "Skin Regeneration"
+      ],
+      "clinical": false,
+      "certifications": [],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-007",
+      "name": "Total Ceraplex 5T5",
+      "inci": "Ceramide Complex (NP, AP, AS, NG), Glycosphingolipids",
+      "family": "Ceramide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Skin Moisturizing"
+      ],
+      "clinical": false,
+      "certifications": [],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-008",
+      "name": "Total Ceraplex 8T10",
+      "inci": "Ceramide Complex (EOP, EOS, NG, NS, NP, AS, AP), Glycosphingolipids",
+      "family": "Ceramide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Skin Moisturizing"
+      ],
+      "clinical": false,
+      "certifications": [],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-009",
+      "name": "Centella-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Skin Soothing",
+        "Pore Care",
+        "Skin Elasticity"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-010",
+      "name": "Camellia-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Brightening"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-011",
+      "name": "Rose-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Brightening"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-012",
+      "name": "Ginseng-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Anti-Aging"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-013",
+      "name": "Tea tree-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Pore Care",
+        "Skin Texture Improvement"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-014",
+      "name": "RICE-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Brightening"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-015",
+      "name": "Eoseongcho-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Hair/Scalp Care",
+        "Desquamation"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-016",
+      "name": "3 Berry-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Brightening"
+      ],
+      "clinical": false,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-017",
+      "name": "Broccoli-P PDRN",
+      "inci": "Sodium DNA",
+      "family": "PDRN",
+      "functions": [
+        "Skin Regeneration"
+      ],
+      "clinical": false,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": true,
+      "patented": true
+    },
+    {
+      "id": "ing-018",
+      "name": "CICASOME",
+      "inci": "Centella Asiatica Callus Extracellular Vesicles",
+      "family": "Exosome",
+      "functions": [
+        "Skin Soothing",
+        "Skin Barrier Repair"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-019",
+      "name": "PANAX-EV",
+      "inci": "Panax Ginseng Adventitious Root Extracellular Vesicles",
+      "family": "Exosome",
+      "functions": [
+        "Anti-Aging"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-020",
+      "name": "Green Tea Phytosome",
+      "inci": "Camellia Sinensis Callus Extracellular Vesicles",
+      "family": "Exosome",
+      "functions": [
+        "Skin Soothing"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-021",
+      "name": "SOYSOME",
+      "inci": "Glycine Max Callus Extracellular Vesicles",
+      "family": "Exosome",
+      "functions": [
+        "Skin Moisturizing",
+        "Anti-Hair Loss"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL",
+        "VEGAN"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-022",
+      "name": "Neuropeptide Complex",
+      "inci": "sh-Pentapeptide-19, sh-Octapeptide-4, sh-Decapeptide-7, sh-Oligopeptide-9",
+      "family": "Peptide",
+      "functions": [
+        "Skin Regeneration",
+        "Skin Barrier Repair"
+      ],
+      "clinical": true,
+      "certifications": [],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-023",
+      "name": "Neoendorphin",
+      "inci": "sh-Decapeptide-9",
+      "family": "Peptide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Anti-aging"
+      ],
+      "clinical": true,
+      "certifications": [],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-024",
+      "name": "Leu-Enkephalin",
+      "inci": "sh-Pentapeptide-5",
+      "family": "Peptide",
+      "functions": [
+        "Skin Regeneration"
+      ],
+      "clinical": false,
+      "certifications": [],
+      "china_export": false,
+      "patented": false
+    },
+    {
+      "id": "ing-025",
+      "name": "TranEX-1",
+      "inci": "Tranexamoyl Dipeptide-23",
+      "family": "Peptide",
+      "functions": [
+        "Whitening"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-026",
+      "name": "Tranexell-V10",
+      "inci": "Tranexamoyl Dipeptide-22, Bifida Ferment Lysate",
+      "family": "Peptide",
+      "functions": [
+        "Whitening"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-027",
+      "name": "Finexell-T11",
+      "inci": "Hexapeptide-9, Tripeptide-29, Tripeptide-1, Acetyl Hexapeptide-8",
+      "family": "Peptide",
+      "functions": [
+        "Anti-aging"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-028",
+      "name": "Lifting Core",
+      "inci": "Hexapeptide-9, Acetyl Hexapeptide-8, Hexapeptide-11, Hexapeptide-67 Palmitate, Acetyl Tetrapeptide-5",
+      "family": "Peptide",
+      "functions": [
+        "Anti-aging"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": false,
+      "patented": true
+    },
+    {
+      "id": "ing-029",
+      "name": "Actigrowth-10(P)",
+      "inci": "Alanine/Histidine/Lysine Polypeptide Copper HCl",
+      "family": "Peptide",
+      "functions": [
+        "Anti-Hair Loss"
+      ],
+      "clinical": true,
+      "certifications": [
+        "HALAL"
+      ],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-030",
+      "name": "RETINALSOME (LDH)",
+      "inci": "Retinal (Retinaldehyde)",
+      "family": "Exosome",
+      "functions": [
+        "Anti-aging"
+      ],
+      "clinical": false,
+      "certifications": [],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-031",
+      "name": "RETINOLSOME (LDH)-4.5%",
+      "inci": "Retinol",
+      "family": "Exosome",
+      "functions": [
+        "Anti-aging"
+      ],
+      "clinical": true,
+      "certifications": [],
+      "china_export": true,
+      "patented": false
+    },
+    {
+      "id": "ing-032",
+      "name": "CERALIPID (6%)",
+      "inci": "Ceramide NP, Caprylic/Capric Triglyceride",
+      "family": "Ceramide",
+      "functions": [
+        "Skin Barrier Repair",
+        "Skin Moisturizing"
+      ],
+      "clinical": false,
+      "certifications": [],
+      "china_export": false,
+      "patented": false
+    }
+  ]
+}
