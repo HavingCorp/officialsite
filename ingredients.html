@@ -166,7 +166,7 @@ html[lang="ko"] #ing-ko-page{display:block;}
 .cat-chip:hover{border-color:#C8602A;color:#a94d1f;}
 .cat-chip.on{color:#fff;border-color:transparent;background:#C8602A;}
 .cat-chip.on b{color:rgba(255,255,255,.7);}
-.ing-thead th{text-align:center;padding:14px 20px;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#bbb;border-bottom:0.5px solid #e8e8e8;white-space:nowrap;background:#F7F7F5;}
+.ing-thead th{text-align:center;padding:14px 20px;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#bbb;border-bottom:0.5px solid #e8e8e8;white-space:nowrap;background:#F7F7F5;}
 @media (max-width:1024px){ .ing-wrap{ padding-left:42px !important; padding-right:42px !important; } }
 @media (max-width:900px){ .ing-wrap{ padding-left:32px !important; padding-right:32px !important; } }
 </style>
@@ -282,14 +282,14 @@ function ENdraw(){
   var pages=Math.ceil(rows.length/ENper)||1;if(ENpage>pages)ENpage=1;
   var slice=rows.slice((ENpage-1)*ENper,ENpage*ENper);
   document.getElementById('en-empty').style.display=rows.length?'none':'block';
-  var TDH='padding:18px 20px;vertical-align:top;';
+  var TDH='padding:18px 20px;vertical-align:middle;';
   document.getElementById('en-tbody').innerHTML=slice.map(function(d){
     var i=EN.indexOf(d);
     var tags=d.fc.slice(0,2).map(function(t){return '<span class="ing-tag">'+esc(t)+'</span>';}).join('');
     if(d.fc.length>2)tags+='<span style="font-size:10px;color:#bbb;margin-left:2px;">+'+(d.fc.length-2)+'</span>';
     return '<tr class="ingredient-row" onclick="ENopen('+i+')" tabindex="0" style="border-bottom:0.5px solid #f0f0f0;cursor:pointer;">'
       +'<td style="'+TDH+'max-width:240px;"><span class="ing-type">'+esc(d.family)+'</span><div style="font-size:15px;font-weight:500;color:#111;line-height:1.3;">'+esc(d.name)+'</div></td>'
-      +'<td style="'+TDH+'font-size:14px;font-weight:300;color:#555;">'+esc(d.inci)+'</td>'
+      +'<td style="'+TDH+'font-size:15px;font-weight:300;color:#555;">'+esc(d.inci)+'</td>'
       +'<td style="'+TDH+'">'+tags+'</td></tr>';
   }).join('');
   var pg='';if(pages>1){var lo=Math.max(1,ENpage-3),hi=Math.min(pages,ENpage+3);for(var p=lo;p<=hi;p++)pg+='<button onclick="ENgo('+p+')" style="min-width:34px;height:34px;border:0.5px solid '+(p===ENpage?'#C8602A':'#e0e0e0')+';background:'+(p===ENpage?'#C8602A':'#fff')+';color:'+(p===ENpage?'#fff':'#555')+';border-radius:8px;cursor:pointer;font-size:13px;">'+p+'</button>';}
@@ -341,14 +341,14 @@ function KOdraw(){
   var pages=Math.ceil(rows.length/KOper)||1;if(KOpage>pages)KOpage=1;
   var slice=rows.slice((KOpage-1)*KOper,KOpage*KOper);
   document.getElementById('ko-empty').style.display=rows.length?'none':'block';
-  var TDH='padding:18px 20px;vertical-align:top;';
+  var TDH='padding:18px 20px;vertical-align:middle;';
   document.getElementById('ko-tbody').innerHTML=slice.map(function(d){
     var i=KO.indexOf(d);
     var tags=d.fc.slice(0,2).map(function(t){return '<span class="ing-tag">'+esc(t)+'</span>';}).join('');
     if(d.fc.length>2)tags+='<span style="font-size:10px;color:#bbb;margin-left:2px;">+'+(d.fc.length-2)+'</span>';
     return '<tr class="ingredient-row" onclick="KOopen('+i+')" tabindex="0" style="border-bottom:0.5px solid #f0f0f0;cursor:pointer;">'
       +'<td style="'+TDH+'max-width:240px;"><span class="ing-type">'+esc(d.category)+'</span><div style="font-size:15px;font-weight:500;color:#111;line-height:1.3;">'+esc(d.name)+'</div></td>'
-      +'<td style="'+TDH+'font-size:14px;font-weight:300;color:#555;">'+esc(d.inci_key)+'</td>'
+      +'<td style="'+TDH+'font-size:15px;font-weight:300;color:#555;">'+esc(d.inci_key)+'</td>'
       +'<td style="'+TDH+'">'+tags+'</td></tr>';
   }).join('');
   var pg='';if(pages>1){var lo=Math.max(1,KOpage-3),hi=Math.min(pages,KOpage+3);for(var p=lo;p<=hi;p++)pg+='<button onclick="KOgo('+p+')" style="min-width:34px;height:34px;border:0.5px solid '+(p===KOpage?'#C8602A':'#e0e0e0')+';background:'+(p===KOpage?'#C8602A':'#fff')+';color:'+(p===KOpage?'#fff':'#555')+';border-radius:8px;cursor:pointer;font-size:13px;">'+p+'</button>';}
@@ -367,7 +367,7 @@ window.KOopen=function(i){
    +(d.marketing?'<div class="ingm__callout">'+esc(d.marketing)+'</div>':'')
    +'<div class="ingm__sec"><div class="ingm__h">성분</div>'+koKv('전성분',d.inci_full)+'</div>'
    +'<div class="ingm__sec"><div class="ingm__h">프로파일</div>'+koKv('제조국',d.region)+koKv('외관',d.appearance)+koKv('권장 사용량',d.dosage)+koKv('인증',d.cert)+koKv('기능',d.function)+'</div>'
-   +'<div class="ingm__sec"><div class="ingm__h">규제 · 데이터</div><div class="ingm__grid">'+koStat('NMPA',d.nmpa)+koStat('중국 수출',d.china)+koStat('EU 수출',d.eu)+koStat('임상',d.clinical)+'</div></div>'
+   +'<div class="ingm__sec"><div class="ingm__h">규제 · 데이터</div><div class="ingm__grid">'+koStat('NMPA',d.nmpa)+koStat('특허',d.patent)+koStat('임상',d.clinical)+'</div></div>'
    +'</div>');
 };
 
