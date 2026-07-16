@@ -173,7 +173,7 @@ html[lang="ko"] #ing-ko-page{display:block;}
 <main class="page-transition-content"><div class="ing-wrap" style="max-width:none;margin:0;padding:32px 68px 80px;box-sizing:border-box;">
 <div id="ing-en-page">
 <div class="ing-toolbar">
-  <div style="flex:1;min-width:160px;position:relative;">
+  <div style="flex:0 1 260px;min-width:160px;max-width:300px;position:relative;">
     <svg fill="none" height="16" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);pointer-events:none;" viewBox="0 0 16 16" width="16"><circle cx="7" cy="7" r="5" stroke="#bbb" stroke-width="1.5"></circle><path d="M11 11l3 3" stroke="#bbb" stroke-linecap="round" stroke-width="1.5"></path></svg>
     <input id="ing-en-q" oninput="ENrender()" placeholder="Search by name, INCI, function..." style="width:100%;padding:13px 16px 13px 44px;font-family:inherit;font-weight:300;border:0.5px solid #e0e0e0;border-radius:100px;outline:none;background:#F7F7F5;color:#111;" type="text"/></div>
   <select id="ing-en-fam" class="ing-fsel" onchange="ENrender()"><option value="">All types</option><option value="Ceramide">Ceramide</option><option value="PDRN">PDRN</option><option value="Exosome">Exosome</option><option value="Peptide">Peptide</option></select>
@@ -181,7 +181,7 @@ html[lang="ko"] #ing-ko-page{display:block;}
   <label class="ing-chk" id="en-ck-clin"><input type="checkbox" id="en-clin" onchange="ENrender()"/><span class="ing-chk__b">&#10003;</span>Clinical Data</label>
   <label class="ing-chk" id="en-ck-pat"><input type="checkbox" id="en-patent" onchange="ENrender()"/><span class="ing-chk__b">&#10003;</span>Patented</label>
   <label class="ing-chk" id="en-ck-cn"><input type="checkbox" id="en-china" onchange="ENrender()"/><span class="ing-chk__b">&#10003;</span>China-compliant</label>
-  <span id="en-count" style="margin-left:auto;font-size:13px;color:#bbb;font-weight:300;"></span>
+  <span id="en-count" style="margin-left:auto;flex-shrink:0;white-space:nowrap;font-size:13px;color:#bbb;font-weight:300;"></span>
 </div>
 <div class="ing-scroll"><table style="width:100%;border-collapse:collapse;min-width:520px;">
 <thead class="ing-thead"><tr><th>Product Name</th><th>INCI Name</th><th>Function</th></tr></thead>
@@ -192,10 +192,10 @@ html[lang="ko"] #ing-ko-page{display:block;}
 
 <div id="ing-ko-page">
 <div class="ing-toolbar">
-  <div style="flex:1;min-width:160px;position:relative;">
+  <div style="flex:0 1 320px;min-width:200px;max-width:360px;position:relative;">
     <svg fill="none" height="16" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);pointer-events:none;" viewBox="0 0 16 16" width="16"><circle cx="7" cy="7" r="5" stroke="#bbb" stroke-width="1.5"></circle><path d="M11 11l3 3" stroke="#bbb" stroke-linecap="round" stroke-width="1.5"></path></svg>
     <input id="ing-ko-q" oninput="KOrender()" placeholder="원료명, INCI, 기능으로 검색..." style="width:100%;padding:13px 16px 13px 44px;font-family:inherit;font-weight:300;border:0.5px solid #e0e0e0;border-radius:100px;outline:none;background:#F7F7F5;color:#111;" type="text"/></div>
-  <select id="ing-ko-region" class="ing-fsel" onchange="KOrender()"><option value="">제조국 전체</option><option value="중국">중국</option><option value="이탈리아">이탈리아</option><option value="튀르키예">튀르키예</option><option value="한국">한국</option></select>
+  <select id="ing-ko-region" class="ing-fsel" onchange="KOrender()"><option value="">제조국</option><option value="중국">중국</option><option value="이탈리아">이탈리아</option><option value="튀르키예">튀르키예</option><option value="한국">한국</option></select>
   <label class="ing-chk" id="ko-ck-nmpa"><input type="checkbox" id="ko-nmpa" onchange="KOrender()"/><span class="ing-chk__b">&#10003;</span>NMPA</label>
   <label class="ing-chk" id="ko-ck-pat"><input type="checkbox" id="ko-patent" onchange="KOrender()"/><span class="ing-chk__b">&#10003;</span>특허</label>
   <label class="ing-chk" id="ko-ck-clin"><input type="checkbox" id="ko-clin" onchange="KOrender()"/><span class="ing-chk__b">&#10003;</span>임상</label>
@@ -361,7 +361,7 @@ window.KOopen=function(i){
   var d=KO[i];
   var ft=d.fc.map(function(t){return '<span class="ingm__tag">'+esc(t)+'</span>';}).join('');
   modalOpen('<button class="ingm__x" onclick="ingCloseModal()">&times;</button>'
-   +'<div class="ingm__head"><div class="ingm__chips"><span class="ingm__chip region" style="background:'+BADGE+';color:#fff;">'+esc(d.category)+'</span><span class="ingm__chip region" style="background:#fff;color:#8a7a5c;">'+esc(d.region)+'</span>'+(d.nmpa==='O'?'<span class="ingm__chip pat">NMPA</span>':'')+'</div>'
+   +'<div class="ingm__head"><div class="ingm__chips"><span class="ingm__chip region" style="background:'+BADGE+';color:#fff;">'+esc(d.category)+'</span>'+(d.nmpa==='O'?'<span class="ingm__chip pat">NMPA</span>':'')+'</div>'
    +'<h2>'+esc(d.name)+'</h2><p class="ingm__inci">'+esc(d.inci_key)+'</p><div class="ingm__tags">'+ft+'</div></div>'
    +'<div class="ingm__body">'
    +(d.marketing?'<div class="ingm__callout">'+esc(d.marketing)+'</div>':'')
