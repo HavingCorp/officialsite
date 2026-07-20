@@ -784,7 +784,7 @@ body{
 
 
 /* ===== 라인아트 지구본 + 스크롤 연동 화살표 ===== */
-.rb-globe{position:relative;width:100%;margin-top:44px;height:clamp(190px,22vw,300px);overflow:hidden;pointer-events:none;}
+.rb-globe{position:relative;width:100%;margin-top:14px;height:clamp(190px,22vw,300px);overflow:hidden;pointer-events:none;}
 .rb-globe .gl-svg{position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(1200px,132%);height:100%;display:block;}
 .rb-globe .gl-line{fill:none;stroke:#d9d4cc;stroke-width:1;vector-effect:non-scaling-stroke;}
 .rb-globe .gl-edge{fill:none;stroke:#bdb6ab;stroke-width:1.4;vector-effect:non-scaling-stroke;}
@@ -808,3 +808,12 @@ body{
 /* 좁은 화면: 화살표가 잘리지 않도록 전체를 맞춰 보여줌 */
 .rb-globe.is-narrow{height:auto;aspect-ratio:1200/330;}
 .rb-globe.is-narrow .gl-svg{width:100%;height:100%;left:0;top:0;transform:none;}
+
+
+/* 리드 문장 내 강조 */
+.rb-lead .rb-hl{font-weight:800;color:#111;white-space:nowrap;border-bottom:2px solid #F18B42;padding-bottom:1px;}
+
+/* 넓은 화면: 지구본을 위로 당겨 오른쪽 열 공백을 줄임 */
+@media (min-width:821px){
+  .rb-globe{margin-top:-96px;}
+}
