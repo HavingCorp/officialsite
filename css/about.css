@@ -781,3 +781,30 @@ body{
     grid-template-columns:1fr !important;
   }
 }
+
+
+/* ===== 라인아트 지구본 + 스크롤 연동 화살표 ===== */
+.rb-globe{position:relative;width:100%;margin-top:44px;height:clamp(190px,22vw,300px);overflow:hidden;pointer-events:none;}
+.rb-globe .gl-svg{position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(1200px,132%);height:100%;display:block;}
+.rb-globe .gl-line{fill:none;stroke:#d9d4cc;stroke-width:1;vector-effect:non-scaling-stroke;}
+.rb-globe .gl-edge{fill:none;stroke:#bdb6ab;stroke-width:1.4;vector-effect:non-scaling-stroke;}
+.rb-globe .gl-path{fill:none;stroke:#F18B42;stroke-width:1.8;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.9;}
+.rb-globe .gl-head{fill:#F18B42;opacity:0;}
+.rb-globe .gl-dot{fill:#F18B42;opacity:0;}
+.rb-globe .gl-kr-map{fill:#F18B42;stroke:#F18B42;stroke-width:.6;stroke-linejoin:round;}
+.rb-globe .gl-kr-halo{fill:#F18B42;opacity:.10;}
+.rb-globe .gl-kr{opacity:0;transform-box:fill-box;transform-origin:center;}
+
+.rb-globe .gl-orig-dot{fill:#F18B42;}
+.rb-globe .gl-orig-ring{fill:none;stroke:#F18B42;stroke-width:1.4;opacity:.45;}
+
+.rb-globe .gl-arrow{opacity:.95;}
+@media (prefers-reduced-motion:reduce){
+  .rb-globe .gl-head{opacity:1;}
+}
+@media (max-width:640px){
+  .rb-globe{margin-top:30px;}
+}
+/* 좁은 화면: 화살표가 잘리지 않도록 전체를 맞춰 보여줌 */
+.rb-globe.is-narrow{height:auto;aspect-ratio:1200/330;}
+.rb-globe.is-narrow .gl-svg{width:100%;height:100%;left:0;top:0;transform:none;}
