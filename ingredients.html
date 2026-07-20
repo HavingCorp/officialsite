@@ -155,7 +155,7 @@ html[lang="ko"] #ing-ko-page{display:block;}
 .thin-page-title__inner{align-items:center !important;text-align:center !important;}
 .thin-page-title__kicker{justify-content:center !important;}
 .thin-page-title__title,.thin-page-title__desc{margin-left:auto !important;margin-right:auto !important;}
-.ing-type{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:#fff;padding:2px 9px;border-radius:5px;margin-bottom:6px;background:#C8602A;}
+.ing-type{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;color:#C75C0F;background:none;padding:0;border-radius:0;margin-bottom:5px;}
 .ing-toolbar{display:flex;gap:8px;flex-wrap:nowrap;align-items:center;margin-bottom:14px;overflow-x:auto;}
 .ing-toolbar .ing-fsel{padding:11px 32px 11px 14px;font-size:12px;}
 .ing-toolbar .ing-chk{padding:9px 11px;font-size:12px;white-space:nowrap;}
@@ -163,8 +163,8 @@ html[lang="ko"] #ing-ko-page{display:block;}
 .cat-row{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 26px;padding:12px 14px;background:#F7F7F5;border:0.5px solid #ececec;border-radius:16px;}
 .cat-chip{font-family:inherit;font-size:13px;font-weight:500;color:#4a443f;background:#fff;border:0.5px solid #e0e0e0;border-radius:100px;padding:8px 15px;cursor:pointer;transition:all .15s;}
 .cat-chip b{color:#b3aca3;font-weight:600;margin-left:3px;font-size:12px;}
-.cat-chip:hover{border-color:#C8602A;color:#a94d1f;}
-.cat-chip.on{color:#fff;border-color:transparent;background:#C8602A;}
+.cat-chip:hover{border-color:#F18B42;color:#a94d1f;}
+.cat-chip.on{color:#fff;border-color:transparent;background:#F18B42;}
 .cat-chip.on b{color:rgba(255,255,255,.7);}
 .ing-thead th{text-align:center;padding:14px 20px;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#bbb;border-bottom:0.5px solid #e8e8e8;white-space:nowrap;background:#F7F7F5;}
 @media (max-width:1024px){ .ing-wrap{ padding-left:42px !important; padding-right:42px !important; } }
@@ -248,7 +248,7 @@ html[lang="ko"] #ing-ko-page{display:block;}
 
 <script>
 (function(){
-var BADGE='#C8602A';
+var BADGE='#C75C0F';
 var CHK='<svg class="ingm__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg>';
 var DASH='<svg class="ingm__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="5" y1="12" x2="19" y2="12"/></svg>';
 function esc(s){return (s==null?'':(''+s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
@@ -292,7 +292,7 @@ function ENdraw(){
       +'<td style="'+TDH+'font-size:15px;font-weight:300;color:#555;">'+esc(d.inci)+'</td>'
       +'<td style="'+TDH+'">'+tags+'</td></tr>';
   }).join('');
-  var pg='';if(pages>1){var lo=Math.max(1,ENpage-3),hi=Math.min(pages,ENpage+3);for(var p=lo;p<=hi;p++)pg+='<button onclick="ENgo('+p+')" style="min-width:34px;height:34px;border:0.5px solid '+(p===ENpage?'#C8602A':'#e0e0e0')+';background:'+(p===ENpage?'#C8602A':'#fff')+';color:'+(p===ENpage?'#fff':'#555')+';border-radius:8px;cursor:pointer;font-size:13px;">'+p+'</button>';}
+  var pg='';if(pages>1){var lo=Math.max(1,ENpage-3),hi=Math.min(pages,ENpage+3);for(var p=lo;p<=hi;p++)pg+='<button onclick="ENgo('+p+')" style="min-width:34px;height:34px;border:0.5px solid '+(p===ENpage?'#F18B42':'#e0e0e0')+';background:'+(p===ENpage?'#F18B42':'#fff')+';color:'+(p===ENpage?'#fff':'#555')+';border-radius:8px;cursor:pointer;font-size:13px;">'+p+'</button>';}
   document.getElementById('en-pager').innerHTML=pg;
 }
 window.ENgo=function(p){ENpage=p;ENdraw();};
@@ -302,7 +302,7 @@ window.ENopen=function(i){
   var d=EN[i];
   var ft=d.fc.map(function(t){return '<span class="ingm__tag">'+esc(t)+'</span>';}).join('');
   modalOpen('<button class="ingm__x" onclick="ingCloseModal()">&times;</button>'
-   +'<div class="ingm__head"><div class="ingm__chips"><span class="ingm__chip region" style="background:'+BADGE+';color:#fff;">'+esc(d.family)+'</span>'+(d.patent==='O'?'<span class="ingm__chip pat">Patented</span>':'')+'</div>'
+   +'<div class="ingm__head"><div class="ingm__chips"><span class="ingm__chip region" style="background:none;padding:0;color:'+BADGE+';font-weight:800;letter-spacing:.06em;">'+esc(d.family)+'</span>'+(d.patent==='O'?'<span class="ingm__chip pat">Patented</span>':'')+'</div>'
    +'<h2>'+esc(d.name)+'</h2><p class="ingm__inci">'+esc(d.inci)+'</p><div class="ingm__tags">'+ft+'</div></div>'
    +'<div class="ingm__body">'
    +'<div class="ingm__sec"><div class="ingm__h">Certification</div><div>'+(d.cert?d.cert.split(', ').map(function(c){return '<span class="ingm__tag">'+esc(c)+'</span>';}).join(''):'<span class="ingm__miss">Not specified</span>')+'</div></div>'
@@ -351,7 +351,7 @@ function KOdraw(){
       +'<td style="'+TDH+'font-size:15px;font-weight:300;color:#555;">'+esc(d.inci_key)+'</td>'
       +'<td style="'+TDH+'">'+tags+'</td></tr>';
   }).join('');
-  var pg='';if(pages>1){var lo=Math.max(1,KOpage-3),hi=Math.min(pages,KOpage+3);for(var p=lo;p<=hi;p++)pg+='<button onclick="KOgo('+p+')" style="min-width:34px;height:34px;border:0.5px solid '+(p===KOpage?'#C8602A':'#e0e0e0')+';background:'+(p===KOpage?'#C8602A':'#fff')+';color:'+(p===KOpage?'#fff':'#555')+';border-radius:8px;cursor:pointer;font-size:13px;">'+p+'</button>';}
+  var pg='';if(pages>1){var lo=Math.max(1,KOpage-3),hi=Math.min(pages,KOpage+3);for(var p=lo;p<=hi;p++)pg+='<button onclick="KOgo('+p+')" style="min-width:34px;height:34px;border:0.5px solid '+(p===KOpage?'#F18B42':'#e0e0e0')+';background:'+(p===KOpage?'#F18B42':'#fff')+';color:'+(p===KOpage?'#fff':'#555')+';border-radius:8px;cursor:pointer;font-size:13px;">'+p+'</button>';}
   document.getElementById('ko-pager').innerHTML=pg;
 }
 window.KOgo=function(p){KOpage=p;KOdraw();};
@@ -361,7 +361,7 @@ window.KOopen=function(i){
   var d=KO[i];
   var ft=d.fc.map(function(t){return '<span class="ingm__tag">'+esc(t)+'</span>';}).join('');
   modalOpen('<button class="ingm__x" onclick="ingCloseModal()">&times;</button>'
-   +'<div class="ingm__head"><div class="ingm__chips"><span class="ingm__chip region" style="background:'+BADGE+';color:#fff;">'+esc(d.category)+'</span>'+(d.nmpa==='O'?'<span class="ingm__chip pat">NMPA</span>':'')+'</div>'
+   +'<div class="ingm__head"><div class="ingm__chips"><span class="ingm__chip region" style="background:none;padding:0;color:'+BADGE+';font-weight:800;letter-spacing:.06em;">'+esc(d.category)+'</span>'+(d.nmpa==='O'?'<span class="ingm__chip pat">NMPA</span>':'')+'</div>'
    +'<h2>'+esc(d.name)+'</h2><p class="ingm__inci">'+esc(d.inci_key)+'</p><div class="ingm__tags">'+ft+'</div></div>'
    +'<div class="ingm__body">'
    +(d.marketing?'<div class="ingm__callout">'+esc(d.marketing)+'</div>':'')

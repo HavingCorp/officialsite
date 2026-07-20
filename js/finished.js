@@ -61,8 +61,8 @@
       if(T) T.textContent=title; if(D) D.textContent=desc; if(K) K.textContent=kicker||'BUSINESS';
     }
     function logoHTML(b,cls){ cls=cls||'';
-      if(b&&b.logo) return '<span class="fp-logo '+cls+'" style="--acc:'+esc(b.accent||'#C8602A')+'"><img src="'+esc(b.logo)+'" alt="'+esc(b.name)+'" onerror="this.parentNode.textContent='+"'"+esc(monogram(b&&b.name))+"'"+'"></span>';
-      return '<span class="fp-logo '+cls+'" style="--acc:'+esc((b&&b.accent)||'#C8602A')+'">'+esc(monogram(b&&b.name))+'</span>';
+      if(b&&b.logo) return '<span class="fp-logo '+cls+'" style="--acc:'+esc(b.accent||'#C75C0F')+'"><img src="'+esc(b.logo)+'" alt="'+esc(b.name)+'" onerror="this.parentNode.textContent='+"'"+esc(monogram(b&&b.name))+"'"+'"></span>';
+      return '<span class="fp-logo '+cls+'" style="--acc:'+esc((b&&b.accent)||'#C75C0F')+'">'+esc(monogram(b&&b.name))+'</span>';
     }
 
     /* hide legacy markup, build shell */
@@ -97,7 +97,7 @@
         var th=imgs.length>1?'<div class="fp-m-thumbs">'+imgs.map(function(s,i){return '<button type="button" class="fp-m-thumb'+(i===0?' is-active':'')+'" data-src="'+esc(s)+'"><img src="'+esc(s)+'" alt=""></button>';}).join('')+'</div>':'';
         return main+th;
       }
-      return '<div class="fp-m-photo fp-m-photo--ph" style="--acc:'+esc(accent||'#C8602A')+'"><span class="fp-m-ph-mono">'+esc(mono)+'</span><span class="fp-m-ph-type">'+esc(typeLabel)+'</span></div>';
+      return '<div class="fp-m-photo fp-m-photo--ph" style="--acc:'+esc(accent||'#C75C0F')+'"><span class="fp-m-ph-mono">'+esc(mono)+'</span><span class="fp-m-ph-type">'+esc(typeLabel)+'</span></div>';
     }
 
     /* ---------- renderers (lang-aware, called on render + lang change) ---------- */
@@ -156,7 +156,7 @@
     }
     function renderOem(){
       setHero('OEM / ODM', t('oemDesc'), t('oemKicker'));
-      var lg=document.getElementById('fp-detail-logo'); lg.outerHTML='<span id="fp-detail-logo" class="fp-logo fp-logo--lg" style="--acc:#C8602A">OE</span>';
+      var lg=document.getElementById('fp-detail-logo'); lg.outerHTML='<span id="fp-detail-logo" class="fp-logo fp-logo--lg" style="--acc:#C75C0F">OE</span>';
       document.getElementById('fp-detail-title').textContent='OEM / ODM';
       document.getElementById('fp-detail-desc').textContent=t('oemDesc');
       document.getElementById('fp-detail-meta').innerHTML='<div class="fp-meta-row"><span>'+esc(t('formatsLabel'))+'</span><b>'+formats.length+' '+t('types')+'</b></div>';
@@ -187,7 +187,7 @@
           (d?'<p class="fp-m-desc">'+esc(d.replace(/\n+/g,' ').trim())+'</p>':'')+
           (concepts.length?'<div class="fp-m-chips">'+concepts.map(function(x){return '<span class="fp-chip">'+esc(L(x))+'</span>';}).join('')+'</div>':'')+
           (feats.length?'<div class="fp-m-sec"><h4>'+esc(t('features'))+'</h4><ul class="fp-m-list">'+feats.map(function(ft){return '<li><b>'+esc(L(ft.title))+'</b><br>'+esc(L(ft.desc))+'</li>';}).join('')+'</ul></div>':'')+
-          (keyIngs.length?'<div class="fp-m-sec"><h4>'+esc(t('keyIng'))+'</h4><div class="fp-m-ingcards">'+keyIngs.map(function(ki){return '<div class="fp-m-ingcard"><div class="fp-m-ingdot" style="--acc:'+esc(b.accent||'#C8602A')+'">'+esc((L(ki.name)||'?').slice(0,2))+'</div><div><b>'+esc(L(ki.name))+'</b><span>'+esc(L(ki.desc))+'</span></div></div>';}).join('')+'</div></div>':'')+
+          (keyIngs.length?'<div class="fp-m-sec"><h4>'+esc(t('keyIng'))+'</h4><div class="fp-m-ingcards">'+keyIngs.map(function(ki){return '<div class="fp-m-ingcard"><div class="fp-m-ingdot" style="--acc:'+esc(b.accent||'#C75C0F')+'">'+esc((L(ki.name)||'?').slice(0,2))+'</div><div><b>'+esc(L(ki.name))+'</b><span>'+esc(L(ki.desc))+'</span></div></div>';}).join('')+'</div></div>':'')+
           (mech?'<div class="fp-m-sec"><h4>'+esc(t('mechanism'))+'</h4><p class="fp-m-secp">'+esc(mech)+'</p></div>':'')+
           (spec.length?'<div class="fp-m-sec"><h4>'+esc(t('spec'))+'</h4><div class="fp-m-spec">'+spec.map(function(s){return '<div class="fp-spec-row"><span>'+esc(s[0])+'</span><b>'+esc(s[1])+'</b></div>';}).join('')+'</div></div>':'')+
           (certs.length?'<div class="fp-m-sec"><h4>'+esc(t('certs'))+'</h4><ul class="fp-m-list">'+certs.map(function(x){return '<li>'+esc(L(x))+'</li>';}).join('')+'</ul></div>':'')+
@@ -203,7 +203,7 @@
           (f.tagline?'<p class="fp-m-desc">'+esc(L(f.tagline))+'</p>':'')+
           ((f.features&&f.features.length)?'<div class="fp-m-sec"><h4>'+esc(t('features'))+'</h4><ul class="fp-m-list">'+f.features.map(function(ft){return '<li><b>'+esc(L(ft.title))+'</b><br>'+esc(L(ft.desc))+'</li>';}).join('')+'</ul></div>':'')+
           (f.mechanism?'<div class="fp-m-sec"><h4>'+esc(t('mechanism'))+'</h4><p class="fp-m-secp">'+esc(L(f.mechanism))+'</p></div>':'')+
-          ((f.key_ingredients&&f.key_ingredients.length)?'<div class="fp-m-sec"><h4>'+esc(t('keyIng'))+'</h4><div class="fp-m-ingcards">'+f.key_ingredients.map(function(ki){return '<div class="fp-m-ingcard"><div class="fp-m-ingdot" style="--acc:'+esc(f.accent||'#C8602A')+'">'+esc((L(ki.name)||'?').slice(0,2))+'</div><div><b>'+esc(L(ki.name))+'</b><span>'+esc(L(ki.desc))+'</span></div></div>';}).join('')+'</div></div>':'')+
+          ((f.key_ingredients&&f.key_ingredients.length)?'<div class="fp-m-sec"><h4>'+esc(t('keyIng'))+'</h4><div class="fp-m-ingcards">'+f.key_ingredients.map(function(ki){return '<div class="fp-m-ingcard"><div class="fp-m-ingdot" style="--acc:'+esc(f.accent||'#C75C0F')+'">'+esc((L(ki.name)||'?').slice(0,2))+'</div><div><b>'+esc(L(ki.name))+'</b><span>'+esc(L(ki.desc))+'</span></div></div>';}).join('')+'</div></div>':'')+
           '<a class="fp-m-cta" href="inquiry.html?product='+encodeURIComponent('OEM/ODM - '+L(f.name))+'">'+esc(t('inquire'))+'</a>';
       }
     }
@@ -314,7 +314,7 @@
           +(lu?'<p class="bm-lineup">'+esc(lu)+'</p>':'')
           +'<div class="bm-thumbs" id="bm-thumbs">'+thumbs+'</div></div>';
       }
-      bmPanel.style.setProperty('--acc', b.accent||'#C8602A');
+      bmPanel.style.setProperty('--acc', b.accent||'#C75C0F');
       bmPanel.innerHTML='<button type="button" class="bm-x" data-bmclose="1">\u00d7</button>'
         +'<div class="bm-hero" id="bm-hero">'+bmHeroBrand(b,slogan)+'</div>'
         +'<div class="bm-scroll"><h3 class="bm-name">'+esc(L(b.name))+'</h3>'

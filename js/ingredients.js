@@ -63,7 +63,7 @@ function ingFilter(){
 function pBtn(label,page,o){o=o||{};
   if(o.dots) return '<span style="min-width:24px;text-align:center;color:#bbb;font-size:13px;">…</span>';
   var st='min-width:34px;height:34px;padding:0 10px;border-radius:9px;font-size:13px;font-family:Inter,sans-serif;cursor:pointer;border:0.5px solid #e0e0e0;background:#fff;color:#555;transition:all .12s;';
-  if(o.current) st='min-width:34px;height:34px;padding:0 11px;border-radius:9px;font-size:13px;font-weight:600;border:0.5px solid #C8602A;background:#C8602A;color:#fff;cursor:default;';
+  if(o.current) st='min-width:34px;height:34px;padding:0 11px;border-radius:9px;font-size:13px;font-weight:600;border:0.5px solid #F18B42;background:#F18B42;color:#fff;cursor:default;';
   if(o.disabled) st+='opacity:.35;cursor:default;';
   return '<button type="button" style="'+st+'" '+((o.disabled||o.current)?'disabled':'onclick="ingGo('+page+')"')+'>'+label+'</button>';
 }

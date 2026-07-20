@@ -446,7 +446,7 @@ html{ scroll-behavior:smooth; }
 .rb-cta2__bar:hover{transform:translateY(-2px);background:rgba(255,255,255,.6);box-shadow:0 20px 56px rgba(17,17,17,.14),0 3px 12px rgba(17,17,17,.06);}
 .rb-cta2__ph{flex:1 1 auto;text-align:left;color:#5f5b56;font-size:16px;font-weight:500;}
 .rb-cta2__go{flex:0 0 auto;width:50px;height:50px;border-radius:50%;background:#1a1a1a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;transition:background-color .18s ease;}
-.rb-cta2__bar:hover .rb-cta2__go{background:#C8602A;}
+.rb-cta2__bar:hover .rb-cta2__go{background:#F18B42;}
 @media(max-width:760px){
   .rb-cta2-band{margin:10px 16px 64px !important;}
   .rb-cta2{padding:60px 20px 70px;}

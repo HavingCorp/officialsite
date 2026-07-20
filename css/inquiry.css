@@ -18,8 +18,8 @@
 /* form submission states + consent */
 .fchk--consent{align-items:flex-start;gap:9px;line-height:1.55;font-size:13px;color:#666;margin:4px 0 8px;}
 .fchk--consent input{margin-top:3px;flex-shrink:0;}
-.fchk--consent a{color:#C8602A;text-decoration:underline;text-underline-offset:2px;}
-.fchk--consent .req{color:#C8602A;}
+.fchk--consent a{color:#C75C0F;text-decoration:underline;text-underline-offset:2px;}
+.fchk--consent .req{color:#C75C0F;}
 .form-status{display:none;margin-top:14px;padding:13px 16px;border-radius:10px;font-size:14px;line-height:1.55;}
 .form-status.show{display:block;}
 .form-status--info{background:#f4f4f2;color:#555;}
