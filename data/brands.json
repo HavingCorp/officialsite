@@ -1,4803 +1,983 @@
 {
- "generated": "2026-06 (master DB v0.9)",
- "schema": "bilingual",
- "note": "Homepage catalog. Translatable fields are {en,ko}; one side may be empty (UI falls back to the other). Key Ingredients are brochure-level, not official INCI. AI-generated rows excluded.",
+ "generated": "2026-07-20",
+ "schema": "having-brands-public-v2",
+ "note": "소싱마스터 기반 공개용. 로고 이미지가 있는 브랜드만 사이트에 표시됩니다. published:false 로 강제 제외 가능.",
  "brands": [
   {
-   "id": "mastina",
-   "name": "Mastina",
-   "accent": "#9C6B4A",
-   "logo": "assets/brands/mastina.png",
-   "manufacturer": "FromBIO Co., Ltd. / 주식회사 프롬바이오",
-   "description": {
-    "en": "Cosmetics-focused entity derived from FromBIO's cosmetics business division. Develops skincare brands based on functional ingredients, natural raw materials, and clinically supported concepts.",
-    "ko": ""
+   "id": "freety-lab",
+   "code": "FTLB",
+   "name": {
+    "ko": "Freety Lab (프리티랩)",
+    "en": "Freety Lab"
    },
-   "signature_ingredients": [
+   "accent": "#6E8B5A",
+   "logo": "assets/brands/freety-lab-logo.png",
+   "hero": "assets/brands/freety-lab-hero.jpg",
+   "photos": [
+    "assets/brands/freety-lab-01.jpg",
+    "assets/brands/freety-lab-02.jpg",
+    "assets/brands/freety-lab-03.jpg",
+    "assets/brands/freety-lab-04.jpg",
+    "assets/brands/freety-lab-05.jpg",
+    "assets/brands/freety-lab-06.jpg"
+   ],
+   "slogan": {
+    "ko": "freety is all free from the skin feel beauty",
+    "en": "freety is all free from the skin feel beauty"
+   },
+   "description": {
+    "ko": "피부로부터 빛나는 일상을 마주할 수 있도록. 프리티랩은 가장 인간 친화적인 성분과 피부를 구성하는 핵심 성분을 바탕으로 깊은 보습과 풍부한 영양을 전달합니다. 피부 본연의 힘을 키우고 피부 코어를 건강하게 회복하여 더욱 맑고 빛나는 피부를 위한 스킨케어 솔루션을 제안합니다.",
+    "en": "Begin every day with naturally radiant skin. Freety Lab formulates its products with skin-friendly ingredients and dermal-inspired components that deliver deep hydration and nourishment. By strengthening the skin's natural foundation and restoring the skin's core, the brand helps reveal healthier, clearer, and naturally radiant skin."
+   },
+   "philosophy": {
+    "ko": "Freety Lab은 자연과 피부가 함께 건강할 수 있는 아름다움을 추구합니다. 자연 그대로의 가치를 존중하며 과장이나 거짓 없이 제품의 품질로 진정성을 전달하고자 합니다. 피부와 환경에 불필요한 유해 요소를 배제하고, 자연에서 얻은 원료와 화장품공학 전문가들의 연구를 바탕으로 안전하고 효과적인 제품을 개발합니다. 자유로운 발상과 디자인 철학, 그리고 지속 가능한 아름다움을 통해 사람과 자연이 함께 공존하는 더 나은 뷰티를 만들어갑니다.",
+    "en": "Freety Lab believes that true beauty begins with healthy skin and respect for nature. The brand is committed to preserving nature's integrity while delivering honest, high-quality products without exaggeration. By eliminating unnecessary harmful ingredients and combining naturally derived materials with advanced cosmetic science, Freety Lab develops safe and effective skincare solutions. Guided by creative freedom, thoughtful design, and continuous innovation, the brand strives to create sustainable beauty that benefits both people and the environment."
+   },
+   "origin": {
+    "ko": "free(자연)와 pretty(아름다움)의 합성어로, 피부와 환경에 이로운 아름다움을 추구하는 브랜드 철학을 담고 있습니다.",
+    "en": "Freety Lab is a combination of the words free and pretty, representing the brand's philosophy of creating beauty that is kind to both the skin and the environment."
+   },
+   "manufacturer": {
+    "ko": "프리티랩(주)",
+    "en": "Freety Lab Co., Ltd."
+   },
+   "technology": [
     {
-     "en": "White Mastic",
-     "ko": ""
-    },
-    {
-     "en": "White Mastic Complex",
-     "ko": ""
-    },
-    {
-     "en": "Niacinamide",
-     "ko": ""
-    },
-    {
-     "en": "Tranexamic Acid",
-     "ko": ""
-    },
-    {
-     "en": "Tranexamic Acid, Alpha-Bisabolol, Arbutin, Glutathione",
-     "ko": ""
-    },
-    {
-     "en": "Plant-Based PDRN / Phyto-PDRN",
-     "ko": ""
-    },
-    {
-     "en": "Phyto PDRN Capsules",
-     "ko": ""
-    },
-    {
-     "en": "Repair Mastic",
-     "ko": ""
-    },
-    {
-     "en": "Ceramide, Copper Tripeptide-1",
-     "ko": ""
-    },
-    {
-     "en": "10 types Hyaluronic Acid, Squalane",
-     "ko": ""
+     "name": "SKIN LAYR® (전기방사 / Electrospinning)",
+     "name_en": "SKIN LAYR® (Electrospinning)",
+     "desc": "나노섬유 필름 제조 기술",
+     "desc_en": "Nanofiber film manufacturing technology based on electrospinning."
     }
    ],
-   "products": [
+   "clinical": [],
+   "lineup": {
+    "ko": "에센스 1종, 앰플 1종, 필름 1종 등 총 4개 SKU",
+    "en": "1 essence, 1 ampoule, 1 film — 4 SKUs in total",
+    "total": 4
+   },
+   "sku_names": [
     {
-     "sku": "MASTINA-001",
-     "name": {
-      "en": "Mastic 6-Hours Ampoule (Dropper)",
-      "ko": ""
-     },
-     "type": {
-      "en": "Ampoule",
-      "ko": ""
-     },
-     "volume": "15 mL",
-     "description": {
-      "en": "White Mastic 6-Hour Soothing Ampoule. Formulated with fermented mastic first introduced in Korea and Mastina's patented ingredient technology. Exclusive White Mastic Complex 63%.",
-      "ko": "매스틱 6 아워스 앰플. 화이트매스틱 라인의 앰플 제품."
-     }
+     "ko": "테카 토닝 에센스",
+     "en": "FREETY LAB TECA TONING ESSENCE"
     },
     {
-     "sku": "MASTINA-002",
-     "name": {
-      "en": "Mastic Perfect Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "Ampoule",
-      "ko": ""
-     },
-     "volume": "25ml",
-     "description": {
-      "en": "White Mastic Perfect Ampoule. Contains White Mastic Complex 63%, Niacinamide 5%, and four brightening ingredients 2% (Tranexamic Acid, Alpha-Bisabolol, Arbutin, Glutathione). Brightening and wrinkle-improving dual functionality. Low-irritation testing completed for normal and sensitive skin. Rich, high-concentration ampoule texture.",
-      "ko": "기미잡티 케어 + 안티에이징. 브라이트닝 성분 79% 고함량으로 검고 진한 기미와 주름을 동시에 케어하는 프리미엄 기미 앰플. 화이트매스틱 70%, 나이아신아마이드 5%, 트라넥삼산 3%, 3종 브라이트닝 시너지 성분 1%."
-     }
+     "ko": "테카 콜라겐 앰플",
+     "en": "FREETY LAB TECA COLLAGEN AMPOULE"
     },
     {
-     "sku": "MASTINA-003",
-     "name": {
-      "en": "Mastic Perfect Ampoule (big size)",
-      "ko": ""
-     },
-     "type": {
-      "en": "Ampoule",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "Big-size version of White Mastic Perfect Ampoule. Same brand positioning as Mastic Perfect Ampoule; verify formulation and claims against official spec before external use.",
-      "ko": "매스틱 퍼펙트 앰플 대용량. 제품 상세는 매스틱 퍼펙트 앰플 기준으로 보되, 공식 용량/구성 확인 필요."
-     }
+     "ko": "스킨 필름 100X",
+     "en": "FREETY LAB SKIN FILM 100X"
     },
     {
-     "sku": "MASTINA-004",
-     "name": {
-      "en": "White mastic core ampoule (season 4)",
-      "ko": ""
-     },
-     "type": {
-      "en": "Skincare",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "Mastina White Mastic Core Ampoule Season 4. High-density concentrated formula designed to penetrate deeply into the skin. Formulated with 74% high-concentration White Mastic and Plant-Based PDRN (Phyto-PDRN) 1%. Targets dark spots, uneven skin tone, and overall brightening care.",
-      "ko": "기미 X 톤 X 치밀도 집중설계 화이트 매스틱 코어 앰플. 화이트매스틱에 매스틱 PDRN 엑소좀을 더한 업그레이드 포뮬러로, 피부 흡수도를 한 단계 끌어올려 기미는 더 촘촘하게, 톤은 더 맑게, 치밀도는 더 탄탄하게 케어하는 프리미엄 기미 X 치밀도 집중 앰플."
-     }
-    },
-    {
-     "sku": "MASTINA-005",
-     "name": {
-      "en": "Phyto PDRN Boosting Amopule",
-      "ko": ""
-     },
-     "type": {
-      "en": "Skincare",
-      "ko": ""
-     },
-     "volume": "30g",
-     "description": {
-      "en": "Phyto PDRN Boosting Ampoule. Dual functional cosmetic for brightening and wrinkle improvement. Boosting ampoule that comfortably cares for damaged skin barriers and adds healthy radiance. Phyto PDRN Capsules × Repair Mastic 10%; pure 99% vegan PDRN encapsulated using microfluidics technology.",
-      "ko": "피토 PDRN 부스팅 앰플. 손상된 피부 장벽과 광채 케어를 위한 부스팅 앰플로 소개됨."
-     }
-    },
-    {
-     "sku": "MASTINA-006",
-     "name": {
-      "en": "White Mastic All-In-One Lotion For Men",
-      "ko": ""
-     },
-     "type": {
-      "en": "Skincare",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "White Mastic All-in-One Lotion for Men. Daily moisturizing and soothing care for men's skin exposed to external stress and shaving. Controls shine, refines pores with 5% Niacinamide, hydrates, and strengthens barrier with Panthenol and 5 ceramides. Contains 50,000 ppm White Mastic Complex.",
-      "ko": "남성 피부용 데일리 보습·진정 올인원 로션. 유분/번들거림, 모공, 보습, 장벽 케어 포지션."
-     }
-    },
-    {
-     "sku": "MASTINA-007",
-     "name": {
-      "en": "White Mastic ampoule suncream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Sun Care",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "White Mastic Moisture Ampoule Sun Cream. Ampoule-like watery hydration texture with no stickiness or white cast. Formulated with 10 types of Hyaluronic Acid, Panthenol, Allantoin, 72% moisturizing ingredients, 10% White Mastic Extract, and Niacinamide. SPF50+ PA++++. Brightening, wrinkle improvement, UV protection triple functional care.",
-      "ko": "화이트매스틱 모이스처 앰플 선크림. 보습 앰플 같은 사용감과 자외선 차단, 미백/주름개선 기능성 포지션."
-     }
-    },
-    {
-     "sku": "MASTINA-008",
-     "name": {
-      "en": "White Mastic Glow tone -up suncream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Sun Care",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "White Mastic Glow Tone-Up Sun Cream. SPF50+ PA++++. Natural peach-beige tone-up with sheer, non-whitening glow. Formulated with White Mastic 10%, Niacinamide 5%, vitamin C derivatives, 10 types of Hyaluronic Acid, and Panthenol. Low-irritation tested.",
-      "ko": "화이트매스틱 글로우 톤업 선크림. 자연스러운 피치 베이지 톤업과 광채 보정, 보습 사용감의 선케어 제품."
-     }
-    },
-    {
-     "sku": "MASTINA-009",
-     "name": {
-      "en": "White Mastic Soft Bubble Peel",
-      "ko": ""
-     },
-     "type": {
-      "en": "Skincare",
-      "ko": ""
-     },
-     "volume": "100",
-     "description": {
-      "en": "White Mastic Soft Bubble Peel. Low-irritation gommage peeling that gently lifts away sebum and flaky dead skin with micro-bubbles. LHA + Papain double exfoliation system. Claims 88.8% improvement in dead skin after one use. Contains phyto mucin, 10 types of hyaluronic acid, and 1% brightening patented White Mastic ingredient.",
-      "ko": "화이트매스틱 소프트 버블 필. 저자극 버블 고마쥬 필링으로 각질, 피지, 피부결 케어 포지션."
-     }
-    },
-    {
-     "sku": "MASTINA-010",
-     "name": {
-      "en": "White Masitc Modeling Pack Cleanser",
-      "ko": ""
-     },
-     "type": {
-      "en": "Cleanser",
-      "ko": ""
-     },
-     "volume": "120g",
-     "description": {
-      "en": "White Mastic Modeling Pack Cleanser. Pack-like moisturizing cleanser that adheres tightly and transforms into soft foam when cleansed with water. Mandelic Acid helps skin texture and balance; Betaine + Panthenol soothe dry skin; Pentavitin + Ceramide help maintain moisture. Contains patented White Mastic extract and 10 types of hyaluronic acid.",
-      "ko": "화이트매스틱 모델링 팩 클렌저. 팩처럼 밀착되는 제형이 물 세안 시 부드러운 거품으로 전환되는 신개념 팩 클렌저."
-     }
-    },
-    {
-     "sku": "MASTINA-011",
-     "name": {
-      "en": "Bakuchiol Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "Ampoule",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "Bakuchiol Ampoule. Whitening and wrinkle improvement. Contains 99% high-purity Bakuchiol 10,000 ppm from refined Psoralea corylifolia seeds. Deep-action collagen × bakuchiol booster. Fine formulation size supports fast absorption and smooth, non-greasy finish.",
-      "ko": "바쿠치올 앰플. 고순도 바쿠치올과 저분자 콜라겐 기반 안티에이징/리프팅 포지션."
-     }
-    },
-    {
-     "sku": "MASTINA-012",
-     "name": {
-      "en": "Bakuchiol Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Cream",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "Bakuchiol Cream. Whitening and wrinkle improvement. 5-Total Cera Complex for skin barrier care. Triple-layered high-potency cream for moisture, firmness, and elasticity. Clinical figures shown: hydration increased by 9.35%, lifting of sagging skin by 0.57%, elasticity improved by 9.59%.",
-      "ko": "바쿠치올 크림. 5종 세라마이드 기반 장벽 케어와 보습/탄력/리프팅 포지션."
-     }
-    },
-    {
-     "sku": "MASTINA-013",
-     "name": {
-      "en": "White Masitc Albumin Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Cream",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "White Mastic Albumin Cream. Detailed catalogue text not extracted from provided pages. Use export specification as base; verify full product claims from supplier.",
-      "ko": "화이트 매스틱 알부민 크림. 제공된 카탈로그 추출 범위에서 상세 설명 미확인. 공급사 확인 필요."
-     }
-    },
-    {
-     "sku": "MASTINA-014",
-     "name": {
-      "en": "Mastina white mastic ampoule mask (4ea)",
-      "ko": ""
-     },
-     "type": {
-      "en": "Skincare",
-      "ko": ""
-     },
-     "volume": "28ml",
-     "description": {
-      "en": "White Mastic Ampoule Mask. Deep, long-lasting hydration mask. Brightening and hydration care with White Mastic 10% + Niacinamide 5%. Beta-Glucan and Betaine provide hydration and moisture retention. Ampoule-infused sheet mask with 6-peptide complex and close-adhering sheet.",
-      "ko": "화이트매스틱 앰플 마스크. 화이트매스틱 10%, 나이아신아마이드 5%, 베타글루칸, 베타인, 6종 펩타이드 기반 보습·광채·탄력 마스크."
-     }
-    },
-    {
-     "sku": "MASTINA-015",
-     "name": {
-      "en": "White Mastic Real ampoule gel Mask (4ea)",
-      "ko": ""
-     },
-     "type": {
-      "en": "Mask",
-      "ko": ""
-     },
-     "volume": "43ml",
-     "description": {
-      "en": "White Mastic Real Ampoule Gel Mask. Hydrogel mask for focused care. High-dose care with 70% White Mastic. Claims to brighten skin tone and lift facial contours in 20 minutes. Six home clinic effects: tone, spots, pigmentation, puffiness, lifting, photoaging care. Sensitive skin test completed.",
-      "ko": "화이트매스틱 리얼 앰플 겔 마스크. 미백 앰플 한 병을 그대로 담아 피부 톤, 탄력, 광채를 단 20분에 압축 케어하는 프리미엄 겔 마스크. 화이트매스틱 70%, 인체 유사 콜라겐, 18종 펩타이드, 11종 히알루론산."
-     }
+     "ko": "PDRN 테카 콜라겐 크림",
+     "en": "FREETY LAB PDRN TECA COLLAGEN CREAM"
     }
    ],
-   "product_count": 15
+   "published": true
+  },
+  {
+   "id": "mastina",
+   "code": "MAST",
+   "name": {
+    "ko": "매스티나 (Mastina)",
+    "en": "Mastina"
+   },
+   "accent": "#9C6B4A",
+   "logo": "assets/brands/mastina-logo.png",
+   "hero": "assets/brands/mastina-hero.jpg",
+   "photos": [
+    "assets/brands/mastina-01.jpg",
+    "assets/brands/mastina-02.jpg",
+    "assets/brands/mastina-03.jpg",
+    "assets/brands/mastina-04.jpg",
+    "assets/brands/mastina-05.jpg",
+    "assets/brands/mastina-06.jpg"
+   ],
+   "slogan": {},
+   "description": {
+    "ko": "매스티나는 그리스 키오스(Chios)섬에서만 생산되는 프리미엄 화이트 매스틱을 핵심 원료로 사용하는 프리미엄 안티에이징 스킨케어 브랜드입니다. 풍부한 항산화 및 피부 컨디셔닝 효능을 지닌 화이트 매스틱을 기반으로 피부 톤, 기미, 광채 및 피부결 개선을 위한 고기능성 스킨케어 솔루션을 제공합니다.",
+    "en": "Mastina is a premium anti-aging skincare brand centered on White Mastic, a rare natural resin sustainably harvested from the mastic trees of Chios Island, Greece. Rich in antioxidant and skin-conditioning properties, White Mastic helps improve skin tone, dark spots, radiance, and overall skin texture while promoting healthier-looking skin."
+   },
+   "philosophy": {
+    "ko": "희소성과 과학적 효능을 갖춘 천연 원료를 바탕으로 피부 본연의 건강한 광채를 되찾는 것을 목표로 합니다. 자연 유래 성분과 피부과학을 결합하여 보다 맑고 균일한 피부를 위한 프리미엄 안티에이징 솔루션을 제안합니다.",
+    "en": "Mastina combines the purity of rare natural ingredients with advanced skincare science to restore the skin's natural glow. By harnessing the unique benefits of White Mastic, the brand delivers premium skincare solutions for brighter, smoother, and more youthful-looking skin."
+   },
+   "origin": {},
+   "manufacturer": {
+    "ko": "(주)프롬바이오코스메틱",
+    "en": "FromBIO Cosmetic Co., Ltd."
+   },
+   "technology": [],
+   "clinical": [],
+   "lineup": {
+    "ko": "앰플 9종을 중심으로 크림·로션·선크림 등 총 15개 SKU",
+    "en": "Anchored by 9 ampoule SKUs, with cream, lotion, sun cream — 15 SKUs in total",
+    "total": 15
+   },
+   "sku_names": [
+    {
+     "ko": "매스틱 식스 아워스 앰플 (스포이드)",
+     "en": "Mastic 6-Hours Ampoule (Dropper)"
+    },
+    {
+     "ko": "화이트매스틱 기미관리 퍼펙트  앰플",
+     "en": "Mastic Perfect Ampoule"
+    },
+    {
+     "ko": "화이트매스틱 기미관리 퍼펙트  앰플(대용량)",
+     "en": "Mastic Perfect Ampoule (big size)"
+    },
+    {
+     "ko": "화이트 메스틱 코어 앰플(시즌4)",
+     "en": "White mastic core ampoule (season 4)"
+    },
+    {
+     "ko": "피토 피디알엔 부스팅 앰플",
+     "en": "Phyto PDRN Boosting Amopule"
+    },
+    {
+     "ko": "화이트매스틱 올인원 로션 포맨",
+     "en": "White Mastic All-In-One Lotion For Men"
+    }
+   ],
+   "published": true
   },
   {
    "id": "hycl",
-   "name": "HYCL",
+   "code": "HYCL",
+   "name": {
+    "ko": "하이클 (HYCL)",
+    "en": "HYCL"
+   },
    "accent": "#5B7C99",
-   "logo": "assets/brands/hycl.png",
-   "manufacturer": "FromBIO Co., Ltd. / 주식회사 프롬바이오",
-   "description": {
-    "en": "Cosmetics-focused entity derived from FromBIO's cosmetics business division. Develops skincare brands based on functional ingredients, natural raw materials, and clinically supported concepts.",
-    "ko": ""
-   },
-   "signature_ingredients": [
-    {
-     "en": "LHA Pearlpicul",
-     "ko": ""
-    },
-    {
-     "en": "Alpha-lipoic Acid",
-     "ko": ""
-    },
-    {
-     "en": "BHA",
-     "ko": ""
-    },
-    {
-     "en": "LHA",
-     "ko": ""
-    },
-    {
-     "en": "Lactic Acid / AHA",
-     "ko": ""
-    },
-    {
-     "en": "Plant-derived BHA",
-     "ko": ""
-    },
-    {
-     "en": "Tannins",
-     "ko": ""
-    },
-    {
-     "en": "Ectoin",
-     "ko": ""
-    },
-    {
-     "en": "Panthenol",
-     "ko": ""
-    },
-    {
-     "en": "Ammonium Lactate",
-     "ko": ""
-    }
+   "logo": "assets/brands/hycl-logo.png",
+   "hero": "assets/brands/hycl-hero.jpg",
+   "photos": [
+    "assets/brands/hycl-01.jpg",
+    "assets/brands/hycl-02.jpg",
+    "assets/brands/hycl-03.jpg",
+    "assets/brands/hycl-04.jpg",
+    "assets/brands/hycl-05.jpg",
+    "assets/brands/hycl-06.jpg"
    ],
-   "products": [
-    {
-     "sku": "HYCL-001",
-     "name": {
-      "en": "BHA DEEP PORE GEL CLEANSER",
-      "ko": ""
-     },
-     "type": {
-      "en": "Cleanser",
-      "ko": ""
-     },
-     "volume": "150",
-     "description": {
-      "en": "HYCL BHA Deep Pore Gel Cleanser. Exfoliating and sebum deep cleanser that captures sebum and leaves smooth bare skin. Functional acne-care cleanser with 5,000 ppm BHA to dissolve dead skin cells and sebum. Gel cleanser that cleanses sebum, dead skin cells, impurities, and blackheads while maintaining hydration.",
-      "ko": "BHA 딥 포어 젤 클렌저. BHA 5,000ppm 기반 딥 포어 클렌징, 피지/각질/블랙헤드 케어 포지션."
-     }
-    },
-    {
-     "sku": "HYCL-002",
-     "name": {
-      "en": "LHA TONE&GLOW SOFTENING SERUM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Skincare",
-      "ko": ""
-     },
-     "volume": "70",
-     "description": {
-      "en": "HYCL LHA Tone & Glow Softening Serum. 0.5% LHA 'injection' you apply. Square Pearlpicul improves texture, brightens tone, and soothes skin. Patented LHA Square Pearlpicul and alpha-lipoic acid for skin texture, radiance, and tone. High efficacy without irritation.",
-      "ko": "LHA 톤앤글로우 소프트닝 세럼. 거친 피부결을 부드럽게 케어해 매끈한 피부로 가꿔주는 데일리 결케어 세럼. 5세대 LHA + 알파리포산, 주름개선 기능성, 피부결/톤/광채 임상 테스트 완료."
-     }
-    },
-    {
-     "sku": "HYCL-003",
-     "name": {
-      "en": "LHA WAKE-UP Tinglle Softening Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "Mask",
-      "ko": ""
-     },
-     "volume": "4ea",
-     "description": {
-      "en": "HYCL LHA Wake-Up! Tingle Softening Mask. 1% LHA skin device-like care; professional-level texture refinement in a single mask. No-rinse high-potency LHA mask. 10,000 ppm LHA + lactic acid for dead skin and pore care, leaving skin smooth and makeup-ready.",
-      "ko": "LHA 웨이크업 팅글 소프트닝 마스크. 새살돋는 10분샷 마스크. LHA + AHA 기반 스페셜 결케어 마스크. 미백/주름개선 기능성, 묵은 각질 및 모공 개선 임상 테스트 완료."
-     }
-    },
-    {
-     "sku": "HYCL-004",
-     "name": {
-      "en": "BHA DEEP PORE MINIMIZING TONER",
-      "ko": ""
-     },
-     "type": {
-      "en": "Toner",
-      "ko": ""
-     },
-     "volume": "200",
-     "description": {
-      "en": "HYCL BHA Deep Pore Minimizing Toner. Pore refreshing toner that wipes away residual sebum inside pores and tightens pore walls. BHA pore-tightening alkaline toner suitable for acne-prone skin; plant-derived BHA and tannins target dead skin, sebum, pores, and sebum production.",
-      "ko": "BHA 딥 포어 미니마이징 토너. 모공 속 잔여 피지와 모공 타이트닝을 위한 BHA 토너."
-     }
-    },
-    {
-     "sku": "HYCL-005",
-     "name": {
-      "en": "HYCL ECTO-PANTO TRIPLE BARRIER CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Cream",
-      "ko": ""
-     },
-     "volume": "50",
-     "description": {
-      "en": "HYCL Ecto-Panto Triple Barrier Cream. Daily soothing repair cream for sensitive skin. Dermatologically tested. Suitable for sensitive, dry, and damaged skin. Formulated with Ectoin 1%, Panthenol 0.5%, and Ammonium Lactate. Clinically tested by an external dermatology institute to help improve the skin barrier of damaged skin.",
-      "ko": "HYCL 엑토판토 트리플 베리어 크림. 민감하고 건조하며 손상된 피부 장벽 케어용 고보습 크림. 엑토인 1%, 판테놀 0.5%, 암모늄락테이트 함유."
-     }
-    },
-    {
-     "sku": "HYCL-006",
-     "name": {
-      "en": "HYCL PANTETHINE MOISTURE PLUMPING CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Cream",
-      "ko": ""
-     },
-     "volume": "50",
-     "description": {
-      "en": "HYCL Hyal-Pantethine Moisture Plumping Cream. Pore-plumping moisture cream with 25 layers of hydration built up from deep within. Nano-sized spherical hyaluronic acid, smaller than pores, delivers hydration; panthenine synergy helps moisture supply within pores.",
-      "ko": "히알판테틴 모이스춰 플럼핑 크림. 피부 속부터 모공까지 수분을 채워 오랜 시간 촉촉함을 유지하는 수분 크림. 히알루론산 + 판테틴, 미백/주름개선 기능성, 수분·보습·모공 임상 테스트 완료."
-     }
-    }
-   ],
-   "product_count": 6
-  },
-  {
-   "id": "wati-for-skin",
-   "name": "Wati For Skin",
-   "accent": "#5C3D8F",
-   "logo": "assets/brands/wati-for-skin.png",
-   "products": [
-    {
-     "sku": "WATI-001",
-     "name": {
-      "en": "Original Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-002",
-     "name": {
-      "en": "Tea Tree Soothing Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-003",
-     "name": {
-      "en": "Propolis Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-004",
-     "name": {
-      "en": "From CICA Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-005",
-     "name": {
-      "en": "Heartleaf Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-006",
-     "name": {
-      "en": "Niacinamide Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-007",
-     "name": {
-      "en": "Collagen Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-008",
-     "name": {
-      "en": "PDRN+ Biome Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-009",
-     "name": {
-      "en": "Hyaluronic Acid Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-010",
-     "name": {
-      "en": "Vitamin Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-011",
-     "name": {
-      "en": "RETI-A Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-012",
-     "name": {
-      "en": "Lifting Essence Micro Spicule 100",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "에센스 / Essence"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-013",
-     "name": {
-      "en": "Glycolic Acid PDRN Micro Spicule Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-014",
-     "name": {
-      "en": "Niacinamide EGF Micro Spicule Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-015",
-     "name": {
-      "en": "Retinol Vitamin Micro Spicule Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-016",
-     "name": {
-      "en": "Bakuchiol Heartleaf Cica Micro Spicule Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-017",
-     "name": {
-      "en": "Tranexamic Acid Collagen Micro Spicule Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-018",
-     "name": {
-      "en": "Hyaluronic Squalane Micro Spicule Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-019",
-     "name": {
-      "en": "Glutathione Squalane Volufroshot Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-020",
-     "name": {
-      "en": "Vita Barrier Volufroshot Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-021",
-     "name": {
-      "en": "Collagen Niacinamide Volufroshot Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-022",
-     "name": {
-      "en": "Tea Tree Cica Blemish Soothing Volufroshot Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-023",
-     "name": {
-      "en": "Panthenol Ceramide Volufroshot Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-024",
-     "name": {
-      "en": "PDRN Biome Volufroshot Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-025",
-     "name": {
-      "en": "Niacinamide Heartleaf Volufroshot Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-026",
-     "name": {
-      "en": "Glycolic Acid Squalane Volufroshot Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-027",
-     "name": {
-      "en": "Collagen Retinol Volufroshot Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-028",
-     "name": {
-      "en": "Tranexamic Acid Vitamin Volufroshot Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-029",
-     "name": {
-      "en": "Hyaluronic Panthenol B5 Volufroshot Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-030",
-     "name": {
-      "en": "Adenosine EGF Volufroshot Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-031",
-     "name": {
-      "en": "Bakuchiol Barrier Cica Exosome-B Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-032",
-     "name": {
-      "en": "Glutathione Cica Blemish Exosome-B Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-033",
-     "name": {
-      "en": "Madecassoside Ceramide Exosome-B Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-034",
-     "name": {
-      "en": "Tea Tree Peptide Exosome-B Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-035",
-     "name": {
-      "en": "Panthenol Caffeine Exosome-B Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-036",
-     "name": {
-      "en": "PDRN Zinc Biome Exosome-B Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "앰플 / Ampoule"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-037",
-     "name": {
-      "en": "Heartleaf Vital Wrinkle Exosome-B Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-038",
-     "name": {
-      "en": "Glutathione Niacinamide Exosome-B Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-039",
-     "name": {
-      "en": "Collagen Retinol Exosome-B Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-040",
-     "name": {
-      "en": "EGF Ginseng Micro Spicule Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-041",
-     "name": {
-      "en": "Glycolic Peptide Micro Spicule Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-042",
-     "name": {
-      "en": "PDRN Ceramide Micro Spicule Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-043",
-     "name": {
-      "en": "Snail Vitamin Skin Booster Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-044",
-     "name": {
-      "en": "Super volume Hyaluronic Acid Skin Booster Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-045",
-     "name": {
-      "en": "Avocado Bio Lifting Volufroshot Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-046",
-     "name": {
-      "en": "Bakuchiol Barrier Volufroshot Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-047",
-     "name": {
-      "en": "Panthenol Dark Circle Volufroshot Conceal Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-048",
-     "name": {
-      "en": "Squalane Caffeine Micro Spicule Conceal Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "30ml"
-    },
-    {
-     "sku": "WATI-049",
-     "name": {
-      "en": "PDRN 2X Biome Micro Spicule 100 Essence Mask Pack 10ea",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Sheet mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-050",
-     "name": {
-      "en": "Collagen Madecassoside Micro Spicule 100 Essence Mask Pack 10ea",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Sheet mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-051",
-     "name": {
-      "en": "Retinol Tea Tree Micro Spicule 100 Essence Mask Pack 10ea",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Sheet mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-052",
-     "name": {
-      "en": "Hyaluronic Acid NMN Micro Spicule 100 Essence Mask Pack 10ea",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Sheet mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-053",
-     "name": {
-      "en": "Vita Ceramide Micro Spicule 100 Essence Mask Pack 10ea",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Sheet mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-054",
-     "name": {
-      "en": "Pink PDRN Collagen Exosome Serum Mask Pack",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Serum mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-055",
-     "name": {
-      "en": "CICA Soothing Heartleaf Exosome Serum Mask Pack",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Serum mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-056",
-     "name": {
-      "en": "Panthenol Snail Pore Tightening Volufroshot Ampoule Mask Pack",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Sheet mask"
-     },
-     "volume": "27g*10ea"
-    },
-    {
-     "sku": "WATI-059",
-     "name": {
-      "en": "Panthenol Squalane Volufroshot Berry Lip Sleeping Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "립 슬리핑 / 마스크 / Lip Sleeping Mask"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-060",
-     "name": {
-      "en": "Collagen PDRN Exosome Grapefruit Lip Sleeping Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "립 슬리핑 / 마스크 / Lip Sleeping Mask"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-061",
-     "name": {
-      "en": "Mango Seed Vita Volufroshot Lip Glowy Balm",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "립 글로이 밤 / Lip Glowy Balm"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-062",
-     "name": {
-      "en": "Vanilla PDRN Hyaluronic Acid Volufroshot Lip Glowy Balm",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "립 글로이 밤 / Lip Glowy Balm"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-063",
-     "name": {
-      "en": "PDRN Peptide Exosome Lip Essence",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "립 에센스 / Lip Essence"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-064",
-     "name": {
-      "en": "Jojoba Retinol Exosome Lip Essence",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "립 에센스 / Lip Essence"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-065",
-     "name": {
-      "en": "NMN PDRN Exosome Neck cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "넥크림 / Neck Cream"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-066",
-     "name": {
-      "en": "NMN Melatonin PDRN Liposome Eye Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "아이크림 / Eye Cream"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-067",
-     "name": {
-      "en": "Propolis Snail Exosome Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-068",
-     "name": {
-      "en": "Madecassoside PDRN Exosome Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-069",
-     "name": {
-      "en": "Centella Zinc Blemish Exosome Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-070",
-     "name": {
-      "en": "NMN Melatonin PDRN Exosome Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-071",
-     "name": {
-      "en": "NMN Melatonin Arbutin Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-072",
-     "name": {
-      "en": "Sea Grape PDRN Exosome Pore Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-073",
-     "name": {
-      "en": "Yulmu Centella PDRN Exosome Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "20ml"
-    },
-    {
-     "sku": "WATI-074",
-     "name": {
-      "en": "PDRN Madecassoside Micro Spicule Pad",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "패드 / Pad"
-     },
-     "volume": "60매"
-    },
-    {
-     "sku": "WATI-075",
-     "name": {
-      "en": "Collagen Heartleaf Exosome Mild Acidic Peeling Pad",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "패드 / Pad"
-     },
-     "volume": "60매"
-    },
-    {
-     "sku": "WATI-076",
-     "name": {
-      "en": "Collagen Carrot Volufroshot Pad",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "패드 / Pad"
-     },
-     "volume": "60매"
-    },
-    {
-     "sku": "WATI-077",
-     "name": {
-      "en": "Collagen PDRN Micro Spicule Gel Toner",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "토너 / Toner"
-     },
-     "volume": "200ml"
-    },
-    {
-     "sku": "WATI-078",
-     "name": {
-      "en": "Melatonin NMN Volufroshot Toner",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "토너 / Toner"
-     },
-     "volume": "200ml"
-    },
-    {
-     "sku": "WATI-079",
-     "name": {
-      "en": "Galactomyces Hyaluronic Acid Exosome Peeling Toner",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "토너 / Toner"
-     },
-     "volume": "200ml"
-    },
-    {
-     "sku": "WATI-080",
-     "name": {
-      "en": "Rose AHA PHA Micro Spicule Glow Liquid Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "리퀴드 / 마스크 / Liquid Mask"
-     },
-     "volume": "200ml"
-    },
-    {
-     "sku": "WATI-081",
-     "name": {
-      "en": "Vitamin PDRN Exosome Liquid Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "리퀴드 / 마스크 / Liquid Mask"
-     },
-     "volume": "200ml"
-    },
-    {
-     "sku": "WATI-082",
-     "name": {
-      "en": "Hyaluronic Acid PDRN Exosome Wrapping Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "랩핑 마스크 / Wrapping Mask"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-083",
-     "name": {
-      "en": "Glutathione NMN Micro Spicule Wrapping Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "랩핑 마스크 / Wrapping Mask"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-084",
-     "name": {
-      "en": "PDRN peptide Micro Spicule Peel-Off Pack",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "필오프팩 / Peel-off Pack"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-085",
-     "name": {
-      "en": "NMN PDRN Volufroshot Water Sleeping Mask",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "슬리핑  / 마스크 / Sleeping Mask"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-086",
-     "name": {
-      "en": "PDRN NMN Exosome Mild Sunscreen SPF50+",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "선크림 / Sunscreen"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-087",
-     "name": {
-      "en": "PDRN Melatonin Volufroshot Milky Tone Up Sunscreen SPF50+",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "선크림 / Sunscreen"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-089",
-     "name": {
-      "en": "PDRN Collagen Deep Clean Whipping Cleansing Foam",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "클렌징폼 / Cleansing Foam"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-090",
-     "name": {
-      "en": "Super Recovery Collagen Exosome Serum BB Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "비비크림 / BB Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-091",
-     "name": {
-      "en": "Glow Cover PDRN Micro Spicule Foundation",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "파운데이션 / Foundation"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-092",
-     "name": {
-      "en": "PDRN Niacinamide Volufroshot brightening Tone up Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "톤업크림 / Tone-Up Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-093",
-     "name": {
-      "en": "Retinol PDRN Volufroshot Pink Tone up Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "톤업크림 / Tone-Up Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-094",
-     "name": {
-      "en": "Heartleaf Niacinamide Micro Spicule Perfumed Soap",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "비누 / Soap"
-     },
-     "volume": "100g"
-    },
-    {
-     "sku": "WATI-095",
-     "name": {
-      "en": "Goat Milk PDRN Micro Spicule Perfumed Soap",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "비누 / Soap"
-     },
-     "volume": "100g"
-    },
-    {
-     "sku": "WATI-096",
-     "name": {
-      "en": "Collagen NMN Exosome Perfumed Soap",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "비누 / Soap"
-     },
-     "volume": "100g"
-    },
-    {
-     "sku": "WATI-097",
-     "name": {
-      "en": "Calendula Lavender Volufroshot Perfumed Soap",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "비누 / Soap"
-     },
-     "volume": "100g"
-    },
-    {
-     "sku": "WATI-098",
-     "name": {
-      "en": "Mild Acidic Black Soybean Beer Yeast Micro Spicule Shampoo Bar",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "샴푸바 / Shampoo Bar"
-     },
-     "volume": "100g"
-    },
-    {
-     "sku": "WATI-099",
-     "name": {
-      "en": "Truffle Squalane Exosome Oil Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-100",
-     "name": {
-      "en": "Melatonin Caffeine PDRN Eye Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-101",
-     "name": {
-      "en": "TXA PDRN Glow Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-102",
-     "name": {
-      "en": "Snail Mucin PDRN Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-103",
-     "name": {
-      "en": "NMN PDRN Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "세럼 / Serum"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-104",
-     "name": {
-      "en": "TXA PDRN Relaxing Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-105",
-     "name": {
-      "en": "Snail Mucin PDRN Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-106",
-     "name": {
-      "en": "NMN Exosome PDRN Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크림 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-107",
-     "name": {
-      "en": "Tea Tree CICA Retinol Spot Calming Care Gel",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "카밍 케어 젤 / Calming Care Gel"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-108",
-     "name": {
-      "en": "CICA Extra Plus Pore Cleaner",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "포어 클리너 / Pore Cleaner"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-109",
-     "name": {
-      "en": "Biotin Protein Polyphenol Volume Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "샴푸 / Shampoo"
-     },
-     "volume": "500ml"
-    },
-    {
-     "sku": "WATI-110",
-     "name": {
-      "en": "Biotin Protein Polyphenol Damage Care Treatment",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "트리트먼트 / Treatment"
-     },
-     "volume": "500ml"
-    },
-    {
-     "sku": "WATI-111",
-     "name": {
-      "en": "PDRN Ceramide Body Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "바디로션 / Body Lotion"
-     },
-     "volume": "500ml"
-    },
-    {
-     "sku": "WATI-112",
-     "name": {
-      "en": "Panthenol Ceramide Ato Moisture Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "바디로션 / Body Lotion"
-     },
-     "volume": "500ml"
-    },
-    {
-     "sku": "WATI-113",
-     "name": {
-      "en": "Acne Clear Ceramide Body Wash",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "바디워시 / Body Wash"
-     },
-     "volume": "500ml"
-    },
-    {
-     "sku": "WATI-114",
-     "name": {
-      "en": "Panthenol Ceramide Ato Top To Toe Wash",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "바디워시 / Body Wash"
-     },
-     "volume": "500ml"
-    },
-    {
-     "sku": "WATI-115",
-     "name": {
-      "en": "Vitamin NMN Deep Hydrogel Mask (Completed Clinical Test)",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Mask Pack"
-     },
-     "volume": "34g*4ea"
-    },
-    {
-     "sku": "WATI-116",
-     "name": {
-      "en": "Collagen PDRN Deep Capsule Hydrogel Mask (Completed Clinical Test)",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Mask Pack"
-     },
-     "volume": "34g*4ea"
-    },
-    {
-     "sku": "WATI-117",
-     "name": {
-      "en": "Hyaluronic Acid Volufroshot Deep Silk Volume Fit Hydrogel Mask (Completed Cl...",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "마스크팩 / Mask Pack"
-     },
-     "volume": "34g*4ea"
-    },
-    {
-     "sku": "WATI-123",
-     "name": {
-      "en": "Panthenol Snail Rejuver Elastic Thread Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크링 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-124",
-     "name": {
-      "en": "PDRN Ceramide Rejuver Vaseline Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크링 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-125",
-     "name": {
-      "en": "Collagen NMN Rejuver Water Glow Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크링 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-126",
-     "name": {
-      "en": "Centella Pore Care Rejuver Relaxing Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크링 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-127",
-     "name": {
-      "en": "TXA Rejuver Mela Care Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크링 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-128",
-     "name": {
-      "en": "Kojic Acid Volufroshot Rejuver Horse Oil Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "크링 / Cream"
-     },
-     "volume": "50ml"
-    },
-    {
-     "sku": "WATI-129",
-     "name": {
-      "en": "Firming Care Melatonin Apple&Strawberry Hand Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "핸드크림 / Hand Cream"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-130",
-     "name": {
-      "en": "Recovery NMN Shea Butter Hand Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "핸드크림 / Hand Cream"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-131",
-     "name": {
-      "en": "Moisture PDRN Chamomile Hand Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "핸드크림 / Hand Cream"
-     },
-     "volume": "100ml"
-    },
-    {
-     "sku": "WATI-132",
-     "name": {
-      "en": "Propolis PDRN Emu Oil Foot Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "",
-      "ko": "풋크림 / Foot Cream"
-     },
-     "volume": "100ml"
-    }
-   ],
-   "product_count": 124
-  },
-  {
-   "id": "curest",
-   "name": "CUREST",
-   "accent": "#3E7C7B",
-   "logo": "assets/brands/curest.png",
-   "products": [],
-   "product_count": 0
-  },
-  {
-   "id": "herbaid",
-   "name": "HerbAid",
-   "accent": "#6B8E4E",
-   "logo": "assets/brands/herbaid.png",
-   "products": [],
-   "product_count": 0
-  },
-  {
-   "id": "freety-lab",
-   "name": "Freety Lab",
-   "accent": "#8B5E3C",
-   "logo": "assets/brands/freety-lab.png",
-   "manufacturer": "FREETY LAB CO. LTD",
-   "description": {
-    "en": "Freety Lab is described as a brand pursuing beauty that is kind to both the skin and the environment, based on the fusion of free and pretty. Source-grounded only from company/brand introduction materials.",
-    "ko": ""
-   },
-   "products": [
-    {
-     "sku": "FREETY_TECA_TONING_ESSENCE_120ML",
-     "name": {
-      "en": "FREETY LAB TECA TONING ESSENCE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Essence",
-      "ko": ""
-     },
-     "volume": "120 ml",
-     "description": {
-      "en": "TECA Toning Essence is presented as a product based on Centella-derived botanical extracts and functional ingredients for brightening and wrinkle care.",
-      "ko": "100시간 기다림 끝에 순도 높은 병풀 에너지 그대로를 담아 피부를 Re-energizing하는 TECA 토닝 에센스. 100시간 저온숙성, 깨끗하게 필터링된 병풀추출물 콘셉트가 소개됨."
-     },
-     "key_ingredients": [
-      {
-       "en": "Botanical Extract",
-       "ko": "Botanical Extract"
-      },
-      {
-       "en": "Niacinamide",
-       "ko": "Niacinamide"
-      },
-      {
-       "en": "Adenosine",
-       "ko": "Adenosine"
-      }
-     ]
-    },
-    {
-     "sku": "FREETY_TECA_COLLAGEN_AMPOULE_30ML",
-     "name": {
-      "en": "FREETY LAB TECA COLLAGEN AMPOULE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Ampoule",
-      "ko": ""
-     },
-     "volume": "30 ml",
-     "description": {
-      "en": "TECA Collagen Ampoule is presented as a collagen-focused ampoule using collagen, elastin, and hyaluronic acid components for skin density and glow.",
-      "ko": "피부 구성성분을 베이스로 한 고밀도 Skin Collagen™ 콘셉트의 앰플. 자료상 콜라겐, 엘라스틴, 히알루론산 구성 비율이 제시됨."
-     },
-     "key_ingredients": [
-      {
-       "en": "Collagen",
-       "ko": "Collagen"
-      },
-      {
-       "en": "Elastine",
-       "ko": "Elastine"
-      },
-      {
-       "en": "Hyaluronic Acid",
-       "ko": "Hyaluronic Acid"
-      },
-      {
-       "en": "Niacinamide",
-       "ko": "Niacinamide"
-      },
-      {
-       "en": "Adenosine",
-       "ko": "Adenosine"
-      }
-     ]
-    },
-    {
-     "sku": "FREETY_SKIN_FILM_100X_30EA",
-     "name": {
-      "en": "FREETY LAB SKIN FILM 100X (30ea)",
-      "ko": ""
-     },
-     "type": {
-      "en": "Skin Film",
-      "ko": ""
-     },
-     "volume": "60 mg x 30 EA",
-     "description": {
-      "en": "Skin Film 100X is presented as a film-type skincare product using electroporation/electrospinning and Skin Layer® technology, with collagen/elastin/hyaluronic acid components.",
-      "ko": "스킨 필름 100X는 모공 1/200 사이즈의 필름이 전기방사 기술을 통해 피부에 즉시 밀착되는 제품으로 소개됨. 뉴질랜드 Sanford사 진짜 성분 배합 콜라겐 사용 및 Skin Layer® 기술이 설명됨."
-     },
-     "key_ingredients": [
-      {
-       "en": "Collagen T-Coll",
-       "ko": "Collagen T-Coll"
-      },
-      {
-       "en": "Elastine",
-       "ko": "Elastine"
-      },
-      {
-       "en": "Hyaluronic Acid",
-       "ko": "Hyaluronic Acid"
-      }
-     ]
-    },
-    {
-     "sku": "FREETY_PDRN_TECA_COLLAGEN_CREAM_50ML",
-     "name": {
-      "en": "FREETY LAB PDRN TECA COLLAGEN CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Cream",
-      "ko": ""
-     },
-     "volume": "50 ml",
-     "description": {
-      "en": "The SKU is listed in the FOB price sheet, but detailed product description is not present in the uploaded brochures.",
-      "ko": "가격표에 SKU와 가격은 존재하나, 제품소개서 본문 상세 설명은 확인되지 않음."
-     }
-    }
-   ],
-   "product_count": 4
-  },
-  {
-   "id": "plagentra",
-   "name": "Plagentra",
-   "accent": "#A0506B",
-   "logo": "assets/brands/plagentra.png",
-   "manufacturer": "Plagentra",
-   "founded": "2001",
-   "category": {
-    "en": "",
-    "ko": "유소아·임산부 화장품 / 병원용 의료 화장품 개발"
+   "slogan": {
+    "ko": "High Performance Skincare",
+    "en": "High Performance Skincare"
    },
    "description": {
-    "en": "",
-    "ko": "2001년 설립 이후 튼살과 아토피 전문 분야 제품 개발을 시작으로 임산부, 영유아 및 가족 모두가 사용할 수 있는 스킨케어 라인 등을 생산하는 발효 한방 코스메슈티컬 기업으로 소개됨."
+    "ko": "하이클은 혁신적인 피부 전달 기술과 고기능 활성 성분을 기반으로 피부결, 각질, 모공, 피지 및 민감성 피부 고민을 집중적으로 관리하는 하이퍼포먼스 더마 코스메틱 브랜드입니다. 전문적인 피부 솔루션을 통해 건강한 피부 컨디션과 개선된 피부결을 제공합니다.",
+    "en": "HYCL is a high-performance dermocosmetic brand built on advanced delivery technologies and highly functional active ingredients. The brand focuses on improving skin texture, pores, excess sebum, dead skin cells, and other visible skin concerns through professional-grade skincare solutions."
    },
-   "products": [
+   "philosophy": {
+    "ko": "'Sense (Sensation Seeking)'라는 브랜드 철학 아래 피부 변화를 직접 체감할 수 있는 고효능 스킨케어를 추구합니다. 혁신적인 제형 기술과 기능성 성분을 결합하여 전문적인 피부 개선 경험을 제공하는 것을 목표로 합니다.",
+    "en": "Guided by its philosophy of 'Sense (Sensation Seeking),' HYCL develops skincare that delivers visible, perceptible skin improvements. By combining innovative formulation technologies with clinically inspired active ingredients, the brand provides high-performance skincare for healthier, smoother, and more refined skin."
+   },
+   "origin": {
+    "ko": "High Performance + Clinical의 의미를 담아 고기능 더마 스킨케어를 지향하는 브랜드입니다.",
+    "en": "HYCL represents the combination of High Performance and Clinical, reflecting the brand's commitment to advanced performance-driven dermocosmetics."
+   },
+   "manufacturer": {
+    "ko": "(주)프롬바이오코스메틱",
+    "en": "FromBIO Cosmetic Co., Ltd."
+   },
+   "technology": [],
+   "clinical": [],
+   "lineup": {
+    "ko": "앰플 2종, 크림 2종, 클렌저 1종 등 총 6개 SKU",
+    "en": "2 ampoule, 2 cream, 1 cleanser — 6 SKUs in total",
+    "total": 6
+   },
+   "sku_names": [
     {
-     "sku": "PLAGENTRA_MOTHERS_BELLY_CREAM",
-     "name": {
-      "en": "Plagentra Mothers Belly Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / Mothers Belly",
-      "ko": ""
-     },
-     "volume": "120/200g",
-     "description": {
-      "en": "",
-      "ko": "[임신/출산] 튼살 개선용 집중 관리 크림"
-     }
+     "ko": "하이클바하 딥포어 젤클렌저",
+     "en": "BHA DEEP PORE GEL CLEANSER"
     },
     {
-     "sku": "PLAGENTRA_MOTHERS_BELLY_LOTION",
-     "name": {
-      "en": "Plagentra Mothers Belly Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / Mothers Belly",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "[임신/출산] 튼살 개선용 전신 관리 로션"
-     }
+     "ko": "",
+     "en": "LHA TONE&GLOW  SOFTENING SERUM"
     },
     {
-     "sku": "PLAGENTRA_MOTHERS_BELLY_OIL",
-     "name": {
-      "en": "Plagentra Mothers Belly Oil",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / Mothers Belly",
-      "ko": ""
-     },
-     "volume": "150/250ml",
-     "description": {
-      "en": "",
-      "ko": "[임신/출산] 튼살 개선용 전신 관리 마사지 오일"
-     }
+     "ko": "",
+     "en": "LHA WAKE-UP Tinglle  Softening Mask"
     },
     {
-     "sku": "PLAGENTRA_WHITE_MARK_CREAM",
-     "name": {
-      "en": "Plagentra White Mark Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / White Mark",
-      "ko": ""
-     },
-     "volume": "80/100g",
-     "description": {
-      "en": "",
-      "ko": "[성장기/비만] 튼살 개선용 집중 관리 크림"
-     }
+     "ko": "하이클 바하 딥 포어  미니마이징 토너",
+     "en": "BHA DEEP PORE  MINIMIZING TONER"
     },
     {
-     "sku": "PLAGENTRA_WHITE_MARK_LOTION",
-     "name": {
-      "en": "Plagentra White Mark Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / White Mark",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "[성장기/비만] 튼살 예방 및 슬림한 바디라인을 위한 전신 관리 로션"
-     }
+     "ko": "하이클 트리플베리어크림",
+     "en": "HYCL ECTO-PANTO TRIPLE  BARRIER CREAM"
     },
     {
-     "sku": "PLAGENTRA_WHITE_MARK_MASSAGE_GEL",
-     "name": {
-      "en": "Plagentra White Mark Massage Gel",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / White Mark",
-      "ko": ""
-     },
-     "volume": "100g",
-     "description": {
-      "en": "",
-      "ko": "[성장기/비만] 튼살 예방 및 종아리 붓기를 완화하는 마사지 젤"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_MOTHERS_SKINCARE_CREAM",
-     "name": {
-      "en": "Plagentra Mothers Skincare Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / Mothers Skin Care",
-      "ko": ""
-     },
-     "volume": "130/200g",
-     "description": {
-      "en": "",
-      "ko": "[임신] 튼살 예방용 집중 관리 크림"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_MOTHERS_SKINCARE_LOTION",
-     "name": {
-      "en": "Plagentra Mothers Skincare Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / Mothers Skin Care",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "[임신] 튼살 예방용 전신 관리 로션"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_MOTHERS_SKINCARE_OIL",
-     "name": {
-      "en": "Plagentra Mothers Skincare Oil",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / Mothers Skin Care",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "[임신] 튼살 예방용 전신 관리 마사지 오일"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_MOTHERS_GOLDEN_PUMPKIN_MASSAGE_GEL",
-     "name": {
-      "en": "Plagentra Mothers Golden Pumpkin Massage Gel",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch marks / Mothers Skin Care",
-      "ko": ""
-     },
-     "volume": "100g",
-     "description": {
-      "en": "",
-      "ko": "[임신] 호박 발효 추출물이 함유된 붓기 완화 마사지 젤"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BABY_BUBBLE_WASH",
-     "name": {
-      "en": "Plagentra Baby Bubble Wash",
-      "ko": ""
-     },
-     "type": {
-      "en": "Baby",
-      "ko": ""
-     },
-     "volume": "250ml / 200ml refill",
-     "description": {
-      "en": "",
-      "ko": "세정과 보습 효과를 동시에 주는 저자극 베이비 버블 워시"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BABY_HAIR_BODY_WASH",
-     "name": {
-      "en": "Plagentra Baby Hair & Body Wash",
-      "ko": ""
-     },
-     "type": {
-      "en": "Baby",
-      "ko": ""
-     },
-     "volume": "400ml",
-     "description": {
-      "en": "",
-      "ko": "샴푸와 바디워시를 한번에 해결 올인원 워시"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BABY_SHAMPOO",
-     "name": {
-      "en": "Plagentra Baby Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Baby",
-      "ko": ""
-     },
-     "volume": "250g",
-     "description": {
-      "en": "",
-      "ko": "유소아를 위한 설페이트 프리 타입의 저자극 베이비 샴푸"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BABY_CREAM",
-     "name": {
-      "en": "Plagentra Baby Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Baby",
-      "ko": ""
-     },
-     "volume": "100g / 300g / 500g",
-     "description": {
-      "en": "",
-      "ko": "거친 피부를 유연하게 케어해주는 베이비 보습 크림"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BABY_LOTION",
-     "name": {
-      "en": "Plagentra Baby Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Baby",
-      "ko": ""
-     },
-     "volume": "300ml / 500ml",
-     "description": {
-      "en": "",
-      "ko": "피부를 촉촉하고 건강하게 가꾸어주는 베이비 보습 로션"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BABY_SUNCITY_CREAM",
-     "name": {
-      "en": "Plagentra Baby Suncity Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Baby",
-      "ko": ""
-     },
-     "volume": "60g",
-     "description": {
-      "en": "",
-      "ko": "피부 자극을 최소화한 베이비 선씨티크림(SPF 36/PA++)"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BABY_SOOTHING_RELIEF_CREAM",
-     "name": {
-      "en": "Plagentra Baby Soothing Relief Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Baby",
-      "ko": ""
-     },
-     "volume": "60ml",
-     "description": {
-      "en": "",
-      "ko": "피부 진정 효과가 우수한 기저귀 발진크림"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_DERMA_ATO_CREAM",
-     "name": {
-      "en": "Derma Ato Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Derma Ato",
-      "ko": ""
-     },
-     "volume": "100g",
-     "description": {
-      "en": "",
-      "ko": "민감 피부에 깊게 침투하여 빠른 효과를 주는 집중 보습 크림"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_DERMA_ATO_LOTION",
-     "name": {
-      "en": "Derma Ato Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Derma Ato",
-      "ko": ""
-     },
-     "volume": "200ml",
-     "description": {
-      "en": "",
-      "ko": "민감 피부에 피부 보호막을 형성하는 전신 보습 로션"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_DERMA_ATO_MILD_WASH",
-     "name": {
-      "en": "Derma Ato Mild Wash",
-      "ko": ""
-     },
-     "type": {
-      "en": "Derma Ato",
-      "ko": ""
-     },
-     "volume": "300ml",
-     "description": {
-      "en": "",
-      "ko": "미세먼지 걱정없는 민감 피부용 저자극 바디 워시"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_DERMA_ATO_SLEEPING_BALM",
-     "name": {
-      "en": "Derma Ato Sleeping Balm",
-      "ko": ""
-     },
-     "type": {
-      "en": "Derma Ato",
-      "ko": ""
-     },
-     "volume": "80g",
-     "description": {
-      "en": "",
-      "ko": "건조함으로 인한 가려움 완화 우리 아이 단잠크림"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_ANTI_HAIR_LOSS_TREATMENT_SHAMPOO",
-     "name": {
-      "en": "Plagentra Anti-Hair Loss Treatment Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Cleansing",
-      "ko": ""
-     },
-     "volume": "500ml",
-     "description": {
-      "en": "",
-      "ko": "천연계면활성 성분의 탈모방지 샴푸"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_DEEP_CLEANSING_BRASSICA_BODY_WASH",
-     "name": {
-      "en": "Plagentra Deep-Cleansing Brassica Body Wash",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Cleansing",
-      "ko": ""
-     },
-     "volume": "300ml",
-     "description": {
-      "en": "",
-      "ko": "천연계면활성 성분의 저자극 바디워시"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_CLEANSING_FOAM",
-     "name": {
-      "en": "Plagentra Cleansing Foam",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Cleansing",
-      "ko": ""
-     },
-     "volume": "120ml",
-     "description": {
-      "en": "",
-      "ko": "마일드하고 풍부한 거품의 저자극 클렌징 폼"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_SOOTHING_REVOLUTION_TONER",
-     "name": {
-      "en": "Plagentra Soothing Revolution Toner",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Revolution",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "특허받은 BSASM을 함유한 트러블 피부 진정을 위한 토너"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_SOOTHING_REVOLUTION_EMULSION",
-     "name": {
-      "en": "Plagentra Soothing Revolution Emulsion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Revolution",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "특허받은 BSASM을 함유한 유수분 밸런스 조절을 위한 에멀젼"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_NIGHT_REVOLUTION_SERUM",
-     "name": {
-      "en": "Plagentra Night Revolution Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Revolution",
-      "ko": ""
-     },
-     "volume": "35/45ml",
-     "description": {
-      "en": "",
-      "ko": "민감해진 피부를 집중적으로 케어해주는 안전한 미백 기능성 세럼"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_SOOTHING_REVOLUTION_AQUA_CREAM",
-     "name": {
-      "en": "Plagentra Soothing Revolution Aqua Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Revolution",
-      "ko": ""
-     },
-     "volume": "60g",
-     "description": {
-      "en": "",
-      "ko": "민감해진 피부를 촉촉하게 케어해주는 안전한 수분 공급 크림"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_SOOTHING_REVOLUTION_SUNCITY_CREAM",
-     "name": {
-      "en": "Plagentra Soothing Revolution Suncity Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Revolution",
-      "ko": ""
-     },
-     "volume": "45g",
-     "description": {
-      "en": "",
-      "ko": "민감해진 피부를 위한 안전한 자외선 차단제 (SPF 40/PA++)"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_SOOTHING_REVOLUTION_BB_CREAM",
-     "name": {
-      "en": "Plagentra Soothing Revolution BB Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Revolution",
-      "ko": ""
-     },
-     "volume": "30g",
-     "description": {
-      "en": "",
-      "ko": "민감해진 피부를 위한 3중 기능성 비비크림 (SPF 38/PA+++)"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BLACK_HOMME_SKIN_GEL",
-     "name": {
-      "en": "Plagentra Black Homme Skin Gel",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Black Homme",
-      "ko": ""
-     },
-     "volume": "120ml",
-     "description": {
-      "en": "",
-      "ko": "남성 전문 미백 기능성 스킨젤"
-     }
-    },
-    {
-     "sku": "PLAGENTRA_BLACK_HOMME_ESSENCE_LOTION",
-     "name": {
-      "en": "Plagentra Black Homme Essence Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Beauty / Black Homme",
-      "ko": ""
-     },
-     "volume": "120ml",
-     "description": {
-      "en": "",
-      "ko": "남성 전문 미백 기능성 에센스 로션"
-     }
+     "ko": "하이클 히알판테틴 모이스처 플럼핑 크림",
+     "en": "HYCL PANTETHINE MOISTURE  PLUMPING CREAM"
     }
    ],
-   "product_count": 32
+   "published": true
   },
   {
-   "id": "plagentra-belly-plus",
-   "name": "Plagentra Belly Plus",
-   "accent": "#C77B9E",
-   "logo": "assets/brands/plagentra-belly-plus.png",
-   "manufacturer": "Plagentra",
-   "founded": "2001",
-   "category": {
-    "en": "",
-    "ko": "유소아·임산부 화장품 / 병원용 의료 화장품 개발"
+   "id": "lindsay",
+   "code": "LDSY",
+   "name": {
+    "ko": "린제이",
+    "en": "LINDSAY"
+   },
+   "accent": "#B5734F",
+   "logo": "assets/brands/lindsay-logo.png",
+   "hero": "assets/brands/lindsay-hero.jpg",
+   "photos": [
+    "assets/brands/lindsay-01.jpg",
+    "assets/brands/lindsay-02.jpg",
+    "assets/brands/lindsay-03.jpg",
+    "assets/brands/lindsay-04.jpg",
+    "assets/brands/lindsay-05.jpg",
+    "assets/brands/lindsay-06.jpg"
+   ],
+   "slogan": {
+    "ko": "2009년부터, 린제이가 당신의 피부를 디자인합니다.",
+    "en": "Since 2009, Lindsay Designs Your Skin."
    },
    "description": {
-    "en": "",
-    "ko": "2001년 설립 이후 튼살과 아토피 전문 분야 제품 개발을 시작으로 임산부, 영유아 및 가족 모두가 사용할 수 있는 스킨케어 라인 등을 생산하는 발효 한방 코스메슈티컬 기업으로 소개됨."
+    "ko": "린제이는 2009년부터 홈 에스테틱과 프로페셔널 스킨케어를 선도해온 대한민국 에스테틱 전문 브랜드입니다. 과학적으로 검증된 천연 유래 원료와 축적된 연구개발 노하우를 바탕으로, 외부 환경으로부터 자극받은 피부의 근본적인 고민을 개선할 수 있는 제품을 개발하고 있습니다. 모델링팩을 비롯한 다양한 스킨케어 제품을 통해 피부 본연의 건강과 아름다움을 위한 홈 에스테틱 솔루션을 제공합니다.",
+    "en": "LINDSAY is a Korean professional aesthetic skincare brand established in 2009, specializing in home aesthetic and professional skincare solutions. Built on scientifically validated naturally derived ingredients and years of skincare research, the brand develops products designed to address the underlying causes of skin concerns caused by environmental stress while supporting healthier, stronger skin. From its signature modeling packs to a wide range of skincare products, LINDSAY delivers effective home aesthetic solutions inspired by professional skincare expertise."
    },
-   "products": [
+   "philosophy": {
+    "ko": "검증된 천연 유래 원료를 바탕으로 피부에 부담을 줄 수 있는 합성 방부제, 인공색소 및 인공향료의 사용을 최소화합니다. 일시적인 피부 표현이 아닌 근본적인 피부 건강을 목표로 저자극·고보습 처방을 지속적으로 연구하며, 누구나 안심하고 사용할 수 있는 안전하고 효과적인 스킨케어를 추구합니다.",
+    "en": "LINDSAY formulates its products with scientifically validated naturally derived ingredients while minimizing the use of synthetic preservatives, artificial colorants, and artificial fragrances. Rather than providing temporary cosmetic results, the brand is committed to supporting long-term skin health through low-irritation, deeply moisturizing formulations that are safe, effective, and comfortable for everyday use."
+   },
+   "origin": {},
+   "manufacturer": {
+    "ko": "유앤코스㈜",
+    "en": "YU&Cos Co., Ltd."
+   },
+   "technology": [],
+   "clinical": [],
+   "lineup": {
+    "ko": "모델링팩 24종을 중심으로 마스크팩·앰플·스킨케어 등 총 43개 SKU",
+    "en": "Anchored by 24 modeling mask SKUs, with mask pack, ampoule, skincare — 43 SKUs in total",
+    "total": 43
+   },
+   "sku_names": [
     {
-     "sku": "PLAGENTRA_BELLY_CREAM_PLUS",
-     "name": {
-      "en": "Plagentra Belly Cream Plus",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stretch mark care cream",
-      "ko": ""
-     },
-     "volume": "120g / 200g",
-     "description": {
-      "en": "",
-      "ko": "이미 튼살 개선을 위한 집중관리 크림. Regestril® 특허 원료, 피부 탄력 증대, 침투력 강화(AQP), 6無 안전 처방, 피부 진정·가려움 완화, 피부 장벽 강화."
-     },
-     "key_ingredients": [
-      {
-       "en": "Regestril®",
-       "ko": "Regestril®"
-      },
-      {
-       "en": "Natural Protector®",
-       "ko": "Natural Protector®"
-      },
-      {
-       "en": "AQP (Aquaporin)",
-       "ko": "AQP (Aquaporin)"
-      },
-      {
-       "en": "Allantoin / Centella Asiatica Extract",
-       "ko": "Allantoin / Centella Asiatica Extract"
-      }
-     ]
+     "ko": "린제이 카밍 아줄렌 토너",
+     "en": "Lindsay Calming Azulene Toner"
     },
     {
-     "sku": "PLAGENTRA_BELLY_LOTION_PLUS",
-     "name": {
-      "en": "Plagentra Belly Lotion Plus",
-      "ko": ""
-     },
-     "type": {
-      "en": "Body lotion",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "피부 손상 개선을 위한 전신관리 로션. 센텔라아시아티카 함유, 유수분 밸런스 강화, 가려움증 예방·완화, 5無 안전 처방."
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica Extract",
-       "ko": "Centella Asiatica Extract"
-      },
-      {
-       "en": "PGA / Hyaluronic Acid",
-       "ko": "PGA / Hyaluronic Acid"
-      },
-      {
-       "en": "Natural Protector®",
-       "ko": "Natural Protector®"
-      },
-      {
-       "en": "PGA (Poly Glutamic Acid)",
-       "ko": "PGA (Poly Glutamic Acid)"
-      }
-     ]
+     "ko": "린제이 카밍 아줄렌 클렌징워터",
+     "en": "Lindsay Calming Azulene Cleansing Water"
     },
     {
-     "sku": "PLAGENTRA_BELLY_OIL_PLUS",
-     "name": {
-      "en": "Plagentra Belly Oil Plus",
-      "ko": ""
-     },
-     "type": {
-      "en": "Massage oil",
-      "ko": ""
-     },
-     "volume": "250ml",
-     "description": {
-      "en": "",
-      "ko": "피부 손상 개선을 위한 마사지 오일. 비타민 E 아세테이트, MCT오일 및 자연유래 오일, 산뜻한 고급 사용감, 6無 안전 처방."
-     },
-     "key_ingredients": [
-      {
-       "en": "Vitamin E Acetate",
-       "ko": "Vitamin E Acetate"
-      },
-      {
-       "en": "MCT Oil / 자연유래 오일",
-       "ko": "MCT Oil / 자연유래 오일"
-      }
-     ]
+     "ko": "린제이 피에이치솔루션  카밍 아줄렌 크림",
+     "en": "Lindsay pH Solution Calming Azulene Cream"
+    },
+    {
+     "ko": "린제이 카밍 아줄렌 토너 패드",
+     "en": "Lindsay Calming Azulene Toner Pad"
+    },
+    {
+     "ko": "린제이 화이트닝  비타 오일 미스트 세럼",
+     "en": "Lindsay Whitening  Vita Oil Mist Serum"
+    },
+    {
+     "ko": "린제이 카밍 아줄렌 하이드로겔 마스크",
+     "en": "Lindsay Calming Azulene Hydrogel Mask"
     }
    ],
-   "product_count": 3
-  },
-  {
-   "id": "pladerm",
-   "name": "Pladerm",
-   "accent": "#7A6A8A",
-   "logo": "assets/brands/pladerm.png",
-   "manufacturer": "Plagentra",
-   "founded": "2001",
-   "category": {
-    "en": "",
-    "ko": "유소아·임산부 화장품 / 병원용 의료 화장품 개발"
-   },
-   "description": {
-    "en": "",
-    "ko": "2001년 설립 이후 튼살과 아토피 전문 분야 제품 개발을 시작으로 임산부, 영유아 및 가족 모두가 사용할 수 있는 스킨케어 라인 등을 생산하는 발효 한방 코스메슈티컬 기업으로 소개됨."
-   },
-   "products": [
-    {
-     "sku": "PLADERM_EX_MARK_CREAM",
-     "name": {
-      "en": "Pladerm EX MARK Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / EX MARK",
-      "ko": ""
-     },
-     "volume": "120g",
-     "description": {
-      "en": "",
-      "ko": "의사들의 전문 처방으로 검증받은 병·의원용 프리미엄 튼살 크림"
-     }
-    },
-    {
-     "sku": "PLADERM_EX_MARK_LOTION",
-     "name": {
-      "en": "Pladerm EX MARK Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / EX MARK",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "",
-      "ko": "의사들의 전문 처방으로 검증받은 병·의원용 프리미엄 튼살 로션"
-     }
-    },
-    {
-     "sku": "PLADERM_ATO_CREAM",
-     "name": {
-      "en": "Ato Pladerm Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / Ato",
-      "ko": ""
-     },
-     "volume": "100g",
-     "description": {
-      "en": "",
-      "ko": "아토피 개선 효과가 확실한 차별화된 집중 케어 크림"
-     }
-    },
-    {
-     "sku": "PLADERM_ATO_LOTION",
-     "name": {
-      "en": "Ato Pladerm Lotion",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / Ato",
-      "ko": ""
-     },
-     "volume": "100ml",
-     "description": {
-      "en": "",
-      "ko": "아토피 개선 효과가 확실한 차별화된 전신 케어 로션"
-     }
-    },
-    {
-     "sku": "PLADERM_ATO_MILD_WASH",
-     "name": {
-      "en": "Ato Pladerm Mild Wash",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / Ato",
-      "ko": ""
-     },
-     "volume": "310ml",
-     "description": {
-      "en": "",
-      "ko": "아토피 개선 효과가 확실한 마일드한 버블 워시액"
-     }
-    },
-    {
-     "sku": "PLADERM_CREAM",
-     "name": {
-      "en": "Pladerm Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / Repair",
-      "ko": ""
-     },
-     "volume": "50g",
-     "description": {
-      "en": "",
-      "ko": "피부 재생·미백 등 개선 효과가 확실한 고기능성 크림"
-     }
-    },
-    {
-     "sku": "PLADERM_SERUM",
-     "name": {
-      "en": "Pladerm Serum",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / Repair",
-      "ko": ""
-     },
-     "volume": "45ml",
-     "description": {
-      "en": "",
-      "ko": "피부 재생·미백 등 개선 효과가 확실한 고기능성 세럼"
-     }
-    },
-    {
-     "sku": "PLADERM_DUAL_SUN_CREAM",
-     "name": {
-      "en": "Pladerm Dual Sun Cream",
-      "ko": ""
-     },
-     "type": {
-      "en": "Hospital / Repair",
-      "ko": ""
-     },
-     "volume": "50g",
-     "description": {
-      "en": "",
-      "ko": "아토피와 민감성 피부을 위한 병·의원용 전문 선크림"
-     }
-    }
-   ],
-   "product_count": 8
+   "published": true
   },
   {
    "id": "minoxell",
-   "name": "MINOXELL",
-   "accent": "#1C3A1C",
-   "logo": "assets/brands/minoxell.png",
-   "manufacturer": "Hyundai Pharm",
-   "category": {
-    "en": "Pharmaceuticals (Prescription/General)",
-    "ko": ""
+   "code": "MNXL",
+   "name": {
+    "ko": "미녹셀 (MINOXELL)",
+    "en": "MINOXELL"
+   },
+   "accent": "#3F5C7A",
+   "logo": "assets/brands/minoxell-logo.png",
+   "hero": "assets/brands/minoxell-hero.jpg",
+   "photos": [
+    "assets/brands/minoxell-01.jpg",
+    "assets/brands/minoxell-02.jpg",
+    "assets/brands/minoxell-03.jpg",
+    "assets/brands/minoxell-04.jpg",
+    "assets/brands/minoxell-05.jpg",
+    "assets/brands/minoxell-06.jpg"
+   ],
+   "slogan": {
+    "ko": "제약 기술로 완성한 두피 솔루션",
+    "en": "Scalp Care Designed with Pharma Trust"
    },
    "description": {
-    "en": "Hyundai Pharm has established a diverse product lineup, including prescription and OTC drugs, health functional foods, cosmetics, beverage/food, and R&D based on over 60 years of pharmaceutical expertise.",
-    "ko": ""
+    "ko": "미녹셀은 현대약품의 제약 연구개발 기술을 바탕으로 탄생한 두피·헤어케어 전문 브랜드입니다. 단순히 모발을 관리하는 것이 아니라 건강한 두피 환경을 조성하는 것을 핵심 가치로 삼아, 두피 장벽, 유수분 밸런스, 각질 및 민감 두피 케어를 위한 기능성 솔루션을 제공합니다. 지속적인 연구와 기능성 성분을 바탕으로 건강한 두피에서 건강한 모발이 시작된다는 철학을 실현합니다.",
+    "en": "MINOXELL is a scalp and haircare brand developed by Hyundai Pharm, built on decades of pharmaceutical research and innovation. Rather than focusing on temporary hair growth, the brand is dedicated to creating a healthy scalp environment through advanced scalp care, barrier support, sebum balance, exfoliation, and soothing solutions. MINOXELL believes that healthy hair begins with a healthy scalp and develops science-driven products that provide long-term scalp wellness."
    },
-   "products": [
+   "philosophy": {
+    "ko": "미녹셀은 건강한 모발은 건강한 두피에서 시작된다는 원칙 아래 제약회사의 연구 역량과 피부과학을 기반으로 근본적인 두피 솔루션을 제공합니다. 일시적인 증상 완화가 아닌 두피 환경 개선을 통해 지속 가능한 두피·헤어 케어를 추구하며, 임상적 근거와 혁신적인 기술을 바탕으로 전문적인 스칼프 케어를 제공합니다.",
+    "en": "MINOXELL approaches scalp care with pharmaceutical rigor, grounded in the principle that healthy hair is sustained by a healthy scalp. Driven by clinical research, functional ingredients, and innovative technologies, the brand delivers sustainable scalp care that addresses the underlying causes of scalp concerns rather than temporary symptoms. As a pharmaceutical-backed scalp care brand, MINOXELL is committed to setting a higher standard for functional scalp cosmetics."
+   },
+   "origin": {
+    "ko": "Minoxidil에서 영감을 받은 MINOX와 Cell의 의미를 결합하여, 건강한 두피 환경과 모근 케어를 통해 건강한 모발의 기반을 만든다는 브랜드 철학을 담고 있습니다.",
+    "en": "The name MINOXELL combines inspiration from \"Minoxidil\" and \"Cell,\" reflecting the brand's philosophy of creating healthy hair by building a healthy scalp environment at the cellular level."
+   },
+   "manufacturer": {
+    "ko": "현대약품㈜",
+    "en": "Hyundai Pharm Co., Ltd."
+   },
+   "technology": [
     {
-     "sku": "minoxell_scalp_intensive_shampoo_480ml",
-     "name": {
-      "en": "MINOXELL Scalp Intensive Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief scalp shampoo",
-      "ko": ""
-     },
-     "volume": "480ml",
-     "description": {
-      "en": "Target: For all scalp types\nUSP: Functional care combining hair loss symptom relief, visible volume boost, and scalp nourishment\nKey message: Where Scalp Science Meets Legacy — The Signature Hair Loss Shampoo.\nFunctionality: Certified functional cosmetic for alleviating hair loss symptoms\nFragrance: Floral Citrus",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex 10%",
-       "ko": ""
-      },
-      {
-       "en": "melatonin-based formula enriched with Biotin",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Collagen Ferment",
-       "ko": ""
-      },
-      {
-       "en": "and Peptides for scalp & root care.",
-       "ko": ""
-      }
-     ]
+     "name": "MINOXELL® Complex",
+     "name_en": "MINOXELL® Complex",
+     "desc": "두피 케어 특허성분. 시그니처 라인은 10% 함유, 멜라토닌 기반 처방",
+     "desc_en": "Patented scalp-care complex; the signature line contains 10%, based on a melatonin formulation."
     },
     {
-     "sku": "minoxell_scalp_intensive_shampoo_960ml",
-     "name": {
-      "en": "MINOXELL Scalp Intensive Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief scalp shampoo",
-      "ko": ""
-     },
-     "volume": "960ml",
-     "description": {
-      "en": "Target: For all scalp types\nUSP: Functional care combining hair loss symptom relief, visible volume boost, and scalp nourishment\nKey message: Where Scalp Science Meets Legacy — The Signature Hair Loss Shampoo.\nFunctionality: Certified functional cosmetic for alleviating hair loss symptoms\nFragrance: Floral Citrus",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex 10%",
-       "ko": ""
-      },
-      {
-       "en": "melatonin-based formula enriched with Biotin",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Collagen Ferment",
-       "ko": ""
-      },
-      {
-       "en": "and Peptides for scalp & root care.",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "minoxell_scalp_intensive_ampoule_60ml",
-     "name": {
-      "en": "MINOXELL Scalp Intensive Ampoule",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief scalp ampoule",
-      "ko": ""
-     },
-     "volume": "60ml",
-     "description": {
-      "en": "Target: For all scalp types & hair loss concerns\nUSP: Instantly soothes sensitive scalp and strengthens the scalp barrier\nKey message: Born from a Heritage of Excellence in Hair Loss Care.\nFunctionality: Certified functional cosmetic for alleviating hair loss symptoms\nFragrance: Refreshing Floral Citrus Scent",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex 10%",
-       "ko": ""
-      },
-      {
-       "en": "melatonin",
-       "ko": ""
-      },
-      {
-       "en": "biotin",
-       "ko": ""
-      },
-      {
-       "en": "panthenol",
-       "ko": ""
-      },
-      {
-       "en": "niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus/Collagen Ferment Filtrate",
-       "ko": ""
-      },
-      {
-       "en": "Tetra-peptide-44",
-       "ko": ""
-      },
-      {
-       "en": "and Copper Tripeptide-1.",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "minoxell_prestige_scalp_shampoo_480ml",
-     "name": {
-      "en": "MINOXELL Prestige Scalp Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief scalp shampoo",
-      "ko": ""
-     },
-     "volume": "480ml",
-     "description": {
-      "en": "Target: For dry & sensitive scalps\nUSP: Reduces hair fall by 85% in just 6 weeks\nKey message: Boost scalp elasticity — the first step in scalp anti-aging care\nFunctionality: Certified functional cosmetic for alleviating hair loss symptoms\nFragrance: Floral woody scent",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex 20%",
-       "ko": ""
-      },
-      {
-       "en": "Melatonin",
-       "ko": ""
-      },
-      {
-       "en": "Biotin",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus/Collagen Ferment Filtrate",
-       "ko": ""
-      },
-      {
-       "en": "Tetra-peptide-44",
-       "ko": ""
-      },
-      {
-       "en": "Copper Tripeptide-1",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "minoxell_prestige_scalp_shampoo_960ml",
-     "name": {
-      "en": "MINOXELL Prestige Scalp Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief scalp shampoo",
-      "ko": ""
-     },
-     "volume": "960ml",
-     "description": {
-      "en": "Target: For dry & sensitive scalps\nUSP: Reduces hair fall by 85% in just 6 weeks\nKey message: Boost scalp elasticity — the first step in scalp anti-aging care\nFunctionality: Certified functional cosmetic for alleviating hair loss symptoms\nFragrance: Floral woody scent",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex 20%",
-       "ko": ""
-      },
-      {
-       "en": "Melatonin",
-       "ko": ""
-      },
-      {
-       "en": "Biotin",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus/Collagen Ferment Filtrate",
-       "ko": ""
-      },
-      {
-       "en": "Tetra-peptide-44",
-       "ko": ""
-      },
-      {
-       "en": "Copper Tripeptide-1",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "minoxell_nutrition_scalp_volume_shampoo_480ml",
-     "name": {
-      "en": "MINOXELL Nutrition Scalp Volume Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief volumizing shampoo",
-      "ko": ""
-     },
-     "volume": "480ml",
-     "description": {
-      "en": "Target: For weakened scalp, thinning hair, and lack of root volume\nUSP: A volumizing and nourishing shampoo formulated with MINOXELL® Complex to revitalize fine, weak hair.\nKey message: Say goodbye to flat, lifeless volume. Reborn with 262% density and a lifted angle of 11°.\nFunctionality: Certified functional cosmetic for alleviating hair loss symptoms\nFragrance: Vanilla & Orange Scent",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex",
-       "ko": ""
-      },
-      {
-       "en": "17 Essential Amino Acid Complex",
-       "ko": ""
-      },
-      {
-       "en": "Goldrella Peptide.",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "minoxell_nutrition_scalp_volume_treatment_200ml",
-     "name": {
-      "en": "MINOXELL Nutrition Scalp Volume Treatment",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief treatment",
-      "ko": ""
-     },
-     "volume": "200ml",
-     "description": {
-      "en": "Target: Individuals with brittle, thin, or weakened hair strands\nUSP: A protein-rich solution designed to repair and fortify damaged hair\nKey message: Strengthens protein binding by 1809%, reinforcing disordered hair strands.\nFunctionality: Certified functional cosmetic for alleviating hair loss symptoms\nFragrance: Vanilla & Orange Scent",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex",
-       "ko": ""
-      },
-      {
-       "en": "17 Essential Amino Acids Complex",
-       "ko": ""
-      },
-      {
-       "en": "Goldrella Peptide.",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "minoxell_pore_cleansing_scalp_shampoo_480ml",
-     "name": {
-      "en": "MINOXELL Pore Cleansing Scalp Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief scalp pore cleansing shampoo",
-      "ko": ""
-     },
-     "volume": "480ml",
-     "description": {
-      "en": "Target: Individuals with oily scalp, excess sebum, and clogged pores\nUSP: A scalp-purifying shampoo that helps relieve hair loss symptoms while cleansing deeply\nKey message: Unclog Your Scalp. Feel the Freedom.\nFunctionality: Functional cosmetic for alleviating hair loss symptoms\nFragrance: Citrus woody scent",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELLV Complex",
-       "ko": ""
-      },
-      {
-       "en": "Salicylic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Piroctone Olamine.",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "minoxell_dandruff_scalp_cooling_shampoo_480ml",
-     "name": {
-      "en": "MINOXELL Dandruff Scalp Cooling Shampoo",
-      "ko": ""
-     },
-     "type": {
-      "en": "Functional hair-loss symptom relief dandruff cooling shampoo",
-      "ko": ""
-     },
-     "volume": "480ml",
-     "description": {
-      "en": "Target: Individuals with oily scalp, frequent dandruff, and scalp itchiness\nUSP: Cooling & balancing care that effectively soothes dandruff, itchiness, and heat on the scalp\nKey message: Awaken your scalp with -7.3°C cooling power\nFunctionality: Functional cosmetic for alleviating symptoms of hair loss\nFragrance: Eucalyptus & Menthol scent",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "MINOXELL® Complex",
-       "ko": ""
-      },
-      {
-       "en": "Apple Vinegar",
-       "ko": ""
-      },
-      {
-       "en": "Decylene Glycol",
-       "ko": ""
-      },
-      {
-       "en": "Piroctone Olamine",
-       "ko": ""
-      },
-      {
-       "en": "Lemon",
-       "ko": ""
-      },
-      {
-       "en": "Papaya",
-       "ko": ""
-      },
-      {
-       "en": "Papain.",
-       "ko": ""
-      }
-     ]
+     "name": "17 Essential Amino Acid Complex; Goldrella Peptide",
+     "name_en": "17 Essential Amino Acid Complex; Goldrella Peptide",
+     "desc": "볼륨·영양 라인 적용",
+     "desc_en": "Applied across the volume and nourishment lines."
     }
    ],
-   "product_count": 9
+   "clinical": [],
+   "lineup": {
+    "ko": "샴푸 7종을 중심으로 트리트먼트·앰플 등 총 9개 SKU",
+    "en": "Anchored by 7 shampoo SKUs, with treatment, ampoule — 9 SKUs in total",
+    "total": 9
+   },
+   "sku_names": [
+    {
+     "ko": "마이녹셀 포어클렌징 스칼프 샴푸 480ml",
+     "en": "MINOXELL Pore Cleansing Scalp Shampoo 480ml"
+    },
+    {
+     "ko": "마이녹셀 댄드러프 스칼프 쿨링 샴푸 480ml",
+     "en": "MINOXELL Dandruff Scalp Cooling Shampoo 480ml"
+    },
+    {
+     "ko": "마이녹셀 뉴트리션 스칼프 볼륨 샴푸 480ml",
+     "en": "MINOXELL Nutrition Scalp Volume Shampoo 480ml"
+    },
+    {
+     "ko": "마이녹셀 뉴트리션 스칼프 볼륨 트리트먼트 200ml",
+     "en": "MINOXELL Nutrition Scalp Volume Treatment 200ml"
+    },
+    {
+     "ko": "스칼프 인텐시브 샴푸 400ml",
+     "en": "MINOXELL Scalp Intensive Shampoo 400ml"
+    },
+    {
+     "ko": "마이녹셀 프레스티지 스칼프 샴푸 480ml",
+     "en": "MINOXELL Prestigr Scalp Shampoo 480ml"
+    }
+   ],
+   "published": true
+  },
+  {
+   "id": "plagentra",
+   "code": "PLGT",
+   "name": {
+    "ko": "프라젠트라",
+    "en": "Plagentra"
+   },
+   "accent": "#7A5C8F",
+   "logo": "assets/brands/plagentra-logo.png",
+   "hero": "assets/brands/plagentra-hero.jpg",
+   "photos": [
+    "assets/brands/plagentra-01.jpg",
+    "assets/brands/plagentra-02.jpg",
+    "assets/brands/plagentra-03.jpg",
+    "assets/brands/plagentra-04.jpg",
+    "assets/brands/plagentra-05.jpg",
+    "assets/brands/plagentra-06.jpg"
+   ],
+   "slogan": {},
+   "description": {
+    "ko": "세대를 뛰어넘는 프라젠트라만의 가치를 미의 상징인 왕관과 건강의 상징인 널스 캡에 담아 표현했습니다. 왕관은 프리미엄 품질과 아름다움을, 널스 캡은 건강과 전문적인 피부 관리를 상징합니다.",
+    "en": "The Plagentra symbol combines a crown, representing premium beauty, with a nurse’s cap, representing health and professional skincare. Together, they express the brand’s enduring value across generations."
+   },
+   "philosophy": {
+    "ko": "프리미엄 자연주의를 바탕으로 자연 유래 성분과 피부과학을 결합해 임산부, 영유아 및 가족 모두를 위한 안전하고 전문적인 스킨케어를 제공합니다.",
+    "en": "Plagentra pursues premium naturalism by combining naturally derived ingredients with skincare science to provide safe and professional skincare solutions for mothers, babies, and families."
+   },
+   "origin": {},
+   "manufacturer": {
+    "ko": "프라젠트라㈜ (구 씨에이팜)",
+    "en": "Plagentra Co., Ltd. (Formerly CA Pharm)"
+   },
+   "technology": [],
+   "clinical": [],
+   "lineup": {
+    "ko": "크림 13종, 로션 7종, 바디워시 4종 등 총 35개 SKU",
+    "en": "13 cream, 7 lotion, 4 body wash — 35 SKUs in total",
+    "total": 35
+   },
+   "sku_names": [
+    {
+     "ko": "프라젠트라 벨리 크림 120g",
+     "en": "Plagentra Belly Cream Plus 120g"
+    },
+    {
+     "ko": "프라젠트라 벨리 크림 200g",
+     "en": "Plagentra Belly Cream Plus 200g"
+    },
+    {
+     "ko": "프라젠트라 벨리 로션 150ml",
+     "en": "Plagentra Belly Lotion Plus 150ml"
+    },
+    {
+     "ko": "프라젠트라 벨리 오일 250ml",
+     "en": "Plagentra Belly Oil Plus 250ml"
+    },
+    {
+     "ko": "프라젠트라 수딩 레볼루션 아쿠아 크림 60g",
+     "en": "Plagentra Soothing Revolution Aqua Cream 60g"
+    },
+    {
+     "ko": "프라젠트라 클렌징 폼 120ml",
+     "en": "Plagentra Cleansing Foam 120ml"
+    }
+   ],
+   "published": true
+  },
+  {
+   "id": "pladerm",
+   "code": "PLDM",
+   "name": {
+    "ko": "프라덤 (PLADERM)",
+    "en": "PLADERM"
+   },
+   "accent": "#4E7C6B",
+   "logo": "assets/brands/pladerm-logo.png",
+   "hero": "assets/brands/pladerm-hero.jpg",
+   "photos": [
+    "assets/brands/pladerm-01.jpg",
+    "assets/brands/pladerm-02.jpg",
+    "assets/brands/pladerm-03.jpg",
+    "assets/brands/pladerm-04.jpg",
+    "assets/brands/pladerm-05.jpg",
+    "assets/brands/pladerm-06.jpg"
+   ],
+   "slogan": {},
+   "description": {
+    "ko": "아토피 피부염, 건선, 튼살 등 집중적인 관리가 필요한 피부 고민을 위한 특수 케어 브랜드로, 의학과 과학에 기반한 전문성을 시각적으로 표현했습니다.",
+    "en": "PLADERM is a specialized care brand developed for skin concerns requiring intensive management, including atopic-prone skin, psoriasis-prone skin, and stretch marks. Its identity represents expertise grounded in medical and scientific research."
+   },
+   "philosophy": {
+    "ko": "민감하고 손상된 피부의 근본적인 원인을 연구하고, 피부 장벽 회복과 건강한 피부 환경 조성을 위한 전문적인 더마 스킨케어 솔루션을 제공합니다.",
+    "en": "PLADERM focuses on the underlying causes of sensitive and compromised skin, providing professional dermacare solutions designed to support the skin barrier and restore a healthier skin environment."
+   },
+   "origin": {
+    "ko": "Plagentra와 Dermatitis의 합성어로, 전문적인 피부 고민을 관리하는 더마 케어 브랜드의 정체성을 담고 있습니다.",
+    "en": "PLADERM is a combination of Plagentra and dermatitis, reflecting the identity of a professional dermacare brand focused on specialized skin concerns."
+   },
+   "manufacturer": {
+    "ko": "프라젠트라㈜ (구 씨에이팜)",
+    "en": "Plagentra Co., Ltd. (Formerly CA Pharm)"
+   },
+   "technology": [],
+   "clinical": [],
+   "lineup": {
+    "ko": "크림 4종을 중심으로 로션·바디워시·세럼 등 총 8개 SKU",
+    "en": "Anchored by 4 cream SKUs, with lotion, body wash, serum — 8 SKUs in total",
+    "total": 8
+   },
+   "sku_names": [
+    {
+     "ko": "아토 프라덤 크림 100g",
+     "en": "Ato Pladerm Cream 100g"
+    },
+    {
+     "ko": "아토 프라덤 로션",
+     "en": "Ato Pladerm Lotion"
+    },
+    {
+     "ko": "아토 프라덤 마일드 워시",
+     "en": "Ato Pladerm Mild Wash"
+    },
+    {
+     "ko": "프라덤 EX MARK 크림",
+     "en": "Pladerm EX MARK Cream"
+    },
+    {
+     "ko": "프라덤 EX MARK 로션",
+     "en": "Pladerm EX MARK Lotion"
+    },
+    {
+     "ko": "프라덤 크림",
+     "en": "Pladerm Repair Cream"
+    }
+   ],
+   "published": true
+  },
+  {
+   "id": "curest",
+   "code": "CRST",
+   "name": {
+    "en": "CUREST",
+    "ko": "큐레스트"
+   },
+   "accent": "#3E7C7B",
+   "logo": "assets/brands/curest-logo.png",
+   "hero": "assets/brands/curest-hero.jpg",
+   "photos": [
+    "assets/brands/curest-01.jpg",
+    "assets/brands/curest-02.jpg",
+    "assets/brands/curest-03.jpg",
+    "assets/brands/curest-04.jpg",
+    "assets/brands/curest-05.jpg",
+    "assets/brands/curest-06.jpg"
+   ],
+   "slogan": {
+    "en": "A moment of rest in your daily life.",
+    "ko": "일상 속 잠깐의 휴식"
+   },
+   "description": {
+    "en": "CUREST is a skincare brand that combines healing botanicals with modern cosmetic science to provide effective, affordable care for tired and stressed skin. The brand offers low-irritation formulations, vegan ingredients, and high-performance skincare solutions across slow-aging, moisturizing, brightening, and anti-trouble care.",
+    "ko": "큐레스트는 자연 유래 진정 성분과 현대적인 화장품 기술을 결합해 지치고 자극받은 피부에 효과적이고 합리적인 케어를 제공하는 스킨케어 브랜드입니다. 슬로에이징, 보습, 브라이트닝 및 트러블 케어를 중심으로 저자극 처방과 비건 성분을 적용한 고기능성 제품을 선보입니다."
+   },
+   "philosophy": {
+    "en": "CUREST pursues authentic care that supports the skin’s natural recovery. Its philosophy is built on value for money, sustainable beauty, zero-waste-oriented packaging, safe ingredients, and scientifically developed low-irritation formulas suitable for sensitive skin.",
+    "ko": "피부 본연의 회복력을 천천히, 정직하게 지원하는 진정성 있는 케어를 추구합니다. 합리적인 가격과 우수한 품질, 지속 가능한 패키징, 안전한 성분 및 과학적 근거에 기반한 저자극 처방을 통해 피부와 일상에 편안한 휴식을 제공합니다."
+   },
+   "origin": {
+    "en": "CUREST is a coined term combining Cure and Rest, representing a brief restorative break for the skin within the daily skincare routine.",
+    "ko": "Cure와 Rest를 결합한 조어로, 매일의 스킨케어 과정에서 피부가 잠시 회복하고 쉴 수 있는 시간을 의미합니다."
+   },
+   "manufacturer": {
+    "en": "Samsung Medicos Co., Ltd.",
+    "ko": "삼성메디코스㈜"
+   },
+   "technology": [],
+   "clinical": [
+    {
+     "item": "버블 마스크 3종",
+     "item_en": "3 bubble masks",
+     "result": "미백 + 주름개선 이중기능성",
+     "result_en": "Dual-function: brightening + wrinkle care"
+    }
+   ],
+   "lineup": {
+    "ko": "앰플 6종을 중심으로 마스크팩·토너·세럼 등 총 15개 SKU",
+    "en": "Anchored by 6 ampoule SKUs, with mask pack, toner, serum — 15 SKUs in total",
+    "total": 15
+   },
+   "sku_names": [
+    {
+     "ko": "",
+     "en": "CUREST Nutrition Ampoule"
+    },
+    {
+     "ko": "",
+     "en": "CUREST Anti-Wrinkle Ampoule"
+    },
+    {
+     "ko": "",
+     "en": "CUREST Lightening Ampoule"
+    },
+    {
+     "ko": "",
+     "en": "CUREST Soothing Ampoule"
+    },
+    {
+     "ko": "",
+     "en": "CUREST Hydrating Ampoule"
+    },
+    {
+     "ko": "",
+     "en": "CUREST Deep Moisture Ampoule"
+    }
+   ],
+   "published": true
+  },
+  {
+   "id": "herbaid",
+   "code": "HBAD",
+   "name": {
+    "en": "HerbAid",
+    "ko": "허브에이드"
+   },
+   "accent": "#6B8E4E",
+   "logo": "assets/brands/herbaid-logo.png",
+   "hero": "assets/brands/herbaid-hero.jpg",
+   "photos": [
+    "assets/brands/herbaid-01.jpg",
+    "assets/brands/herbaid-02.jpg",
+    "assets/brands/herbaid-03.jpg",
+    "assets/brands/herbaid-04.jpg",
+    "assets/brands/herbaid-05.jpg",
+    "assets/brands/herbaid-06.jpg"
+   ],
+   "slogan": {
+    "en": "We add nothing, we hide nothing, but deliver only what is essential.",
+    "ko": "더하지 않고, 숨기지 않고, 피부에 필요한 본질만을 전합니다."
+   },
+   "description": {
+    "en": "HerbAid is a vegan skincare brand centered on soothing, hydration, and preventive care. It combines carefully selected plant-based ingredients with scientifically supported formulations to help tired and depleted skin regain its natural balance, vitality, and resilience. Products are manufactured under strict quality control in CGMP-certified facilities.",
+    "ko": "허브에이드는 진정, 보습 및 예방적 피부 관리에 중점을 둔 비건 스킨케어 브랜드입니다. 엄선한 식물 유래 성분과 과학적으로 설계된 처방을 결합해 지치고 메마른 피부가 본연의 균형과 생기, 건강한 힘을 되찾도록 돕습니다. 제품은 CGMP 인증 제조시설의 엄격한 품질관리 아래 생산됩니다."
+   },
+   "philosophy": {
+    "en": "HerbAid believes that nature is the true source of beauty and healing. The brand avoids unnecessary or artificially enhanced formulas and instead develops gentle, honest solutions using safe and effective naturally derived ingredients. Its goal is to preserve the skin’s innate balance through preventive care and support long-lasting skin well-being.",
+    "ko": "자연이 아름다움과 회복의 근원이라는 믿음을 바탕으로 불필요한 성분이나 인위적으로 과장된 처방을 지양합니다. 안전성과 효능을 고려한 자연 유래 성분으로 순하고 정직한 제품을 개발하며, 사후 개선보다 피부의 균형과 활력을 지키는 예방적 케어를 통해 지속 가능한 피부 건강을 추구합니다."
+   },
+   "origin": {
+    "en": "HerbAid represents the beneficial gifts of nature, combining the concepts of herbal ingredients and care that helps restore the skin’s natural vitality.",
+    "ko": "자연이 주는 이로운 선물을 의미하며, 허브를 비롯한 식물 유래 성분으로 피부 본연의 생기와 균형 회복을 돕는 브랜드 정체성을 담고 있습니다."
+   },
+   "manufacturer": {
+    "en": "Samsung Medicos Co., Ltd.",
+    "ko": "삼성메디코스㈜"
+   },
+   "technology": [],
+   "clinical": [],
+   "lineup": {
+    "ko": "크림 4종, 에센스 3종, 세럼 3종 등 총 14개 SKU",
+    "en": "4 cream, 3 essence, 3 serum — 14 SKUs in total",
+    "total": 14
+   },
+   "sku_names": [
+    {
+     "ko": "",
+     "en": "HERBAID GREEN CICA BUBBLE ESSENCE"
+    },
+    {
+     "ko": "",
+     "en": "HERBAID GLUTA GLOW BUBBLE ESSENCE"
+    },
+    {
+     "ko": "",
+     "en": "HERBAID RED CICA CALMING MIST"
+    },
+    {
+     "ko": "",
+     "en": "HERBAID COLLAGEN FIRMING BUBBLE SERUM"
+    },
+    {
+     "ko": "",
+     "en": "HERBAID BLUE HEART LEAF BOOSTING TONER"
+    },
+    {
+     "ko": "",
+     "en": "HERBAID HYDRAMIDE DEEP MOISTURE CREAM"
+    }
+   ],
+   "published": true
+  },
+  {
+   "id": "wati-for-skin",
+   "code": "WATI",
+   "name": {
+    "ko": "와티 포 스킨",
+    "en": "Wati For Skin"
+   },
+   "accent": "#5C3D8F",
+   "logo": "assets/brands/wati-for-skin-logo.png",
+   "hero": "assets/brands/wati-for-skin-hero.jpg",
+   "photos": [
+    "assets/brands/wati-for-skin-01.jpg",
+    "assets/brands/wati-for-skin-02.jpg",
+    "assets/brands/wati-for-skin-03.jpg",
+    "assets/brands/wati-for-skin-04.jpg",
+    "assets/brands/wati-for-skin-05.jpg",
+    "assets/brands/wati-for-skin-06.jpg"
+   ],
+   "slogan": {
+    "ko": "피부를 지키는 효과적인 성분",
+    "en": "Effective Ingredients for Healthy Skin"
+   },
+   "description": {
+    "ko": "건강한 피부와 효과적인 스킨케어를 위해 피부에 필요한 성분만을 정직하게 담는 코스메틱 브랜드입니다. 와티 포 스킨은 안전성과 효능을 모두 고려한 성분을 균형 있게 조합하여 가장 효과적인 피부 솔루션을 연구하며, 다양한 피부 타입과 세분화된 피부 고민에 맞춘 특화 제품을 제공합니다.",
+    "en": "Wati For Skin is a cosmetics brand dedicated to healthy skin through honest formulations and effective ingredients. By combining safe, high-performance ingredients in optimal balance, the brand continuously develops targeted skincare solutions tailored to diverse skin types and individual skin concerns."
+   },
+   "philosophy": {
+    "ko": "Ingredients Focused — 피부에 필요한 핵심 성분을 연구하고 피부 타입별 최적의 솔루션을 제안합니다.Clean Beauty — 사람과 자연을 함께 고려한 안전하고 지속 가능한 화장품을 추구합니다.",
+    "en": "Ingredients Focused — Researching functional ingredients that support healthy skin and developing optimized solutions for every skin type.Clean Beauty — Creating safe, effective, and sustainable skincare that respects both people and nature."
+   },
+   "origin": {
+    "ko": "옛 조상들은 호랑이를 산신령(山神靈)과 산군(山君)으로 여기며 나쁜 기운을 막아주는 존재로 믿었습니다. 피부의 핵심 구성 요소인 'Water'와 'Tiger'를 결합한 WATI는 피부를 보호하는 핵심 성분을 중심으로, 피부 타입별 최적의 성분 조합을 제안하는 브랜드입니다.",
+    "en": "WATI combines Water, an essential component of healthy skin, with Tiger, long regarded in Korean tradition as a guardian that protects against harm. The brand represents skincare built around carefully selected functional ingredients that help protect and care for different skin types."
+   },
+   "manufacturer": {
+    "ko": "주식회사 투타이거즈",
+    "en": "Two Tigers Corp."
+   },
+   "technology": [
+    {
+     "name": "Micro Spicule (마이크로 스피큘)",
+     "name_en": "Micro Spicule",
+     "desc": "스피큘 함유 제형. 앰플·에센스 라인 중심",
+     "desc_en": "Spicule-based formulations, centered on the ampoule and essence lines."
+    }
+   ],
+   "clinical": [
+    {
+     "item": "하이드로겔 마스크 3종 12개 효능 항목",
+     "item_en": "3 hydrogel masks, 12 efficacy claims",
+     "result": "피부결·보습·탄력·진정·모공개선 등",
+     "result_en": "Texture, hydration, elasticity, soothing, pore care"
+    }
+   ],
+   "lineup": {
+    "ko": "크림 26종, 아이크림 13종, 마스크팩 13종 등 총 128개 SKU",
+    "en": "26 cream, 13 eye cream, 13 mask pack — 128 SKUs in total",
+    "total": 128
+   },
+   "sku_names": [
+    {
+     "ko": "오리지널 에센스 마이크로 스피큘 100",
+     "en": "Original Essence Micro Spicule 100"
+    },
+    {
+     "ko": "티트리 수딩 에센스 마이크로 스피큘 100",
+     "en": "Tea Tree Soothing Essence Micro Spicule 100"
+    },
+    {
+     "ko": "프로폴리스 에센스 마이크로 스피큘 100",
+     "en": "Propolis Essence Micro Spicule 100"
+    },
+    {
+     "ko": "프롬시카 에센스 마이크로 스피큘 100",
+     "en": "From CICA Essence Micro Spicule 100"
+    },
+    {
+     "ko": "어성초 에센스 마이크로 스피큘 100",
+     "en": "Heartleaf Essence Micro Spicule 100"
+    },
+    {
+     "ko": "나이아신아마이드 에센스 마이크로 스피큘 100",
+     "en": "Niacinamide Essence Micro Spicule 100"
+    }
+   ],
+   "published": true
   },
   {
    "id": "w-skin-lab",
-   "name": "W.SKIN LAB",
-   "accent": "#37506B",
-   "logo": "assets/brands/w-skin-lab.png",
-   "manufacturer": "W.SKIN LABORATORY",
-   "description": {
-    "en": "High quality professional dermo cosmetic laboratory. Product introduction and price table uploaded.",
-    "ko": ""
+   "code": "WSKN",
+   "name": {
+    "ko": "W.피부연구소",
+    "en": "W. SKIN LABORATORY"
    },
-   "products": [
+   "accent": "#4A6B8A",
+   "logo": "assets/brands/w-skin-lab-logo.png",
+   "hero": "assets/brands/w-skin-lab-hero.jpg",
+   "photos": [
+    "assets/brands/w-skin-lab-01.jpg",
+    "assets/brands/w-skin-lab-02.jpg",
+    "assets/brands/w-skin-lab-03.jpg",
+    "assets/brands/w-skin-lab-04.jpg",
+    "assets/brands/w-skin-lab-05.jpg",
+    "assets/brands/w-skin-lab-06.jpg"
+   ],
+   "slogan": {
+    "ko": "우리가 만들면 다릅니다",
+    "en": "It’s Different If We Make It."
+   },
+   "description": {
+    "ko": "W.피부연구소는 한국인의 피부 환경과 고민에 맞는 제품을 연구·개발하는 더모코스메틱 브랜드입니다. 해외 화장품을 유통하며 축적한 경험과 협력 관계를 바탕으로 원료 선정, 제형 개발, 품질 관리까지 직접 관여하며, 합리적인 가격에 높은 품질과 기능성을 갖춘 스킨케어 제품을 제안합니다.",
+    "en": "W. Skin Laboratory is a Korean dermocosmetic brand dedicated to developing skincare suited to Korean skin conditions and concerns. Drawing on extensive experience in international cosmetics distribution and technical partnerships, the brand is involved in ingredient selection, formulation development, and quality control to deliver high-quality, functional skincare at accessible prices."
+   },
+   "philosophy": {
+    "ko": "Constant Research on Skin. 피부에 효과적인 원료와 기술을 지속적으로 연구하며, 최고 품질의 원료, 혁신적인 기술과 유럽과의 기술 제휴, 정직한 가격과 유통, 전문 연구진이라는 네 가지 원칙을 바탕으로 제품을 개발합니다. 브랜드나 생산지가 아니라 제품 자체의 품질과 기술력이 좋은 화장품을 결정한다는 철학을 지향합니다.",
+    "en": "Constant Research on Skin. The brand develops products according to four core commitments: carefully selected premium ingredients, innovative technologies and international technical collaboration, honest pricing and distribution, and continuous research by experienced specialists. It believes that true product quality comes from formulation and technology rather than brand origin or manufacturing country."
+   },
+   "origin": {
+    "ko": "W는 소비자가 제품을 선택할 때 던지는 여러 질문인 Why에서 출발했습니다. 유럽의 더모코스메틱처럼 기능이 우수하면서도 합리적인 가격의 제품을 직접 만들겠다는 문제의식을 브랜드 정체성에 담았습니다.",
+    "en": "The W originates from the many “Why” questions raised while developing the brand: why high-performance dermocosmetics should be expensive, why functional products cannot be offered at reasonable prices, and why effective skincare cannot be developed specifically for Korean skin."
+   },
+   "manufacturer": {
+    "ko": "㈜제이앤제이컴퍼니",
+    "en": "J&J Company"
+   },
+   "technology": [],
+   "clinical": [],
+   "lineup": {
+    "ko": "크림 4종, 토너 3종, 마스크팩 3종 등 총 15개 SKU",
+    "en": "4 cream, 3 toner, 3 mask pack — 15 SKUs in total",
+    "total": 15
+   },
+   "sku_names": [
     {
-     "sku": "WSKIN_AM_CREAM_50ML",
-     "name": {
-      "en": "A.M CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "A.M Anti Melasma",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "A.M Anti Melasma line cream for freckles, wrinkles, and dark circles; 10 types of skin clinical trials completed / skin irritation tests completed.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Tranexamic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Bisabolol",
-       "ko": ""
-      },
-      {
-       "en": "Trehalose",
-       "ko": ""
-      },
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "20 Natural Ingredients",
-       "ko": ""
-      }
-     ]
+     "ko": "",
+     "en": "STOP-AGING PEPTIDE ESSENCE"
     },
     {
-     "sku": "WSKIN_AM_BOOSTING_SERUM_30ML",
-     "name": {
-      "en": "A.M BOOSTING SERUM",
-      "ko": ""
-     },
-     "type": {
-      "en": "A.M Anti Melasma",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "Boosting serum that enhances moisturizing and helps cream absorption deeper.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Tranexamic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Bisabolol",
-       "ko": ""
-      },
-      {
-       "en": "Trehalose",
-       "ko": ""
-      },
-      {
-       "en": "Sodium Hyaluronate",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "16 Natural Ingredients",
-       "ko": ""
-      }
-     ]
+     "ko": "",
+     "en": "STOP-AGING PEPTIDE TONER"
     },
     {
-     "sku": "WSKIN_AM_CLEARING_TONER_250ML",
-     "name": {
-      "en": "A.M CLEARING TONER",
-      "ko": ""
-     },
-     "type": {
-      "en": "A.M Anti Melasma",
-      "ko": ""
-     },
-     "volume": "250ml",
-     "description": {
-      "en": "Daily gentle clearing toner for dead skin cell care and smooth skin.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Glycolic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Tartaric Acid",
-       "ko": ""
-      },
-      {
-       "en": "Malic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Lactic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Sodium Hyaluronate",
-       "ko": ""
-      },
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Allantoin",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      }
-     ]
+     "ko": "",
+     "en": "STOP-AGING PEPTIDE CREAM"
     },
     {
-     "sku": "WSKIN_STOP_AGING_PEPTIDE_ESSENCE_100ML",
-     "name": {
-      "en": "STOP-AGING PEPTIDE ESSENCE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stop-Aging Peptide",
-      "ko": ""
-     },
-     "volume": "100ml",
-     "description": {
-      "en": "Deep intensive skin care essence with microbubble to fill skin elasticity and help peptide absorption.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Acetyl Hexapeptide-8",
-       "ko": ""
-      },
-      {
-       "en": "Hexapeptide-9",
-       "ko": ""
-      },
-      {
-       "en": "Copper Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Nonapeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Palmitoyl Pentapeptide-4",
-       "ko": ""
-      },
-      {
-       "en": "Palmitoyl Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Volufiline",
-       "ko": ""
-      }
-     ]
+     "ko": "",
+     "en": "STOP-AGING PEPTIDE EYE CREAM"
     },
     {
-     "sku": "WSKIN_STOP_AGING_PEPTIDE_TONER_250ML",
-     "name": {
-      "en": "STOP-AGING PEPTIDE TONER",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stop-Aging Peptide",
-      "ko": ""
-     },
-     "volume": "250ml",
-     "description": {
-      "en": "Whitening + wrinkle improvement dual-function nutritional toner.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "CFT-1",
-       "ko": ""
-      },
-      {
-       "en": "Shp-19",
-       "ko": ""
-      },
-      {
-       "en": "Palmitoyl-4",
-       "ko": ""
-      },
-      {
-       "en": "shD-9",
-       "ko": ""
-      },
-      {
-       "en": "Nicorinoyl-1",
-       "ko": ""
-      },
-      {
-       "en": "CSO-4",
-       "ko": ""
-      },
-      {
-       "en": "shO-4",
-       "ko": ""
-      },
-      {
-       "en": "Volufiline",
-       "ko": ""
-      }
-     ]
+     "ko": "",
+     "en": "6 COMPLEX PEPTIDE MASK"
     },
     {
-     "sku": "WSKIN_STOP_AGING_PEPTIDE_CREAM_50ML",
-     "name": {
-      "en": "STOP-AGING PEPTIDE CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stop-Aging Peptide",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "Highly concentrated nutritional cream for wrinkles and blemishes with luxury peptide ingredients.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "CFT-1",
-       "ko": ""
-      },
-      {
-       "en": "Shp-19",
-       "ko": ""
-      },
-      {
-       "en": "Palmitoyl-4",
-       "ko": ""
-      },
-      {
-       "en": "shD-9",
-       "ko": ""
-      },
-      {
-       "en": "Nicorinoyl-1",
-       "ko": ""
-      },
-      {
-       "en": "Palmitoyl Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "CSO-4",
-       "ko": ""
-      },
-      {
-       "en": "shO-4",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_STOP_AGING_PEPTIDE_EYE_CREAM_30ML",
-     "name": {
-      "en": "STOP-AGING PEPTIDE EYE CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Stop-Aging Peptide",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "All-day care eye cream for elasticity around the eyes.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Palmitoyl Tripeptide-5",
-       "ko": ""
-      },
-      {
-       "en": "Volufiline",
-       "ko": ""
-      },
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "patented natural herb blend",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_AC_CLEARING_CREAM_60ML",
-     "name": {
-      "en": "AC+ CLEARING CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "AC+ Trouble",
-      "ko": ""
-     },
-     "volume": "60ml",
-     "description": {
-      "en": "Trouble eraser cream; light non-sticky soothing cream for skin trouble.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Papaya Fruit Extract",
-       "ko": ""
-      },
-      {
-       "en": "Glycolic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Citric Acid",
-       "ko": ""
-      },
-      {
-       "en": "Loofah & Cucumber Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus Ferment",
-       "ko": ""
-      },
-      {
-       "en": "Butylene Glycol",
-       "ko": ""
-      },
-      {
-       "en": "Apple Extract",
-       "ko": ""
-      },
-      {
-       "en": "Ananas Sativus Fruit Extract",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_AC_CLEARING_TONER_150ML",
-     "name": {
-      "en": "AC+ CLEARING TONER",
-      "ko": ""
-     },
-     "type": {
-      "en": "AC+ Trouble",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "Toner to remove sebum and dead skin cells using AHA ingredients.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Papaya Fruit Extract",
-       "ko": ""
-      },
-      {
-       "en": "Glycolic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Citric Acid",
-       "ko": ""
-      },
-      {
-       "en": "Luffa Cylindrica Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus Fermentation",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_AC_TROUBLE_CLEARING_CLEANSING_FOAM_150ML",
-     "name": {
-      "en": "AC+ TROUBLE CLEARING CLEANSING FOAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "AC+ Trouble",
-      "ko": ""
-     },
-     "volume": "150ml",
-     "description": {
-      "en": "Deep pore and acne cleansing foam with soft creamy foam.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Papaya Fruit Extract",
-       "ko": ""
-      },
-      {
-       "en": "Melissa Officinalis Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Aloe Vera Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Loofah & Cucumber Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus Ferment",
-       "ko": ""
-      },
-      {
-       "en": "Apple Extract",
-       "ko": ""
-      },
-      {
-       "en": "Mango Extract",
-       "ko": ""
-      },
-      {
-       "en": "Butylene Glycol",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_AC_TROUBLE_PATCH_56EA",
-     "name": {
-      "en": "AC+ TROUBLE PATCH",
-      "ko": ""
-     },
-     "type": {
-      "en": "AC+ Trouble",
-      "ko": ""
-     },
-     "volume": "10mm x 56EA",
-     "description": {
-      "en": "Super-slim adherence trouble-care patch.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Green Tea Extract",
-       "ko": ""
-      },
-      {
-       "en": "Melaleuca Alternifolia Leaf Oil",
-       "ko": ""
-      },
-      {
-       "en": "Portulaca Oleracea Extract",
-       "ko": ""
-      },
-      {
-       "en": "1,2-Hexanediol",
-       "ko": ""
-      },
-      {
-       "en": "Butylene Glycol",
-       "ko": ""
-      },
-      {
-       "en": "Acrylates Copolymer",
-       "ko": ""
-      },
-      {
-       "en": "Salicylic Acid",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_CICA_PLUS_REPAIR_MASK_180ML",
-     "name": {
-      "en": "CICA PLUS REPAIR MASK",
-      "ko": ""
-     },
-     "type": {
-      "en": "CICA Plus",
-      "ko": ""
-     },
-     "volume": "180ml",
-     "description": {
-      "en": "Soothing and exfoliating peel-off repair mask.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Hydrolyzed Collagen",
-       "ko": ""
-      },
-      {
-       "en": "Snail Secretion Filtrate",
-       "ko": ""
-      },
-      {
-       "en": "Sodium Hyaluronate",
-       "ko": ""
-      },
-      {
-       "en": "Aloe Vera Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Allantoin",
-       "ko": ""
-      },
-      {
-       "en": "Melaleuca Alternifolia Leaf",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_CICA_PLUS_BHA_TONER_PAD_155ML",
-     "name": {
-      "en": "CICA PLUS BHA TONER PAD",
-      "ko": ""
-     },
-     "type": {
-      "en": "CICA Plus",
-      "ko": ""
-     },
-     "volume": "155ml / 70sheet",
-     "description": {
-      "en": "BHA toner pad for sebum, dead skin cells and sensitive skin care.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "BHA",
-       "ko": ""
-      },
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Mango Extract",
-       "ko": ""
-      },
-      {
-       "en": "Pineapple Extract",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus Ferment",
-       "ko": ""
-      },
-      {
-       "en": "Sodium Hyaluronate",
-       "ko": ""
-      },
-      {
-       "en": "Hyaluronic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Hydrolyzed Hyaluronic Acid",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_CICA_PLUS_REPAIR_CREAM_50ML",
-     "name": {
-      "en": "CICA PLUS REPAIR CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "CICA Plus",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "CicaCare cream that gently soothes sensitive skin.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      },
-      {
-       "en": "Trehalose",
-       "ko": ""
-      },
-      {
-       "en": "Pear Water",
-       "ko": ""
-      },
-      {
-       "en": "Portulaca Oleracea Extract",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_CICA_PLUS_REPAIR_SOOTHING_CREAM_50ML",
-     "name": {
-      "en": "CICA PLUS REPAIR SOOTHING CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "CICA Plus",
-      "ko": ""
-     },
-     "volume": "50ml",
-     "description": {
-      "en": "Multi-functional Cica repair cream for sensitive to normal skin while strengthening the skin barrier.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Glycerin",
-       "ko": ""
-      },
-      {
-       "en": "Trehalose",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      },
-      {
-       "en": "Portulaca Oleracea Extract",
-       "ko": ""
-      },
-      {
-       "en": "Butyrospermum Parkii Butter",
-       "ko": ""
-      },
-      {
-       "en": "Allantoin",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_HYALURONIC_ACID_MOISTURIZING_AMPOULE_30ML",
-     "name": {
-      "en": "HYALURONIC ACID MOISTURIZING AMPOULE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Ampoule",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "Moisturizing ampoule that fills and maintains moisture on the skin.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "5 Types of Hyaluronic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Hydrolyzed Hyaluronic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Betaine",
-       "ko": ""
-      },
-      {
-       "en": "Snail Secretion Filtrate",
-       "ko": ""
-      },
-      {
-       "en": "Trehalose",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_VITAMIN_BRIGHTENING_AMPOULE_30ML",
-     "name": {
-      "en": "VITAMIN BRIGHTENING AMPOULE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Ampoule",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "Glow whitening ampoule for clear and bright skin.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Hippophae Rhamnoides Extract",
-       "ko": ""
-      },
-      {
-       "en": "Citrus Limon Fruit Extract",
-       "ko": ""
-      },
-      {
-       "en": "Tocopheryl Acetate",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      },
-      {
-       "en": "Lactobacillus",
-       "ko": ""
-      },
-      {
-       "en": "Saccharomyces",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_CICA_CENTELLA_CALMING_AMPOULE_30ML",
-     "name": {
-      "en": "CICA CENTELLA CALMING AMPOULE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Ampoule",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "Care soothing ampoule that quickly soothes sensitive skin.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica Extract",
-       "ko": ""
-      },
-      {
-       "en": "Asiaticoside",
-       "ko": ""
-      },
-      {
-       "en": "Asiatic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Madecassic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Camellia Sinensis Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Brassica Oleracea Italica Extract",
-       "ko": ""
-      },
-      {
-       "en": "6 Healthy Nature Nutrients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_PEPTIDE_ENERGY_AMPOULE_30ML",
-     "name": {
-      "en": "PEPTIDE ENERGY AMPOULE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Ampoule",
-      "ko": ""
-     },
-     "volume": "30ml",
-     "description": {
-      "en": "Elastic ampoule with 11 peptides for skin elasticity and wrinkle concerns.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Acetyl Hexapeptide-8",
-       "ko": ""
-      },
-      {
-       "en": "sh-Pentapeptide-5",
-       "ko": ""
-      },
-      {
-       "en": "sh-Decapeptide-9",
-       "ko": ""
-      },
-      {
-       "en": "Caffeoyl Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Palmitoyl Pentapeptide-4",
-       "ko": ""
-      },
-      {
-       "en": "Caffeoyl sh-Octapeptide-4",
-       "ko": ""
-      },
-      {
-       "en": "Sodium Hyaluronate",
-       "ko": ""
-      },
-      {
-       "en": "Panthenol",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_WHITE_GLUTATHIONE_TONE_UP_CREAM_60ML",
-     "name": {
-      "en": "WHITE GLUTATHIONE TONE-UP CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cream",
-      "ko": ""
-     },
-     "volume": "60ml",
-     "description": {
-      "en": "Tone-up cream for whitening, wrinkle care and moisturizing.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Glutathione",
-       "ko": ""
-      },
-      {
-       "en": "Carbonated Hot Spring Water",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "MultiEX BSASM Plus",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_HYALURONIC_CREAM_80ML",
-     "name": {
-      "en": "HYALURONIC CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cream",
-      "ko": ""
-     },
-     "volume": "80ml",
-     "description": {
-      "en": "Moisturizing cream for skin hydration and moisture evaporation prevention.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Hydration Acid",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "Nature Nutrients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_CAVIAR_CREAM_80ML",
-     "name": {
-      "en": "CAVIAR CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cream",
-      "ko": ""
-     },
-     "volume": "80ml",
-     "description": {
-      "en": "Cream with Black Caviar Extract for oil/moisture balance and skin improvement.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Black Diamond Caviar",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "Nature Nutrients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_ESCARGOT_CREAM_80ML",
-     "name": {
-      "en": "ESCARGOT CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cream",
-      "ko": ""
-     },
-     "volume": "80ml",
-     "description": {
-      "en": "Cream with snail secretion extract for daily anti-aging care.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Snail Secretion",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "Nature Nutrients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_STOP_AGING_SON_JOO_RUM_HAND_CREAM_60G",
-     "name": {
-      "en": "STOP-AGING SON JOO RUM HAND CREAM +",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cream",
-      "ko": ""
-     },
-     "volume": "60g",
-     "description": {
-      "en": "Hand cream for wrinkle care, daily care and moisturizing.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Adenosine",
-       "ko": ""
-      },
-      {
-       "en": "Galactomyces Ferment Filtrate",
-       "ko": ""
-      },
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_AM_MOISTURE_BOOSTING_MASK_22ML",
-     "name": {
-      "en": "A.M MOISTURE BOOSTING MASK",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Mask Pack",
-      "ko": ""
-     },
-     "volume": "22ml",
-     "description": {
-      "en": "Soft-textured sheet mask containing high-content hyaluronic acid and Centella asiatica extract.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Sodium Hyaluronate",
-       "ko": ""
-      },
-      {
-       "en": "11 Natural Ingredients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_AC_SENSITIVE_ESSENCE_MASK_22ML",
-     "name": {
-      "en": "AC+ SENSITIVE ESSENCE MASK",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Mask Pack",
-      "ko": ""
-     },
-     "volume": "22ml",
-     "description": {
-      "en": "Super-fit calming care mask with tea tree and lemon balm moisturizing.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Melissa Officinalis Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Melaleuca Alternifolia Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Aloe Vera Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Allantoin",
-       "ko": ""
-      },
-      {
-       "en": "Hydration Acid",
-       "ko": ""
-      },
-      {
-       "en": "6 Natural Ingredients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_ALOE_VERA_SKIN_SOOTHING_MASK_22ML",
-     "name": {
-      "en": "ALOE VERA SKIN SOOTHING MASK",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Mask Pack",
-      "ko": ""
-     },
-     "volume": "22ml",
-     "description": {
-      "en": "Collagen + aloe moisture mask for soothing and elasticity.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Aloe Vera Leaf Extract",
-       "ko": ""
-      },
-      {
-       "en": "Hydrolyzed Collagen",
-       "ko": ""
-      },
-      {
-       "en": "Sodium Hyaluronate",
-       "ko": ""
-      },
-      {
-       "en": "8 Natural Ingredients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_6_COMPLEX_PEPTIDE_MASK_22ML",
-     "name": {
-      "en": "6 COMPLEX PEPTIDE MASK",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Mask Pack",
-      "ko": ""
-     },
-     "volume": "22ml",
-     "description": {
-      "en": "Premium moisture and elasticity mask pack with 6 peptide components.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Palmitoyl Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Palmitoyl Pentapeptide-4",
-       "ko": ""
-      },
-      {
-       "en": "Copper Tripeptide-1",
-       "ko": ""
-      },
-      {
-       "en": "Hexapeptide-9 & 11",
-       "ko": ""
-      },
-      {
-       "en": "Oats Extract",
-       "ko": ""
-      },
-      {
-       "en": "Blueberries Extract",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_TRIPLE_CARE_SUN_CREAM_60G",
-     "name": {
-      "en": "TRIPLE CARE SUN CREAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Care",
-      "ko": ""
-     },
-     "volume": "60g",
-     "description": {
-      "en": "Sun cream with SPF50+/PA+++ for UV protection, soothing and hydration.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Hyaluronic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Zinc Oxide",
-       "ko": ""
-      },
-      {
-       "en": "Organic UV Block",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_TRIPLE_CARE_SUN_STICK_17G",
-     "name": {
-      "en": "TRIPLE CARE SUN STICK",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Care",
-      "ko": ""
-     },
-     "volume": "17g",
-     "description": {
-      "en": "Matte non-sticky sun stick with SPF50+/PA+++ for easy use.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Centella Asiatica",
-       "ko": ""
-      },
-      {
-       "en": "Madecassoside",
-       "ko": ""
-      },
-      {
-       "en": "Asiaticoside",
-       "ko": ""
-      },
-      {
-       "en": "Inorganic UV Block",
-       "ko": ""
-      },
-      {
-       "en": "Organic UV Block",
-       "ko": ""
-      },
-      {
-       "en": "Red Food Complex",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_ANTI_HAIR_LOSS_SHAMPOO_500ML",
-     "name": {
-      "en": "ANTI HAIR LOSS SHAMPOO",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Care",
-      "ko": ""
-     },
-     "volume": "500ml",
-     "description": {
-      "en": "Low-pH shampoo (pH 5.4) for hair loss protection and healthy scalp without irritation.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Dexpanthenol",
-       "ko": ""
-      },
-      {
-       "en": "Salicylic Acid",
-       "ko": ""
-      },
-      {
-       "en": "Zinc Pyrithione",
-       "ko": ""
-      },
-      {
-       "en": "Niacinamide",
-       "ko": ""
-      },
-      {
-       "en": "Black Food Complex",
-       "ko": ""
-      },
-      {
-       "en": "34 Natural Ingredients",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_UNDER_FLOWER_PERFUME_ADELAIDE_5ML",
-     "name": {
-      "en": "UNDER FLOWER PERFUME ADELAIDE",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Care",
-      "ko": ""
-     },
-     "volume": "5ml",
-     "description": {
-      "en": "100% natural aroma oil perfume for refreshing and relaxing mind.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Olive Oil",
-       "ko": ""
-      },
-      {
-       "en": "Sunflower Oil",
-       "ko": ""
-      },
-      {
-       "en": "Evening Primrose Oil",
-       "ko": ""
-      },
-      {
-       "en": "Vitamin Tree Oil",
-       "ko": ""
-      },
-      {
-       "en": "Lemon Oil",
-       "ko": ""
-      },
-      {
-       "en": "Jojoba Seed Oil",
-       "ko": ""
-      },
-      {
-       "en": "Orange Oil",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_DERMO_CLEANSING_FOAM_220ML",
-     "name": {
-      "en": "DERMO CLEANSING FOAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cleansing",
-      "ko": ""
-     },
-     "volume": "220ml",
-     "description": {
-      "en": "Cleansing foam to prevent skin from getting dry.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Dill Extract",
-       "ko": ""
-      },
-      {
-       "en": "Spikemoss Extract",
-       "ko": ""
-      },
-      {
-       "en": "Maypop Extract",
-       "ko": ""
-      },
-      {
-       "en": "Persian Silk Tree",
-       "ko": ""
-      },
-      {
-       "en": "Baby's Breath Root Extract",
-       "ko": ""
-      },
-      {
-       "en": "Milk Protein Extract",
-       "ko": ""
-      },
-      {
-       "en": "Hydrolyzed Collagen",
-       "ko": ""
-      },
-      {
-       "en": "WS B/S Care EX",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_MILKY_PERFECT_CLEANSING_FOAM_120ML",
-     "name": {
-      "en": "MILKY PERFECT CLEANSING FOAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cleansing",
-      "ko": ""
-     },
-     "volume": "120ml",
-     "description": {
-      "en": "Cleansing foam with rich bubbles and milk protein to balance oil and moisture.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Milk Protein Extract",
-       "ko": ""
-      },
-      {
-       "en": "Black Rice Extract",
-       "ko": ""
-      },
-      {
-       "en": "Black Sesame Extract",
-       "ko": ""
-      },
-      {
-       "en": "Black Bean Extract",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_MILKY_COLLAGEN_CLEANSING_FOAM_300ML",
-     "name": {
-      "en": "MILKY COLLAGEN CLEANSING FOAM",
-      "ko": ""
-     },
-     "type": {
-      "en": "Daily Cleansing",
-      "ko": ""
-     },
-     "volume": "300ml",
-     "description": {
-      "en": "Large capacity cleansing foam with milk protein and hydrolyzed collagen.",
-      "ko": ""
-     },
-     "key_ingredients": [
-      {
-       "en": "Milk Protein Extract",
-       "ko": ""
-      },
-      {
-       "en": "Hydrolyzed Collagen",
-       "ko": ""
-      },
-      {
-       "en": "Mild Alkaline Cleanser",
-       "ko": ""
-      }
-     ]
-    },
-    {
-     "sku": "WSKIN_CICA_PLUS_REPAIR_TONER_250ML",
-     "name": {
-      "en": "CICA PLUS REPAIR TONER",
-      "ko": ""
-     },
-     "type": {
-      "en": "CICA Plus",
-      "ko": ""
-     },
-     "volume": "250ml",
-     "description": {
-      "en": "Price table SKU only. Detailed product page not found in uploaded W.SKIN LAB brochure.",
-      "ko": ""
-     }
+     "ko": "",
+     "en": "A.M (Anti-Melasma) CREAM"
     }
    ],
-   "product_count": 36
+   "published": true
+  },
+  {
+   "id": "simplete",
+   "code": "SMPL",
+   "name": {
+    "en": "Simplete",
+    "ko": "심플레"
+   },
+   "accent": "#8A7A5C",
+   "logo": "assets/brands/simplete-logo.png",
+   "hero": "assets/brands/simplete-hero.jpg",
+   "photos": [
+    "assets/brands/simplete-01.jpg",
+    "assets/brands/simplete-02.jpg",
+    "assets/brands/simplete-03.jpg",
+    "assets/brands/simplete-04.jpg",
+    "assets/brands/simplete-05.jpg",
+    "assets/brands/simplete-06.jpg"
+   ],
+   "slogan": {
+    "en": "Simply Glow You",
+    "ko": "Simply Glow You"
+   },
+   "description": {
+    "en": "Simplete is a Korean beauty lifestyle brand inspired by ballet, created for women who embody grace through understated elegance. Pursuing timeless, classic beauty, the brand goes beyond skincare to bring elegance and confidence into everyday life.",
+    "ko": "심플레는 발레에서 영감을 받아 절제된 아름다움 속 우아함을 지닌 여성을 위해 탄생한 국내 뷰티 라이프스타일 브랜드입니다. 세월이 지나도 변하지 않는 클래식한 아름다움을 추구하며, 단순한 스킨케어를 넘어 일상에 우아함과 자신감을 더합니다."
+   },
+   "philosophy": {
+    "en": "Simplete reflects ballet’s unwavering pursuit of perfection and expresses enduring beauty through three commitments: delivering clear, visible improvements to the skin; creating simple 30-second beauty routines that fit naturally into everyday life; and developing products with a strong focus on refined skin texture and radiance.",
+    "ko": "심플레는 완벽을 향해 끊임없이 도전하는 발레의 정신을 바탕으로 변치 않는 아름다움을 표현합니다. 적당한 변화에 만족하지 않고 확실한 피부 변화를 추구하며, 일상에 자연스럽게 녹아드는 30초 뷰티 루틴과 정돈된 피부결 및 빛나는 피부를 위한 제품 개발에 집중합니다."
+   },
+   "origin": {},
+   "manufacturer": {
+    "en": "Liebemi Corporation",
+    "ko": "리베미코퍼레이션"
+   },
+   "technology": [
+    {
+     "name": "Barrier CCC™",
+     "name_en": "Barrier CCC™",
+     "desc": "Time Recovery Cream 적용 배리어 복합체",
+     "desc_en": "Barrier complex used in the Time Recovery Cream."
+    }
+   ],
+   "clinical": [],
+   "lineup": {
+    "ko": "액세서리 3종, 토너 2종, 세럼 1종 등 총 11개 SKU",
+    "en": "3 accessory, 2 toner, 1 serum — 11 SKUs in total",
+    "total": 11
+   },
+   "sku_names": [
+    {
+     "ko": "",
+     "en": "Milk-Peel Toner To Essence 200ml"
+    },
+    {
+     "ko": "",
+     "en": "Milk-Peel Toner To Essence 80ml"
+    },
+    {
+     "ko": "",
+     "en": "Radiance & Moisture Booster Serum 50ml"
+    },
+    {
+     "ko": "",
+     "en": "Lift & Glow Ampoule 30ml"
+    },
+    {
+     "ko": "",
+     "en": "Time Recovery Cream 35ml"
+    },
+    {
+     "ko": "",
+     "en": "Strawberry Milky Tone-up Sun Ampoule 30ml"
+    }
+   ],
+   "published": true
+  },
+  {
+   "id": "ofbase",
+   "code": "OFBS",
+   "name": {
+    "en": "OFBASE",
+    "ko": "오브베이스"
+   },
+   "accent": "#5C7A5C",
+   "logo": "assets/brands/ofbase-logo.png",
+   "hero": "assets/brands/ofbase-hero.jpg",
+   "photos": [
+    "assets/brands/ofbase-01.jpg",
+    "assets/brands/ofbase-02.jpg",
+    "assets/brands/ofbase-03.jpg",
+    "assets/brands/ofbase-04.jpg",
+    "assets/brands/ofbase-05.jpg",
+    "assets/brands/ofbase-06.jpg"
+   ],
+   "slogan": {
+    "en": "OFBASE is the foundation of Korean skin",
+    "ko": "오브베이스는 한국 피부의 기반입니다"
+   },
+   "description": {
+    "en": "OFBASE is a Korean skincare brand that interprets K-skin through layered care, refined skin texture, and a naturally revealed glow. Under the concept of K-SKIN OF BASE, the brand captures Korean sensibility in its purest form and presents an approach to beauty designed to endure over time.",
+    "ko": "오브베이스는 겹겹이 쌓이는 케어, 정돈된 피부결과 자연스럽게 드러나는 광채를 통해 K-스킨을 해석하는 국내 스킨케어 브랜드입니다. K-SKIN OF BASE라는 콘셉트 아래 한국적 감각을 가장 순수한 형태로 담아, 시간이 지나도 지속되는 아름다움을 제안합니다."
+   },
+   "philosophy": {
+    "en": "OFBASE believes that beauty begins with trust in the base. Here, “base” goes beyond basic skincare to represent the harmony of skin texture, the flow of light, and balance. Rather than pursuing superficial glamour, the brand focuses on awakening the skin’s inherent potential.",
+    "ko": "오브베이스는 아름다움이 언제나 바탕에 대한 믿음에서 시작된다고 생각합니다. 여기서 ‘Base’는 단순한 기초 관리를 넘어 피부의 결, 빛의 흐름과 균형의 미학을 의미합니다. 화려함을 강조하기보다 피부 본연의 잠재력을 깨우는 데 집중합니다."
+   },
+   "origin": {
+    "en": "K-SKIN OF BASE",
+    "ko": "K-SKIN OF BASE"
+   },
+   "manufacturer": {
+    "en": "EYESOME KOREA Co., Ltd.",
+    "ko": "주식회사 아이썸코리아"
+   },
+   "technology": [
+    {
+     "name": "Tannin Exosome™",
+     "name_en": "Tannin Exosome™",
+     "desc": "라이스/뱀부/PDRN 3개 라인 공통 적용",
+     "desc_en": "Applied across the Rice, Bamboo and PDRN lines."
+    }
+   ],
+   "clinical": [],
+   "lineup": {
+    "ko": "클렌저 4종, 토너 3종, 세럼 3종 등 총 16개 SKU",
+    "en": "4 cleanser, 3 toner, 3 serum — 16 SKUs in total",
+    "total": 16
+   },
+   "sku_names": [
+    {
+     "ko": "오브베이스 라이스 엑소좀 미백 클렌징 밤",
+     "en": "OFBASE Rice Exosome Brightening Cleansing Balm"
+    },
+    {
+     "ko": "오브베이스 라이스 엑소좀 미백 클렌징 폼",
+     "en": "OFBASE Rice Exosome Brightening Cleansing Foam"
+    },
+    {
+     "ko": "오브베이스 라이스 엑소좀 미백 토너",
+     "en": "OFBASE Rice Exosome Brightening Toner"
+    },
+    {
+     "ko": "오브베이스 라이스 엑소좀 미백 세럼",
+     "en": "OFBASE Rice Exosome Brightening Serum"
+    },
+    {
+     "ko": "오브베이스 라이스 엑소좀 미백 크림",
+     "en": "OFBASE Rice Exosome Brightening Cream"
+    },
+    {
+     "ko": "오브베이스 라이스 엑소좀 미백 여행용 키트",
+     "en": "OFBASE Rice Exosome Brightening Travle Kit"
+    }
+   ],
+   "published": true
   }
- ]
+ ],
+ "show_oem": false
 }

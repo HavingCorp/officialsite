@@ -6,6 +6,7 @@
     if(page !== 'finished.html') return;
 
     var brands=[], formats=[], state={view:'list', brand:null, modal:null, dType:'ALL', dPage:1};
+    var showOem=true;
 
     var UI={
       en:{ listTitle:'Finished Products',
@@ -16,7 +17,7 @@
         oemCardDesc:'Selectable formulations for private-label product development.',
         manufacturer:'Manufacturer', founded:'Founded', category:'Category', products:'Products', formatsLabel:'Formats',
         onRequest:'On request', skus:'SKUs', types:'types', koreanBrand:'Korean brand',
-        signature:'Signature ingredients', keyIng:'Key Ingredients', benefits:'Benefits',
+        signature:'Signature ingredients', keyIng:'Key Ingredients', benefits:'Benefits', story:'Brand Story',
         features:'Features', mechanism:'Technology & Mechanism', inquire:'Inquire about this \u2192',
         notePrep:'Product details for this brand are being prepared.', noteContact:'Contact us', noteTail:'for the current lineup and specifications.',
         loading:'Loading brands\u2026' },
@@ -28,7 +29,7 @@
         oemCardDesc:'\uD504\uB77C\uC774\uBE57\uB77C\uBCA8 \uC81C\uD488 \uAC1C\uBC1C\uC744 \uC704\uD55C \uC120\uD0DD \uAC00\uB2A5\uD55C \uCC98\uBC29.',
         manufacturer:'\uC81C\uC870\uC0AC', founded:'\uC124\uB9BD', category:'\uCE74\uD14C\uACE0\uB9AC', products:'\uC81C\uD488', formatsLabel:'\uD3EC\uB9F7',
         onRequest:'\uBB38\uC758', skus:'\uAC1C SKU', types:'\uC885', koreanBrand:'\uD55C\uAD6D \uBE0C\uB79C\uB4DC',
-        signature:'\uB300\uD45C \uC131\uBD84', keyIng:'\uD575\uC2EC \uC131\uBD84', benefits:'\uBCA0\uB124\uD56B',
+        signature:'\uB300\uD45C \uC131\uBD84', story:'\uBE0C\uB79C\uB4DC \uC2A4\uD1A0\uB9AC', keyIng:'\uD575\uC2EC \uC131\uBD84', benefits:'\uBCA0\uB124\uD56B',
         features:'\uD2B9\uC9D5', mechanism:'\uAE30\uC220 \uBC0F \uBA54\uCEE4\uB2C8\uC998', inquire:'\uC774 \uD56D\uBAA9 \uBB38\uC758\uD558\uAE30 \u2192',
         notePrep:'\uC774 \uBE0C\uB79C\uB4DC\uC758 \uC81C\uD488 \uC0C1\uC138 \uC815\uBCF4\uB294 \uC900\uBE44 \uC911\uC785\uB2C8\uB2E4.', noteContact:'\uBB38\uC758\uD558\uAE30', noteTail:'\uD604\uC7AC \uB77C\uC778\uC5C5\uACFC \uC0AC\uC591\uC744 \uC548\uB0B4\uD574 \uB4DC\uB9BD\uB2C8\uB2E4.',
         loading:'\uBE0C\uB79C\uB4DC \uBD88\uB7EC\uC624\uB294 \uC911\u2026' }
@@ -48,7 +49,8 @@
     function cardLogoHTML(b){
       var nm=esc(b&&b.name);
       if(b&&b.logo){
-        return '<div class="fp-card-logo"><img src="'+esc(b.logo)+'" alt="'+nm+'" onerror="this.parentNode.style.display=\'none\';"></div>';
+        var ll=imgAlts(b.logo);
+        return '<div class="fp-card-logo"><img src="'+esc(ll[0])+'" data-alt="'+esc(ll.slice(1).join('|'))+'" alt="'+nm+'" data-role="cardlogo" onload="cardLogoOk(this)" onerror="bmNextSrc(this)"></div>';
       }
       return '';
     }
@@ -78,7 +80,8 @@
       '</section>',
       '<div id="fp-modal" class="fp-modal" aria-hidden="true"><div class="fp-modal-backdrop" data-close="1"></div>',
         '<div class="fp-modal-panel" role="dialog" aria-modal="true"><button type="button" class="fp-modal-close" data-close="1" aria-label="Close">\u00d7</button>',
-        '<div class="fp-modal-grid"><div id="fp-m-gallery" class="fp-m-gallery"></div><div class="fp-m-main" id="fp-m-main"></div></div></div></div>'
+        '<div class="fp-modal-grid"><div id="fp-m-gallery" class="fp-m-gallery"></div><div class="fp-m-main" id="fp-m-main"></div></div></div></div>',
+      '<div id="bm-modal" class="bm-ov"><div class="bm" id="bm-panel"></div></div>'
     ].join('');
     if(hero&&hero.parentNode) hero.insertAdjacentElement('afterend',app); else document.body.appendChild(app);
 
@@ -102,13 +105,13 @@
       document.getElementById('fp-list-title').textContent=t('listTitle');
       document.getElementById('fp-list-desc').textContent=t('listDesc');
       var cards=brands.map(function(b,i){
-        return '<article class="fp-card" tabindex="0" data-card="brand" data-index="'+i+'">'+
+        return '<article class="fp-card is-pending" tabindex="0" data-card="brand" data-index="'+i+'">'+
           cardLogoHTML(b)+
           '<p class="fp-card-desc">'+esc(brandDesc(b).slice(0,170))+'</p></article>';
       }).join('');
-      var oem='<article class="fp-card oem" tabindex="0" data-card="oem">'+
+      var oem = showOem ? ('<article class="fp-card oem" tabindex="0" data-card="oem">'+
         '<div class="fp-card-oemlabel">OEM / ODM</div>'+
-        '<p class="fp-card-desc">'+esc(t('oemCardDesc'))+'</p></article>';
+        '<p class="fp-card-desc">'+esc(t('oemCardDesc'))+'</p></article>') : '';
       cardGrid.innerHTML=cards+oem;
     }
     function renderBrand(b){
@@ -222,8 +225,94 @@
     function openModal(){ modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); renderModal(); }
     function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); state.modal=null; }
 
-    cardGrid.addEventListener('click',function(e){ var c=e.target.closest('.fp-card'); if(!c) return; c.dataset.card==='oem'?showOem():showBrand(brands[+c.dataset.index]); });
-    cardGrid.addEventListener('keydown',function(e){ if(e.key!=='Enter')return; var c=e.target.closest('.fp-card'); if(!c)return; c.dataset.card==='oem'?showOem():showBrand(brands[+c.dataset.index]); });
+    /* ===== 브랜드 모달 (히어로 고정 + 본문 스크롤 + 대표 사진) ===== */
+    /* 확장자 자동 탐색: jpg/png/webp/jpeg 순으로 시도 */
+    var IMG_EXTS=['.jpg','.png','.webp','.jpeg'];
+    function imgAlts(path){
+      if(!path) return [];
+      var dot=path.lastIndexOf('.'); if(dot<0) return [path];
+      var base=path.slice(0,dot), cur=path.slice(dot).toLowerCase();
+      var list=[path];
+      IMG_EXTS.forEach(function(e){ if(e!==cur) list.push(base+e); });
+      return list;
+    }
+    function imgTag(path, cls, extra){
+      var list=imgAlts(path); if(!list.length) return '';
+      return '<img src="'+esc(list[0])+'" data-alt="'+esc(list.slice(1).join('|'))+'" '
+        +(cls?'class="'+cls+'" ':'')+(extra||'')+' onerror="bmNextSrc(this)">';
+    }
+    window.bmNextSrc=function(el){
+      var alts=(el.getAttribute('data-alt')||'').split('|').filter(Boolean);
+      if(alts.length){ el.setAttribute('data-alt', alts.slice(1).join('|')); el.src=alts[0]; return; }
+      var role=el.getAttribute('data-role');
+      if(role==='hero'){ el.parentNode.classList.add('is-brand'); el.remove(); }
+      else if(role==='thumb'){ var th=el.closest('.bm-th'); if(th) th.remove(); }
+      else if(role==='herothumb'){ el.style.display='none'; var t=el.closest('.bm-th'); if(t) t.classList.add('is-fb'); }
+      else if(role==='cardlogo'){ var cd=el.closest('.fp-card'); if(cd) cd.remove(); }
+    };
+    window.cardLogoOk=function(el){ var cd=el.closest('.fp-card'); if(cd) cd.classList.remove('is-pending'); };
+    var bmOv=document.getElementById('bm-modal'), bmPanel=document.getElementById('bm-panel');
+    function bmHeroBrand(b,cap){
+      return imgTag(b.hero||'', '', 'alt="" data-role="hero"')
+        +'<div class="bm-scrim"></div>'+(cap?'<div class="bm-cap">'+esc(cap)+'</div>':'');
+    }
+    window.bmPick=function(el){
+      var hero=document.getElementById('bm-hero'); if(!hero) return;
+      var type=el.getAttribute('data-type'), src=el.getAttribute('data-src'), cap=el.getAttribute('data-cap')||'';
+      if(type==='brand'){ hero.className='bm-hero'; hero.innerHTML=bmHeroBrand(state.brand||{hero:src},cap); }
+      else { hero.className='bm-hero'; hero.innerHTML=imgTag(src,'','alt="" data-role="skuhero"')+'<div class="bm-skuname">'+esc(cap)+'</div>'; }
+      var ths=bmPanel.querySelectorAll('.bm-th');
+      for(var i=0;i<ths.length;i++) ths[i].classList.toggle('is-on', ths[i]===el);
+    };
+    window.bmShowThumbs=function(){ var t=document.getElementById('bm-thumbs'); if(t) t.classList.add('is-ready'); };
+    function openBrandModal(b){
+      if(!b) return; state.brand=b;
+      var ko=(lang()==='ko');
+      var slogan=L(b.slogan)||'';
+      var lead='';
+      [L(b.description),L(b.philosophy),L(b.origin)].forEach(function(x){ if(x) lead+='<p>'+esc(x)+'</p>'; });
+      var sec='';
+      var tech=(b.technology||[]);
+      if(tech.length){
+        sec+='<div class="bm-sec"><h4>'+(ko?'기술 · 특허':'Technology')+'</h4>'+tech.map(function(t){
+          var nm=ko?(t.name||''):(t.name_en||t.name||''), ds=ko?(t.desc||''):(t.desc_en||'');
+          return nm?('<div class="bm-tech"><b>'+esc(nm)+'</b>'+(ds?'<span>'+esc(ds)+'</span>':'')+'</div>'):'';
+        }).join('')+'</div>';
+      }
+      var clin=(b.clinical||[]).filter(function(c){ return ko ? c.item : (c.item_en||c.result_en); });
+      if(clin.length){
+        sec+='<div class="bm-sec"><h4>'+(ko?'임상 근거':'Clinical Evidence')+'</h4>'+clin.map(function(c){
+          return '<div class="bm-stat"><span>'+esc(ko?c.item:(c.item_en||''))+'</span><b>'+esc(ko?c.result:(c.result_en||''))+'</b></div>';
+        }).join('')+'</div>';
+      }
+      var lu=(b.lineup&&(ko?b.lineup.ko:b.lineup.en))||'';
+      var names=b.sku_names||[], photos=b.photos||[];
+      var thumbs='<button type="button" class="bm-th is-on" data-type="brand" data-src="'+esc(b.hero||'')+'" data-cap="'+esc(slogan)+'" onclick="bmPick(this)">'
+        +imgTag(b.hero||'', '', 'alt="" data-role="herothumb"')+'</button>';
+      photos.forEach(function(src,i){
+        var nm=names[i]?(ko?(names[i].ko||names[i].en):(names[i].en||'')):'';
+        thumbs+='<button type="button" class="bm-th" data-type="sku" data-src="'+esc(src)+'" data-cap="'+esc(nm)+'" onclick="bmPick(this)">'
+          +imgTag(src, '', 'alt="" data-role="thumb" onload="bmShowThumbs()"')+'</button>';
+      });
+      if(lu||photos.length){
+        sec+='<div class="bm-sec"><h4>'+(ko?'제품 라인업':'Product Lineup')+'</h4>'
+          +(lu?'<p class="bm-lineup">'+esc(lu)+'</p>':'')
+          +'<div class="bm-thumbs" id="bm-thumbs">'+thumbs+'</div></div>';
+      }
+      bmPanel.style.setProperty('--acc', b.accent||'#C8602A');
+      bmPanel.innerHTML='<button type="button" class="bm-x" data-bmclose="1">\u00d7</button>'
+        +'<div class="bm-hero" id="bm-hero">'+bmHeroBrand(b,slogan)+'</div>'
+        +'<div class="bm-scroll"><h3 class="bm-name">'+esc(L(b.name))+'</h3>'
+        +(L(b.manufacturer)?'<div class="bm-meta"><span>'+esc(L(b.manufacturer))+'</span></div>':'')
+        +'<div class="bm-lead">'+lead+'</div>'+sec
+        +'<a class="bm-cta" href="inquiry.html?brand='+encodeURIComponent(L(b.name)||b.id)+'">'+esc(t('inquire'))+'</a></div>';
+      bmOv.classList.add('is-open'); document.body.style.overflow='hidden';
+    }
+    function closeBrandModal(){ bmOv.classList.remove('is-open'); document.body.style.overflow=''; }
+    bmOv.addEventListener('click',function(e){ if(e.target===bmOv||(e.target.dataset&&e.target.dataset.bmclose)) closeBrandModal(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&bmOv.classList.contains('is-open')) closeBrandModal(); });
+    cardGrid.addEventListener('click',function(e){ var c=e.target.closest('.fp-card'); if(!c) return; c.dataset.card==='oem'?showOem():openBrandModal(brands[+c.dataset.index]); });
+    cardGrid.addEventListener('keydown',function(e){ if(e.key!=='Enter')return; var c=e.target.closest('.fp-card'); if(!c)return; c.dataset.card==='oem'?showOem():openBrandModal(brands[+c.dataset.index]); });
     itemGrid.addEventListener('click',function(e){ var it=e.target.closest('.fp-item'); if(!it) return;
       if(it.dataset.kind==='format'){ state.modal={kind:'format',format:formats[+it.dataset.index]}; }
       else { state.modal={kind:'sku',brand:state.brand,product:products(state.brand)[+it.dataset.index]}; }
@@ -244,7 +333,10 @@
       fetch('data/brands.json').then(function(r){return r.json();}).catch(function(){return {brands:[]};}),
       fetch('data/oem.json').then(function(r){return r.json();}).catch(function(){return {formats:[]};})
     ]).then(function(res){
-      brands=(res[0]&&res[0].brands)||[]; formats=(res[1]&&res[1].formats)||[];
+      var bdoc=res[0]||{};
+      brands=((bdoc.brands)||[]).filter(function(b){ return b.published!==false; });
+      showOem=(bdoc.show_oem!==false);
+      formats=(res[1]&&res[1].formats)||[];
       showList();
     });
   });
