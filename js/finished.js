@@ -222,8 +222,8 @@
       try{ if(!(history.state&&history.state.fpDetail)) history.pushState({fpDetail:1},''); }catch(e){} render(); window.scrollTo({top:0,behavior:'smooth'}); }
     function showOem(){ state.view='oem'; listEl.style.display='none'; detail.classList.add('is-active');
       try{ if(!(history.state&&history.state.fpDetail)) history.pushState({fpDetail:1},''); }catch(e){} render(); window.scrollTo({top:0,behavior:'smooth'}); }
-    function openModal(){ modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); renderModal(); }
-    function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); state.modal=null; }
+    function openModal(){ modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); lockScroll(); renderModal(); }
+    function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); state.modal=null;  unlockScroll(); }
 
     /* ===== 브랜드 모달 (히어로 고정 + 본문 스크롤 + 대표 사진) ===== */
     /* 확장자 자동 탐색: jpg/png/webp/jpeg 순으로 시도 */
@@ -250,6 +250,22 @@
       else if(role==='herothumb'){ el.style.display='none'; var t=el.closest('.bm-th'); if(t) t.classList.add('is-fb'); }
       else if(role==='cardlogo'){ var cd=el.closest('.fp-card'); if(cd) cd.remove(); }
     };
+    /* 배경 스크롤 잠금 - html 이 스크롤 주체라 position:fixed 방식 사용 */
+    var _lockY=0, _locked=false;
+    function lockScroll(){
+      if(_locked) return;
+      _lockY=window.pageYOffset||document.documentElement.scrollTop||0;
+      var bs=document.body.style;
+      bs.position='fixed'; bs.top=(-_lockY)+'px'; bs.left='0'; bs.right='0'; bs.width='100%'; bs.overflow='hidden';
+      _locked=true;
+    }
+    function unlockScroll(){
+      if(!_locked) return;
+      var bs=document.body.style;
+      bs.position=''; bs.top=''; bs.left=''; bs.right=''; bs.width=''; bs.overflow='';
+      _locked=false;
+      window.scrollTo(0,_lockY);
+    }
     window.cardLogoOk=function(el){ var cd=el.closest('.fp-card'); if(cd) cd.classList.remove('is-pending'); };
     var bmOv=document.getElementById('bm-modal'), bmPanel=document.getElementById('bm-panel');
     function bmHeroBrand(b,cap){
@@ -260,7 +276,7 @@
       var hero=document.getElementById('bm-hero'); if(!hero) return;
       var type=el.getAttribute('data-type'), src=el.getAttribute('data-src'), cap=el.getAttribute('data-cap')||'';
       if(type==='brand'){ hero.className='bm-hero'; hero.innerHTML=bmHeroBrand(state.brand||{hero:src},cap); }
-      else { hero.className='bm-hero'; hero.innerHTML=imgTag(src,'','alt="" data-role="skuhero"')+'<div class="bm-skuname">'+esc(cap)+'</div>'; }
+      else { hero.className='bm-hero'; hero.innerHTML=imgTag(src,'','alt="" data-role="skuhero"'); }
       var ths=bmPanel.querySelectorAll('.bm-th');
       for(var i=0;i<ths.length;i++) ths[i].classList.toggle('is-on', ths[i]===el);
     };
@@ -290,8 +306,7 @@
       var thumbs='<button type="button" class="bm-th is-on" data-type="brand" data-src="'+esc(b.hero||'')+'" data-cap="'+esc(slogan)+'" onclick="bmPick(this)">'
         +imgTag(b.hero||'', '', 'alt="" data-role="herothumb"')+'</button>';
       photos.forEach(function(src,i){
-        var nm=names[i]?(ko?(names[i].ko||names[i].en):(names[i].en||'')):'';
-        thumbs+='<button type="button" class="bm-th" data-type="sku" data-src="'+esc(src)+'" data-cap="'+esc(nm)+'" onclick="bmPick(this)">'
+        thumbs+='<button type="button" class="bm-th" data-type="sku" data-src="'+esc(src)+'" data-cap="" onclick="bmPick(this)">'
           +imgTag(src, '', 'alt="" data-role="thumb" onload="bmShowThumbs()"')+'</button>';
       });
       if(lu||photos.length){
@@ -306,9 +321,9 @@
         +(L(b.manufacturer)?'<div class="bm-meta"><span>'+esc(L(b.manufacturer))+'</span></div>':'')
         +'<div class="bm-lead">'+lead+'</div>'+sec
         +'<a class="bm-cta" href="inquiry.html?brand='+encodeURIComponent(L(b.name)||b.id)+'">'+esc(t('inquire'))+'</a></div>';
-      bmOv.classList.add('is-open'); document.body.style.overflow='hidden';
+      bmOv.classList.add('is-open'); lockScroll();
     }
-    function closeBrandModal(){ bmOv.classList.remove('is-open'); document.body.style.overflow=''; }
+    function closeBrandModal(){ bmOv.classList.remove('is-open'); unlockScroll(); }
     bmOv.addEventListener('click',function(e){ if(e.target===bmOv||(e.target.dataset&&e.target.dataset.bmclose)) closeBrandModal(); });
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&bmOv.classList.contains('is-open')) closeBrandModal(); });
     cardGrid.addEventListener('click',function(e){ var c=e.target.closest('.fp-card'); if(!c) return; c.dataset.card==='oem'?showOem():openBrandModal(brands[+c.dataset.index]); });
