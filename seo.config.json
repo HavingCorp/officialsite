@@ -1,0 +1,110 @@
+{
+  "_comment": "Having Corp. SEO configuration. Single source of truth for title / description / canonical / Open Graph. Edit this file, then run: node scripts/apply-seo.js && node scripts/generate-sitemap.js && node scripts/check-seo.js",
+  "site": {
+    "origin": "https://having.co.kr",
+    "siteName": "Having Corp.",
+    "locale": "en_US",
+    "twitterCard": "summary_large_image",
+    "logo": "assets/logo.svg"
+  },
+  "organization": {
+    "name": "Having Corp.",
+    "email": "having@having.co.kr",
+    "address": {
+      "streetAddress": "B-519, 338, Gwanggyojungang-ro, Suji-gu",
+      "addressLocality": "Yongin-si",
+      "addressRegion": "Gyeonggi-do",
+      "postalCode": "16942",
+      "addressCountry": "KR"
+    }
+  },
+  "excludeFromSitemap": [
+    "ingredients-en.html",
+    "ingredients-ko.html"
+  ],
+  "noindexPages": [
+    "ingredients-en.html",
+    "ingredients-ko.html"
+  ],
+  "_noindexNote": "Orphan pages superseded by ingredients.html. Not linked from anywhere. Tagged noindex so Google does not index them as duplicate content. Deleting these files instead is also fine.",
+  "pages": [
+    {
+      "file": "index.html",
+      "path": "/",
+      "title": "K-Beauty Trading Company · Having Corp.",
+      "description": "Having Corp. connects Korean cosmetic ingredients, fragrance solutions, finished products, and OEM / ODM capabilities with global beauty partners.",
+      "ogImage": "assets/og/og-home.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "about.html",
+      "path": "/about.html",
+      "title": "About Us · Having Corp.",
+      "description": "Having Corp. is a Korean beauty trade partner supporting sourcing, supplier coordination, and overseas market development.",
+      "ogImage": "assets/og/og-about.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "ingredients.html",
+      "path": "/ingredients.html",
+      "title": "Cosmetic Ingredients · Having Corp.",
+      "description": "Functional cosmetic ingredients, biotech actives, and formulation-ready materials. Browse by function, form, and certification.",
+      "ogImage": "assets/og/og-ingredients.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "fragrance.html",
+      "path": "/fragrance.html",
+      "title": "Fragrance Solutions · Having Corp.",
+      "description": "Connecting global fragrance expertise with Korean brands and manufacturers, across cosmetics, fine fragrance, home fragrance, and scent marketing.",
+      "ogImage": "assets/og/og-fragrance.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "finished.html",
+      "path": "/finished.html",
+      "title": "Finished Products · Having Corp.",
+      "description": "Korean beauty brands and finished cosmetic products available for overseas distribution, with OEM / ODM support for buyers developing their own lines.",
+      "ogImage": "assets/og/og-finished.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "team.html",
+      "path": "/team.html",
+      "title": "Leadership · Having Corp.",
+      "description": "A message from the founder of Having Corp. and the principles that guide how the company works with suppliers and overseas partners.",
+      "ogImage": "assets/og/og-team.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "esg.html",
+      "path": "/esg.html",
+      "title": "Sustainability · Having Corp.",
+      "description": "Responsible trade principles at Having Corp., covering supplier review, product documentation, and long-term beauty partnerships.",
+      "ogImage": "assets/og/og-esg.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "inquiry.html",
+      "path": "/inquiry.html",
+      "title": "Send an Inquiry · Having Corp.",
+      "description": "Send your product, ingredient, OEM / ODM, or fragrance inquiry to Having Corp. and we will help identify the right Korean partner.",
+      "ogImage": "assets/og/og-inquiry.jpg",
+      "ogType": "website"
+    },
+    {
+      "file": "privacy.html",
+      "path": "/privacy.html",
+      "title": "Privacy Policy · Having Corp.",
+      "description": "How Having Corp. collects, uses, stores, and protects personal information submitted through this website.",
+      "ogType": "website"
+    },
+    {
+      "file": "terms.html",
+      "path": "/terms.html",
+      "title": "Terms of Service · Having Corp.",
+      "description": "The terms that apply to use of the Having Corp. website and the information provided on it.",
+      "ogType": "website"
+    }
+  ]
+}

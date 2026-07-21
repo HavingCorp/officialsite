@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://having.co.kr/sitemap.xml
