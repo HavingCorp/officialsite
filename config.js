@@ -6,7 +6,7 @@
    ============================================================ */
 window.HAVING_CONFIG = {
   // --- form / analytics (replace placeholders when available) ---
-  web3formsAccessKey: "c638c719-12c8-4e28-bdb9-2fbd026a1ff2",   // get from https://web3forms.com (free)
+  web3formsAccessKey: "86192900-6124-4bd4-af5a-262133779491",   // get from https://web3forms.com (free)
   gaMeasurementId:    "G-EL31DFRHN3",      // Google Analytics 4 Measurement ID
 
   // --- contact (language-independent) ---
