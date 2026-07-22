@@ -1,2 +1,0 @@
-원본 로고 (파일명 = 브랜드 id, 예: minoxell.png)
-실행: python3 logo_normalize.py raw out
