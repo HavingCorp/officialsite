@@ -1,2 +1,0 @@
-원본 제품컷 (파일명 = 최종 이름, 예: minoxell-01.jpg)
-실행: python3 logo_normalize.py sku_raw sku_out --sku
