@@ -18,15 +18,8 @@
       "addressCountry": "KR"
     }
   },
-  "excludeFromSitemap": [
-    "ingredients-en.html",
-    "ingredients-ko.html"
-  ],
-  "noindexPages": [
-    "ingredients-en.html",
-    "ingredients-ko.html"
-  ],
-  "_noindexNote": "Orphan pages superseded by ingredients.html. Not linked from anywhere. Tagged noindex so Google does not index them as duplicate content. Deleting these files instead is also fine.",
+  "excludeFromSitemap": [],
+  "noindexPages": [],
   "pages": [
     {
       "file": "index.html",
@@ -105,6 +98,60 @@
       "title": "Terms of Service · Having Corp.",
       "description": "The terms that apply to use of the Having Corp. website and the information provided on it.",
       "ogType": "website"
+    },
+    {
+      "file": "index-ko.html",
+      "path": "/index-ko.html",
+      "title": "K-뷰티 무역 전문기업 · 해빙 주식회사",
+      "description": "해빙은 한국 화장품 원료·향료·완제품과 OEM/ODM 역량을 전 세계 뷰티 파트너와 연결하는 무역 전문기업입니다.",
+      "ogImage": "assets/og/og-home.jpg",
+      "ogType": "website",
+      "lang": "ko"
+    },
+    {
+      "file": "ingredients-ko.html",
+      "path": "/ingredients-ko.html",
+      "title": "화장품 원료 소싱·수출 · 해빙 주식회사",
+      "description": "기능성 화장품 원료와 바이오 액티브, 포뮬레이션용 소재를 글로벌 뷰티 개발에 연결합니다. 기능·제형·인증별로 원료를 확인하세요.",
+      "ogImage": "assets/og/og-ingredients.jpg",
+      "ogType": "website",
+      "lang": "ko"
+    },
+    {
+      "file": "finished-ko.html",
+      "path": "/finished-ko.html",
+      "title": "완제품·브랜드 유통 · 해빙 주식회사",
+      "description": "해외 유통이 가능한 한국 뷰티 브랜드와 완제품을 소개하고, 자체 라인을 준비하는 바이어를 위한 OEM/ODM을 지원합니다.",
+      "ogImage": "assets/og/og-finished.jpg",
+      "ogType": "website",
+      "lang": "ko"
+    },
+    {
+      "file": "about-ko.html",
+      "path": "/about-ko.html",
+      "title": "회사소개 · 해빙 주식회사",
+      "description": "해빙 주식회사는 원료·향료·완제품 전반에서 소싱, 공급사 조율, 해외 시장 개척을 지원하는 뷰티 무역 파트너입니다.",
+      "ogImage": "assets/og/og-about.jpg",
+      "ogType": "website",
+      "lang": "ko"
+    },
+    {
+      "file": "fragrance-ko.html",
+      "path": "/fragrance-ko.html",
+      "title": "향료 솔루션 · 해빙 주식회사",
+      "description": "글로벌 향료 전문성을 한국 브랜드·제조사와 연결합니다. 화장품, 퍼퓸, 홈 프래그런스, 향 마케팅을 아우릅니다.",
+      "ogImage": "assets/og/og-fragrance.jpg",
+      "ogType": "website",
+      "lang": "ko"
+    },
+    {
+      "file": "inquiry-ko.html",
+      "path": "/inquiry-ko.html",
+      "title": "문의하기 · 해빙 주식회사",
+      "description": "제품, 원료, OEM/ODM, 향료 관련 문의를 남겨 주세요. 해빙이 알맞은 한국 파트너를 연결해 드립니다.",
+      "ogImage": "assets/og/og-inquiry.jpg",
+      "ogType": "website",
+      "lang": "ko"
     }
   ]
 }
